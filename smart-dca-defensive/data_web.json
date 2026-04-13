@@ -1,0 +1,119 @@
+{
+    "Fecha": "2026-04-13",
+    "Ordenes": [
+        {
+            "Accion": "VENDER",
+            "Simbolo": "TLT",
+            "Nombre": "Bonos del Tesoro Largo Plazo",
+            "Porcentaje": "0%",
+            "InfoMGC": "SGLD"
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "UUP",
+            "Nombre": "Dólar Estadounidense",
+            "Porcentaje": "50%",
+            "InfoMGC": "CBU0"
+        }
+    ],
+    "Historico": {
+        "url_grafico": "graph2.png",
+        "tabla_anual": [
+            {
+                "Año": 2026,
+                "Retorno": "-14.8%",
+                "MaxPerdida": "2026.0"
+            },
+            {
+                "Año": 2025,
+                "Retorno": "-6.9%",
+                "MaxPerdida": "2025.0"
+            },
+            {
+                "Año": 2024,
+                "Retorno": "-2.8%",
+                "MaxPerdida": "2024.0"
+            },
+            {
+                "Año": 2023,
+                "Retorno": "-6.5%",
+                "MaxPerdida": "2023.0"
+            },
+            {
+                "Año": 2022,
+                "Retorno": "-12.2%",
+                "MaxPerdida": "2022.0"
+            },
+            {
+                "Año": 2021,
+                "Retorno": "-6.0%",
+                "MaxPerdida": "2021.0"
+            },
+            {
+                "Año": 2020,
+                "Retorno": "-8.9%",
+                "MaxPerdida": "2020.0"
+            },
+            {
+                "Año": 2019,
+                "Retorno": "-6.5%",
+                "MaxPerdida": "2019.0"
+            },
+            {
+                "Año": 2018,
+                "Retorno": "-3.1%",
+                "MaxPerdida": "2018.0"
+            },
+            {
+                "Año": 2017,
+                "Retorno": "-6.9%",
+                "MaxPerdida": "2017.0"
+            },
+            {
+                "Año": 2016,
+                "Retorno": "-4.4%",
+                "MaxPerdida": "2016.0"
+            },
+            {
+                "Año": 2015,
+                "Retorno": "-10.6%",
+                "MaxPerdida": "2015.0"
+            },
+            {
+                "Año": 2014,
+                "Retorno": "-3.6%",
+                "MaxPerdida": "2014.0"
+            },
+            {
+                "Año": 2013,
+                "Retorno": "-12.7%",
+                "MaxPerdida": "2013.0"
+            },
+            {
+                "Año": 2012,
+                "Retorno": "-5.5%",
+                "MaxPerdida": "2012.0"
+            },
+            {
+                "Año": 2011,
+                "Retorno": "-10.7%",
+                "MaxPerdida": "2011.0"
+            },
+            {
+                "Año": 2010,
+                "Retorno": "-6.1%",
+                "MaxPerdida": "2010.0"
+            },
+            {
+                "Año": 2009,
+                "Retorno": "-16.4%",
+                "MaxPerdida": "2009.0"
+            },
+            {
+                "Año": 2008,
+                "Retorno": "-16.0%",
+                "MaxPerdida": "2008.0"
+            }
+        ]
+    }
+}

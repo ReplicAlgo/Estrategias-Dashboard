@@ -1,0 +1,20 @@
+{
+    "Fecha": "2026-04-13",
+    "Ordenes": [
+        {
+            "Accion": "VENDER",
+            "Simbolo": "QLD",
+            "Nombre": "Nasdaq 100 Apalancado",
+            "Porcentaje": "0%",
+            "InfoMGC": NaN
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "DBC",
+            "Nombre": "Materias Primas",
+            "Porcentaje": "14%",
+            "InfoMGC": "IB01*"
+        }
+    ],
+    "Historico": {}
+}

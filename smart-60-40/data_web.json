@@ -1,0 +1,22 @@
+{
+    "Fecha": "2026-04-13",
+    "Ordenes": [
+        {
+            "Accion": "VENDER",
+            "Simbolo": "TLT",
+            "Nombre": "Bonos del Tesoro Largo Plazo",
+            "Porcentaje": "0%",
+            "InfoMGC": "SGLD"
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "UUP",
+            "Nombre": "Dólar Estadounidense",
+            "Porcentaje": "20%",
+            "InfoMGC": "CBU0"
+        }
+    ],
+    "Historico": {
+        "url_grafico": "graph2.png"
+    }
+}

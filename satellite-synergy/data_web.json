@@ -1,0 +1,34 @@
+{
+    "Fecha": "2026-04-13",
+    "Ordenes": [
+        {
+            "Accion": "VENDER",
+            "Simbolo": "IEF",
+            "Nombre": "Bonos del Tesoro Mediano Plazo",
+            "Porcentaje": "0%",
+            "InfoMGC": NaN
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "FLOT",
+            "Nombre": "Bonos Tasa Flotante",
+            "Porcentaje": "25%",
+            "InfoMGC": NaN
+        },
+        {
+            "Accion": "VENDER",
+            "Simbolo": "SPY",
+            "Nombre": "S&P 500",
+            "Porcentaje": "0%",
+            "InfoMGC": "CSPX / VOO / SPXS"
+        },
+        {
+            "Accion": "VENDER",
+            "Simbolo": "TLH",
+            "Nombre": "Bonos del Tesoro Largo Plazo",
+            "Porcentaje": "0%",
+            "InfoMGC": NaN
+        }
+    ],
+    "Historico": {}
+}
