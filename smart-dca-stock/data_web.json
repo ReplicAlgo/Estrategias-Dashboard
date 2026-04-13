@@ -14,8 +14,8 @@
     "Portafolio": [],
     "Historico": {
         "resumen": {
-            "Benchmark": "N/A",
-            "Strategy": "N/A"
+            "Benchmark": "4841",
+            "Strategy": "4841"
         },
         "tabla_anual": [
             {
@@ -110,7 +110,7 @@
             },
             {
                 "Año": 2026,
-                "Retorno": "-3.9%",
+                "Retorno": "-4.4%",
                 "MaxPerdida": "-11.8%"
             }
         ]
