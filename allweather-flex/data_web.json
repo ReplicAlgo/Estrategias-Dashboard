@@ -1,5 +1,22 @@
 {
+    "StrategyName": "AllWeather FLEX",
     "Fecha": "2026-04-13",
-    "Ordenes": [],
-    "Historico": {}
+    "MesActual": "April 2026",
+    "Ordenes": [
+        {
+            "Accion": "INFO",
+            "Simbolo": "-",
+            "Nombre": "No hay cambios este periodo",
+            "Instruccion": "-",
+            "MGC": "-"
+        }
+    ],
+    "Portafolio": [],
+    "Historico": {
+        "resumen": {
+            "Benchmark": "N/A",
+            "Strategy": "N/A"
+        },
+        "tabla_anual": []
+    }
 }

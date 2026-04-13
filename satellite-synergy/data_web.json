@@ -1,34 +1,43 @@
 {
+    "StrategyName": "Satellite Synergy",
     "Fecha": "2026-04-13",
+    "MesActual": "April 2026",
     "Ordenes": [
         {
             "Accion": "VENDER",
             "Simbolo": "IEF",
             "Nombre": "Bonos del Tesoro Mediano Plazo",
-            "Porcentaje": "0%",
-            "InfoMGC": NaN
+            "Instruccion": "MKT (%)",
+            "MGC": NaN
         },
         {
             "Accion": "COMPRAR",
             "Simbolo": "FLOT",
             "Nombre": "Bonos Tasa Flotante",
-            "Porcentaje": "25%",
-            "InfoMGC": NaN
+            "Instruccion": "MKT (24.9922%)",
+            "MGC": NaN
         },
         {
             "Accion": "VENDER",
             "Simbolo": "SPY",
             "Nombre": "S&P 500",
-            "Porcentaje": "0%",
-            "InfoMGC": "CSPX / VOO / SPXS"
+            "Instruccion": "MKT (%)",
+            "MGC": "CSPX / VOO / SPXS"
         },
         {
             "Accion": "VENDER",
             "Simbolo": "TLH",
             "Nombre": "Bonos del Tesoro Largo Plazo",
-            "Porcentaje": "0%",
-            "InfoMGC": NaN
+            "Instruccion": "MKT (%)",
+            "MGC": NaN
         }
     ],
-    "Historico": {}
+    "Portafolio": [],
+    "Historico": {
+        "resumen": {
+            "Benchmark": "N/A",
+            "Strategy": "N/A"
+        },
+        "tabla_anual": []
+    }
 }

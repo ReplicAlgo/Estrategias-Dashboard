@@ -1,22 +1,29 @@
 {
+    "StrategyName": "Smart Global 60/40",
     "Fecha": "2026-04-13",
+    "MesActual": "April 2026",
     "Ordenes": [
         {
             "Accion": "VENDER",
             "Simbolo": "TLT",
             "Nombre": "Bonos del Tesoro Largo Plazo",
-            "Porcentaje": "0%",
-            "InfoMGC": "SGLD"
+            "Instruccion": "MKT (%)",
+            "MGC": "SGLD"
         },
         {
             "Accion": "COMPRAR",
             "Simbolo": "UUP",
             "Nombre": "Dólar Estadounidense",
-            "Porcentaje": "20%",
-            "InfoMGC": "CBU0"
+            "Instruccion": "MKT (19.999%)",
+            "MGC": "CBU0"
         }
     ],
+    "Portafolio": [],
     "Historico": {
-        "url_grafico": "graph2.png"
+        "resumen": {
+            "Benchmark": "N/A",
+            "Strategy": "N/A"
+        },
+        "tabla_anual": []
     }
 }

@@ -1,20 +1,29 @@
 {
+    "StrategyName": "AllWeather Leverage",
     "Fecha": "2026-04-13",
+    "MesActual": "April 2026",
     "Ordenes": [
         {
             "Accion": "VENDER",
             "Simbolo": "QLD",
             "Nombre": "Nasdaq 100 Apalancado",
-            "Porcentaje": "0%",
-            "InfoMGC": NaN
+            "Instruccion": "MKT (%)",
+            "MGC": NaN
         },
         {
             "Accion": "COMPRAR",
             "Simbolo": "DBC",
             "Nombre": "Materias Primas",
-            "Porcentaje": "14%",
-            "InfoMGC": "IB01*"
+            "Instruccion": "MKT (14.2852%)",
+            "MGC": "IB01*"
         }
     ],
-    "Historico": {}
+    "Portafolio": [],
+    "Historico": {
+        "resumen": {
+            "Benchmark": "N/A",
+            "Strategy": "N/A"
+        },
+        "tabla_anual": []
+    }
 }
