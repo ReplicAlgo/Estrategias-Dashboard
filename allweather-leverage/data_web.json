@@ -1,12 +1,13 @@
 {
     "StrategyName": "AllWeather Leverage",
     "MesActual": "April 2026",
+    "Fecha": "April 2026",
     "Ordenes": [
         {
             "Accion": "VENDER",
             "Simbolo": "QLD",
             "Nombre": "Nasdaq 100 Apalancado",
-            "Instruccion": "MKT (N/A%)",
+            "Instruccion": "MKT (100%)",
             "MGC": NaN
         },
         {
@@ -20,9 +21,105 @@
     "Portafolio": [],
     "Historico": {
         "resumen": {
-            "Benchmark": "4841",
-            "Strategy": "4841"
+            "Benchmark": "N/A",
+            "Strategy": "247.99%"
         },
-        "tabla_anual": []
+        "tabla_anual": [
+            {
+                "Año": 2026,
+                "Retorno": "2026",
+                "MaxPerdida": "2026"
+            },
+            {
+                "Año": 2025,
+                "Retorno": "2025",
+                "MaxPerdida": "2025"
+            },
+            {
+                "Año": 2024,
+                "Retorno": "2024",
+                "MaxPerdida": "2024"
+            },
+            {
+                "Año": 2023,
+                "Retorno": "2023",
+                "MaxPerdida": "2023"
+            },
+            {
+                "Año": 2022,
+                "Retorno": "2022",
+                "MaxPerdida": "2022"
+            },
+            {
+                "Año": 2021,
+                "Retorno": "2021",
+                "MaxPerdida": "2021"
+            },
+            {
+                "Año": 2020,
+                "Retorno": "2020",
+                "MaxPerdida": "2020"
+            },
+            {
+                "Año": 2019,
+                "Retorno": "2019",
+                "MaxPerdida": "2019"
+            },
+            {
+                "Año": 2018,
+                "Retorno": "2018",
+                "MaxPerdida": "2018"
+            },
+            {
+                "Año": 2017,
+                "Retorno": "2017",
+                "MaxPerdida": "2017"
+            },
+            {
+                "Año": 2016,
+                "Retorno": "2016",
+                "MaxPerdida": "2016"
+            },
+            {
+                "Año": 2015,
+                "Retorno": "2015",
+                "MaxPerdida": "2015"
+            },
+            {
+                "Año": 2014,
+                "Retorno": "2014",
+                "MaxPerdida": "2014"
+            },
+            {
+                "Año": 2013,
+                "Retorno": "2013",
+                "MaxPerdida": "2013"
+            },
+            {
+                "Año": 2012,
+                "Retorno": "2012",
+                "MaxPerdida": "2012"
+            },
+            {
+                "Año": 2011,
+                "Retorno": "2011",
+                "MaxPerdida": "2011"
+            },
+            {
+                "Año": 2010,
+                "Retorno": "2010",
+                "MaxPerdida": "2010"
+            },
+            {
+                "Año": 2009,
+                "Retorno": "2009",
+                "MaxPerdida": "2009"
+            },
+            {
+                "Año": 2008,
+                "Retorno": "2008",
+                "MaxPerdida": "2008"
+            }
+        ]
     }
 }
