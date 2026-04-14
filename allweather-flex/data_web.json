@@ -3,7 +3,50 @@
     "MesActual": "April 2026",
     "Fecha": "14/04/2026",
     "Ordenes": [],
-    "Portafolio": [],
+    "Portafolio": [
+        {
+            "Simbolo": "DBB",
+            "Nombre": "Metales Básicos",
+            "Peso": "14%",
+            "Estado": "MANTENER",
+            "MGC": "IDTP"
+        },
+        {
+            "Simbolo": "EEM",
+            "Nombre": "Mercados Emergentes",
+            "Peso": "14%",
+            "Estado": "MANTENER",
+            "MGC": "EIMI "
+        },
+        {
+            "Simbolo": "GLD",
+            "Nombre": "Oro",
+            "Peso": "14%",
+            "Estado": "MANTENER",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "IAU",
+            "Nombre": "Oro",
+            "Peso": "14%",
+            "Estado": "MANTENER",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "VEA",
+            "Nombre": "Mercados Desarrollados",
+            "Peso": "14%",
+            "Estado": "MANTENER",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "XLE",
+            "Nombre": "Energía",
+            "Peso": "14%",
+            "Estado": "MANTENER",
+            "MGC": NaN
+        }
+    ],
     "Historico": {
         "resumen": {
             "Benchmark": "147.70%",
