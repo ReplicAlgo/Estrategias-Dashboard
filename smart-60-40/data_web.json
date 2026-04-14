@@ -1,124 +1,158 @@
 {
     "StrategyName": "Smart Global 60/40",
     "MesActual": "April 2026",
-    "Fecha": "April 2026",
+    "Fecha": "14/04/2026",
     "Ordenes": [
         {
             "Accion": "VENDER",
             "Simbolo": "TLT",
             "Nombre": "Bonos del Tesoro Largo Plazo",
-            "Instruccion": "MKT (100%)",
+            "Instruccion": "Vender al mercado en la apertura",
             "MGC": "SGLD"
         },
         {
             "Accion": "COMPRAR",
             "Simbolo": "UUP",
             "Nombre": "Dólar Estadounidense",
-            "Instruccion": "MKT (19.999%)",
+            "Instruccion": "Comprar al mercado en la apertura",
             "MGC": "CBU0"
         }
     ],
-    "Portafolio": [],
+    "Portafolio": [
+        {
+            "Simbolo": "QQQ",
+            "Nombre": "Nasdaq 100",
+            "Peso": "30%",
+            "Estado": "MANTENER",
+            "MGC": "EQAC"
+        },
+        {
+            "Simbolo": "EEM",
+            "Nombre": "Mercados Emergentes",
+            "Peso": "30%",
+            "Estado": "MANTENER",
+            "MGC": "EIMI "
+        },
+        {
+            "Simbolo": "VTIP",
+            "Nombre": "Bonos ST Protegidos Inflación",
+            "Peso": "20%",
+            "Estado": "MANTENER",
+            "MGC": "IHYA"
+        },
+        {
+            "Simbolo": "UUP",
+            "Nombre": "Dólar Estadounidense",
+            "Peso": "20%",
+            "Estado": "NUEVA COMPRA",
+            "MGC": "CBU0"
+        }
+    ],
     "Historico": {
         "resumen": {
-            "Benchmark": "N/A",
+            "Benchmark": "236.67%",
             "Strategy": "561.04%"
         },
         "tabla_anual": [
             {
                 "Año": 2026,
-                "Retorno": "2026",
-                "MaxPerdida": "2026"
+                "Retorno": "0.7%",
+                "MaxPerdida": "-7.5%"
             },
             {
                 "Año": 2025,
-                "Retorno": "2025",
-                "MaxPerdida": "2025"
+                "Retorno": "22.4%",
+                "MaxPerdida": "-13.3%"
             },
             {
                 "Año": 2024,
-                "Retorno": "2024",
-                "MaxPerdida": "2024"
+                "Retorno": "20.1%",
+                "MaxPerdida": "-7.5%"
             },
             {
                 "Año": 2023,
-                "Retorno": "2023",
-                "MaxPerdida": "2023"
+                "Retorno": "24.3%",
+                "MaxPerdida": "-5.9%"
             },
             {
                 "Año": 2022,
-                "Retorno": "2022",
-                "MaxPerdida": "2022"
+                "Retorno": "-23.5%",
+                "MaxPerdida": "-27.6%"
             },
             {
                 "Año": 2021,
-                "Retorno": "2021",
-                "MaxPerdida": "2021"
+                "Retorno": "17.3%",
+                "MaxPerdida": "-9.4%"
             },
             {
                 "Año": 2020,
-                "Retorno": "2020",
-                "MaxPerdida": "2020"
+                "Retorno": "34.5%",
+                "MaxPerdida": "-20.4%"
             },
             {
                 "Año": 2019,
-                "Retorno": "2019",
-                "MaxPerdida": "2019"
+                "Retorno": "23.5%",
+                "MaxPerdida": "-7.1%"
             },
             {
                 "Año": 2018,
-                "Retorno": "2018",
-                "MaxPerdida": "2018"
+                "Retorno": "1.3%",
+                "MaxPerdida": "-15.0%"
             },
             {
                 "Año": 2017,
-                "Retorno": "2017",
-                "MaxPerdida": "2017"
+                "Retorno": "18.7%",
+                "MaxPerdida": "-3.4%"
             },
             {
                 "Año": 2016,
-                "Retorno": "2016",
-                "MaxPerdida": "2016"
+                "Retorno": "9.2%",
+                "MaxPerdida": "-5.9%"
             },
             {
                 "Año": 2015,
-                "Retorno": "2015",
-                "MaxPerdida": "2015"
+                "Retorno": "1.5%",
+                "MaxPerdida": "-9.8%"
             },
             {
                 "Año": 2014,
-                "Retorno": "2014",
-                "MaxPerdida": "2014"
+                "Retorno": "14.8%",
+                "MaxPerdida": "-4.8%"
             },
             {
                 "Año": 2013,
-                "Retorno": "2013",
-                "MaxPerdida": "2013"
+                "Retorno": "17.2%",
+                "MaxPerdida": "-6.9%"
             },
             {
                 "Año": 2012,
-                "Retorno": "2012",
-                "MaxPerdida": "2012"
+                "Retorno": "11.3%",
+                "MaxPerdida": "-7.1%"
             },
             {
                 "Año": 2011,
-                "Retorno": "2011",
-                "MaxPerdida": "2011"
+                "Retorno": "2.0%",
+                "MaxPerdida": "-6.8%"
             },
             {
                 "Año": 2010,
-                "Retorno": "2010",
-                "MaxPerdida": "2010"
+                "Retorno": "12.9%",
+                "MaxPerdida": "-9.5%"
             },
             {
                 "Año": 2009,
-                "Retorno": "2009",
-                "MaxPerdida": "2009"
+                "Retorno": "32.0%",
+                "MaxPerdida": "-11.7%"
             },
             {
                 "Año": 2008,
-                "Retorno": "2008",
-                "MaxPerdida": "2008"
+                "Retorno": "-23.3%",
+                "MaxPerdida": "-36.9%"
+            },
+            {
+                "Año": 2007,
+                "Retorno": "19.1%",
+                "MaxPerdida": "-10.0%"
             }
         ]
     }

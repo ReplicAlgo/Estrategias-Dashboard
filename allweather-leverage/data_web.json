@@ -1,124 +1,172 @@
 {
     "StrategyName": "AllWeather Leverage",
     "MesActual": "April 2026",
-    "Fecha": "April 2026",
+    "Fecha": "14/04/2026",
     "Ordenes": [
         {
             "Accion": "VENDER",
             "Simbolo": "QLD",
             "Nombre": "Nasdaq 100 Apalancado",
-            "Instruccion": "MKT (100%)",
+            "Instruccion": "Vender al mercado en la apertura",
             "MGC": NaN
         },
         {
             "Accion": "COMPRAR",
             "Simbolo": "DBC",
             "Nombre": "Materias Primas",
-            "Instruccion": "MKT (14.2852%)",
+            "Instruccion": "Comprar al mercado en la apertura",
             "MGC": "IB01*"
         }
     ],
-    "Portafolio": [],
+    "Portafolio": [
+        {
+            "Simbolo": "GLD",
+            "Nombre": "Oro",
+            "Peso": "14%",
+            "Estado": "MANTENER",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "EET",
+            "Nombre": "Mercados Emergentes Apalancados",
+            "Peso": "14%",
+            "Estado": "MANTENER",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "EFO",
+            "Nombre": "Mercados Desarrollados Apalancados",
+            "Peso": "14%",
+            "Estado": "MANTENER",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "UGL",
+            "Nombre": "Oro Apalancado",
+            "Peso": "14%",
+            "Estado": "MANTENER",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "XLE",
+            "Nombre": "Energía",
+            "Peso": "14%",
+            "Estado": "MANTENER",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "DBC",
+            "Nombre": "Materias Primas",
+            "Peso": "14%",
+            "Estado": "NUEVA COMPRA",
+            "MGC": "IB01*"
+        }
+    ],
     "Historico": {
         "resumen": {
-            "Benchmark": "N/A",
-            "Strategy": "247.99%"
+            "Benchmark": "247.99%",
+            "Strategy": "1,291.38%"
         },
         "tabla_anual": [
             {
                 "Año": 2026,
-                "Retorno": "2026",
-                "MaxPerdida": "2026"
+                "Retorno": "2.4%",
+                "MaxPerdida": "-16.8%"
             },
             {
                 "Año": 2025,
-                "Retorno": "2025",
-                "MaxPerdida": "2025"
+                "Retorno": "35.9%",
+                "MaxPerdida": "-16.0%"
             },
             {
                 "Año": 2024,
-                "Retorno": "2024",
-                "MaxPerdida": "2024"
+                "Retorno": "16.1%",
+                "MaxPerdida": "-13.0%"
             },
             {
                 "Año": 2023,
-                "Retorno": "2023",
-                "MaxPerdida": "2023"
+                "Retorno": "10.6%",
+                "MaxPerdida": "-11.9%"
             },
             {
                 "Año": 2022,
-                "Retorno": "2022",
-                "MaxPerdida": "2022"
+                "Retorno": "0.6%",
+                "MaxPerdida": "-10.9%"
             },
             {
                 "Año": 2021,
-                "Retorno": "2021",
-                "MaxPerdida": "2021"
+                "Retorno": "24.5%",
+                "MaxPerdida": "-8.5%"
             },
             {
                 "Año": 2020,
-                "Retorno": "2020",
-                "MaxPerdida": "2020"
+                "Retorno": "33.3%",
+                "MaxPerdida": "-22.3%"
             },
             {
                 "Año": 2019,
-                "Retorno": "2019",
-                "MaxPerdida": "2019"
+                "Retorno": "19.7%",
+                "MaxPerdida": "-6.0%"
             },
             {
                 "Año": 2018,
-                "Retorno": "2018",
-                "MaxPerdida": "2018"
+                "Retorno": "-6.8%",
+                "MaxPerdida": "-16.3%"
             },
             {
                 "Año": 2017,
-                "Retorno": "2017",
-                "MaxPerdida": "2017"
+                "Retorno": "77.0%",
+                "MaxPerdida": "-5.3%"
             },
             {
                 "Año": 2016,
-                "Retorno": "2016",
-                "MaxPerdida": "2016"
+                "Retorno": "4.1%",
+                "MaxPerdida": "-9.8%"
             },
             {
                 "Año": 2015,
-                "Retorno": "2015",
-                "MaxPerdida": "2015"
+                "Retorno": "-5.6%",
+                "MaxPerdida": "-15.3%"
             },
             {
                 "Año": 2014,
-                "Retorno": "2014",
-                "MaxPerdida": "2014"
+                "Retorno": "21.4%",
+                "MaxPerdida": "-9.2%"
             },
             {
                 "Año": 2013,
-                "Retorno": "2013",
-                "MaxPerdida": "2013"
+                "Retorno": "27.6%",
+                "MaxPerdida": "-12.9%"
             },
             {
                 "Año": 2012,
-                "Retorno": "2012",
-                "MaxPerdida": "2012"
+                "Retorno": "4.3%",
+                "MaxPerdida": "-6.7%"
             },
             {
                 "Año": 2011,
-                "Retorno": "2011",
-                "MaxPerdida": "2011"
+                "Retorno": "12.8%",
+                "MaxPerdida": "-12.7%"
             },
             {
                 "Año": 2010,
-                "Retorno": "2010",
-                "MaxPerdida": "2010"
+                "Retorno": "7.5%",
+                "MaxPerdida": "-16.7%"
             },
             {
                 "Año": 2009,
-                "Retorno": "2009",
-                "MaxPerdida": "2009"
+                "Retorno": "27.8%",
+                "MaxPerdida": "-6.9%"
             },
             {
                 "Año": 2008,
-                "Retorno": "2008",
-                "MaxPerdida": "2008"
+                "Retorno": "-13.1%",
+                "MaxPerdida": "-14.5%"
+            },
+            {
+                "Año": 2007,
+                "Retorno": "18.5%",
+                "MaxPerdida": "-12.0%"
             }
         ]
     }
