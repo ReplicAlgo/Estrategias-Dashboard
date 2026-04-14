@@ -1,30 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
     const timestamp = new Date().getTime();
-    
-    // Cache-busting fuerte para el JSON
+
     fetch(`data_web.json?t=${timestamp}`)
         .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
             return response.json();
         })
         .then(data => {
-            console.log("✅ Datos cargados correctamente para:", data.StrategyName);
+            console.log("✅ Datos cargados:", data.StrategyName);
 
-            // 1. Títulos y Fechas
-            document.title = data.StrategyName || "Smart Strategy Dashboard";
-            
-            const titulo = document.querySelector('h1, .strategy-title, #title, nav h1');
-            if (titulo) titulo.textContent = data.StrategyName || "Estrategia";
+            // 1. Actualizar título principal (nav)
+            const navTitle = document.getElementById('nav-title');
+            if (navTitle) {
+                navTitle.innerHTML = `<i class="fa-solid fa-chart-line mr-2"></i>${data.StrategyName}`;
+            }
+            document.title = data.StrategyName || "Smart-DCA Dashboard";
 
-            // Fecha en el nav (más confiable)
+            // 2. Fecha de actualización
             const fechaEl = document.getElementById('fecha-update');
-            if (fechaEl) fechaEl.textContent = data.Fecha || data.MesActual || "Actualizado";
+            if (fechaEl) {
+                fechaEl.textContent = data.Fecha || data.MesActual || "Actualizado";
+            }
 
-            // 2. Órdenes
-            const ordersBody = document.getElementById('tabla-ordenes') || document.querySelector('[id*="orders"] tbody');
-            if (ordersBody && data.Ordenes && data.Ordenes.length > 0) {
+            // 3. Órdenes del mes
+            const ordersBody = document.getElementById('tabla-ordenes');
+            if (ordersBody && data.Ordenes) {
                 ordersBody.innerHTML = data.Ordenes.map(o => `
                     <tr>
                         <td class="p-3">${o.Accion || ''}</td>
@@ -34,13 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         <td class="p-3">${o.MGC || '-'}</td>
                     </tr>
                 `).join('');
-            } else if (ordersBody) {
-                ordersBody.innerHTML = `<tr><td colspan="5" class="p-4 text-center text-slate-400">Sin órdenes este mes</td></tr>`;
             }
 
-            // 3. Portafolio
-            const portfolioBody = document.getElementById('tabla-portafolio') || document.querySelector('[id*="portfolio"] tbody');
-            if (portfolioBody && data.Portafolio && data.Portafolio.length > 0) {
+            // 4. Portafolio actual
+            const portfolioBody = document.getElementById('tabla-portafolio');
+            if (portfolioBody && data.Portafolio) {
                 portfolioBody.innerHTML = data.Portafolio.map(p => `
                     <tr>
                         <td class="p-3">${p.Simbolo || ''}</td>
@@ -52,15 +50,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 `).join('');
             }
 
-            // 4. Resumen de Rendimiento
-            const bch = document.getElementById('bench-return');
-            const str = document.getElementById('strat-return');
-            if (bch && data.Historico?.resumen) bch.textContent = data.Historico.resumen.Benchmark || 'N/A';
-            if (str && data.Historico?.resumen) str.textContent = data.Historico.resumen.Strategy || 'N/A';
+            // 5. RESUMEN DE RENDIMIENTO (¡ESTA ES LA PARTE QUE FALTABA!)
+            const stratReturn = document.getElementById('strat-return');
+            const benchReturn = document.getElementById('bench-return');
 
-            // 5. Tabla Anual
-            const annualBody = document.getElementById('tabla-historico') || document.querySelector('[id*="annual"] tbody');
-            if (annualBody && data.Historico?.tabla_anual && data.Historico.tabla_anual.length > 0) {
+            if (stratReturn && data.Historico?.resumen?.Strategy) {
+                stratReturn.textContent = data.Historico.resumen.Strategy;
+            }
+            if (benchReturn && data.Historico?.resumen?.Benchmark) {
+                benchReturn.textContent = data.Historico.resumen.Benchmark;
+            }
+
+            // 6. Tabla anual
+            const annualBody = document.getElementById('tabla-historico');
+            if (annualBody && data.Historico?.tabla_anual) {
                 annualBody.innerHTML = data.Historico.tabla_anual.map(row => `
                     <tr>
                         <td class="p-2">${row.Año}</td>
@@ -70,13 +73,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 `).join('');
             }
 
+            console.log("🎉 Dashboard actualizado correctamente");
         })
         .catch(err => {
-            console.error("❌ Error al cargar data_web.json:", err);
-            // Mensaje amigable al usuario
-            const containers = document.querySelectorAll('tbody');
-            containers.forEach(tb => {
-                if (tb) tb.innerHTML = `<tr><td colspan="5" class="p-8 text-center text-red-400">Error al cargar datos. Intenta recargar la página (Ctrl + F5).</td></tr>`;
+            console.error("❌ Error cargando data_web.json:", err);
+            // Mensaje visible si falla
+            const bodies = document.querySelectorAll('tbody');
+            bodies.forEach(body => {
+                if (body) {
+                    body.innerHTML = `<tr><td colspan="5" class="p-8 text-center text-red-400">Error al cargar datos. Presiona Ctrl + F5</td></tr>`;
+                }
             });
         });
 });
