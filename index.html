@@ -3,56 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReplicAlgo | Dashboard de Estrategias</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>ReplicAlgo | Estrategias</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --bg: #0f172a; --card: #1e293b; --text: #f8fafc; --accent: #38bdf8; }
-        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; padding: 40px 20px; }
-        .container { max-width: 1000px; margin: 0 auto; text-align: center; }
-        h1 { font-weight: 300; letter-spacing: -1px; margin-bottom: 10px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 40px; }
-        .card { background: var(--card); padding: 30px; border-radius: 12px; border: 1px solid #334155; transition: 0.3s; text-decoration: none; color: inherit; display: block; }
-        .card:hover { border-color: var(--accent); transform: translateY(-5px); background: #263449; }
-        .card h3 { margin: 0 0 10px 0; color: var(--accent); }
-        .card p { font-size: 0.9rem; color: #94a3b8; line-height: 1.5; }
-        .footer { margin-top: 60px; font-size: 0.8rem; color: #64748b; }
+        .strategy-card {
+            transition: all 0.4s ease;
+        }
+        .strategy-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+        }
+        .highlight-text {
+            background: linear-gradient(90deg, #38bdf8, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>ReplicAlgo <span style="font-weight: 600;">Estrategias</span></h1>
-        <p style="color: #94a3b8;">Seleccione un portafolio para ver el análisis detallado y órdenes vigentes.</p>
+<body class="bg-slate-950 text-slate-200 font-sans leading-relaxed">
+
+    <div class="max-w-6xl mx-auto px-6 py-16">
         
-        <div class="grid">
-            <a href="smart-dca-stock/" class="card">
-                <h3>Smart DCA Stock</h3>
-                <p>Estrategia de acumulación mensual optimizada para ETFs de renta variable.</p>
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <h1 class="text-5xl font-light tracking-tight mb-4">
+                ReplicAlgo <span class="highlight-text font-semibold">Estrategias</span>
+            </h1>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto">
+                Sistemas cuantitativos diseñados para reducir emociones y maximizar disciplina en los mercados.
+            </p>
+        </div>
+
+        <!-- Introducción -->
+        <div class="max-w-3xl mx-auto text-center mb-20">
+            <div class="prose prose-invert mx-auto">
+                <p class="text-lg text-slate-300 leading-relaxed">
+                    El mayor enemigo del inversionista no es el mercado, sino sus propias emociones.<br>
+                    Nuestros sistemas utilizan datos objetivos para guiar cada movimiento. 
+                    Cuando el mercado entra en euforia o pánico, nuestros sistemas mantienen la calma matemática.
+                </p>
+                <p class="text-lg text-slate-300 mt-6">
+                    Encuentra las estrategias que necesitas para complementar tu cartera o ayudarte en tu viaje de inversión.
+                </p>
+            </div>
+        </div>
+
+        <!-- Grid de Estrategias -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <a href="smart-dca-stock/" class="strategy-card group bg-slate-900 border border-slate-700 rounded-3xl p-8 hover:border-blue-500">
+                <h3 class="text-2xl font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors">Smart DCA Acciones</h3>
+                <p class="text-slate-400 mb-6">Modelo de acumulación mensual optimizada para ETFs de renta variable. Siempre invertidos, pero rotando entre los mejores mercados de acciones.</p>
+                <div class="text-xs uppercase tracking-widest text-blue-400 font-medium">Mensual • ETFs</div>
             </a>
-            <a href="smart-dca-defensive/" class="card">
-                <h3>Smart DCA Defensive</h3>
-                <p>Enfoque defensivo para mitigar volatilidad en ciclos bajistas.</p>
+
+            <a href="smart-dca-defensive/" class="strategy-card group bg-slate-900 border border-slate-700 rounded-3xl p-8 hover:border-blue-500">
+                <h3 class="text-2xl font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors">Smart DCA Defensivo</h3>
+                <p class="text-slate-400 mb-6">Modelo de acumulación mensual optimizada para ETFs defensivos. Siempre invertidos, pero rotando entre activos con menor volatilidad.</p>
+                <div class="text-xs uppercase tracking-widest text-blue-400 font-medium">Mensual • ETFs</div>
             </a>
-            <a href="smart-60-40/" class="card">
-                <h3>Smart 60/40</h3>
-                <p>Balance clásico entre bonos y acciones con filtros de salud de mercado.</p>
+
+            <a href="smart-60-40/" class="strategy-card group bg-slate-900 border border-slate-700 rounded-3xl p-8 hover:border-blue-500">
+                <h3 class="text-2xl font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors">Smart Global 60/40</h3>
+                <p class="text-slate-400 mb-6">Balance clásico entre bonos y acciones utilizando nuestros modelos inteligentes Smart-DCA. Menor volatilidad y mejor retorno que modelos tradicionales.</p>
+                <div class="text-xs uppercase tracking-widest text-blue-400 font-medium">Mensual • ETFs</div>
             </a>
-            <a href="satellite-synergy/" class="card">
-                <h3>Satellite Synergy</h3>
-                <p>Portafolio dinámico enfocado en momentum y rotación de activos.</p>
+
+            <a href="satellite-synergy/" class="strategy-card group bg-slate-900 border border-slate-700 rounded-3xl p-8 hover:border-blue-500">
+                <h3 class="text-2xl font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors">Satellite Synergy</h3>
+                <p class="text-slate-400 mb-6">Modelo dinámico compuesto por 5 sistemas de rotación táctica. Menor volatilidad que el mercado sin sacrificar retornos a largo plazo.</p>
+                <div class="text-xs uppercase tracking-widest text-blue-400 font-medium">Mensual • ETFs</div>
             </a>
-            <a href="allweather-flex/" class="card">
-                <h3>AllWeather FLEX</h3>
-                <p>Estrategia multi-activo diseñada para cualquier entorno económico.</p>
+
+            <a href="allweather-flex/" class="strategy-card group bg-slate-900 border border-slate-700 rounded-3xl p-8 hover:border-blue-500">
+                <h3 class="text-2xl font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors">AllWeather FLEX</h3>
+                <p class="text-slate-400 mb-6">Modelo multi-activo inspirado en el AllWeather de Ray Dalio. Diseñado para cualquier entorno económico con mecanismos defensivos.</p>
+                <div class="text-xs uppercase tracking-widest text-blue-400 font-medium">Mensual • ETFs</div>
             </a>
-            <a href="allweather-leverage/" class="card">
-                <h3>AllWeather Leverage</h3>
-                <p>Versión optimizada con apalancamiento controlado para máximo retorno.</p>
+
+            <a href="allweather-leverage/" class="strategy-card group bg-slate-900 border border-slate-700 rounded-3xl p-8 hover:border-blue-500">
+                <h3 class="text-2xl font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors">AllWeather Leverage</h3>
+                <p class="text-slate-400 mb-6">Versión con apalancamiento controlado del modelo AllWeather FLEX. Máximo retorno con volatilidad controlada.</p>
+                <div class="text-xs uppercase tracking-widest text-blue-400 font-medium">Mensual • ETFs</div>
             </a>
         </div>
 
-        <div class="footer">
-            © 2026 ReplicAlgo | Actualizado automáticamente vía Master Bot
+        <!-- Disclaimer -->
+        <div class="mt-20 max-w-3xl mx-auto text-center">
+            <div class="bg-slate-900 border border-slate-700 rounded-2xl p-8 text-sm text-slate-400 leading-relaxed">
+                <strong class="text-amber-400">DISCLAIMER:</strong> Toda la información presente en esta web debe considerarse como una opinión y en ningún caso como un asesoramiento financiero o de inversión. 
+                Las rentabilidades pasadas no garantizan resultados futuros. Siempre serás tú el responsable de tus decisiones en materia de dinero o inversión. 
+                Consulta a tu asesor financiero antes de invertir.
+            </div>
         </div>
+
+        <footer class="text-center text-slate-500 text-sm mt-16">
+            © 2026 ReplicAlgo • Actualizado automáticamente vía RealTest Master Bot
+        </footer>
     </div>
+
 </body>
 </html>
