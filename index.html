@@ -11,12 +11,11 @@
             transition: all 0.4s ease;
         }
         .strategy-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3);
         }
-        .highlight-box {
-            background: linear-gradient(135deg, #1e2937, #334155);
-            border: 1px solid #475569;
+        .strategy-header {
+            background: linear-gradient(to right, #1e40af, #3b82f6);
         }
     </style>
 </head>
@@ -24,81 +23,77 @@
 
     <div class="max-w-6xl mx-auto px-6 py-20">
 
-        <!-- Header -->
-        <div class="text-center mb-16">
-            <h1 class="text-5xl font-light tracking-tighter text-white mb-3">
+        <!-- Título Principal -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-light tracking-tighter text-white">
                 Nuestros <span class="font-semibold text-blue-400">Sistemas</span>
             </h1>
         </div>
 
-        <!-- Caja de Introducción -->
-        <div class="highlight-box rounded-3xl p-10 mb-20 max-w-4xl mx-auto text-center">
-            <p class="text-xl text-slate-300 leading-relaxed">
-                Sistemas cuantitativos diseñados para reducir emociones y maximizar disciplina en los mercados.
-            </p>
-            <p class="mt-6 text-slate-400">
+        <!-- Texto Introductorio -->
+        <div class="max-w-3xl mx-auto text-center mb-20">
+            <p class="text-lg text-slate-300 leading-relaxed">
+                El mayor enemigo del inversionista no es el mercado, sino sus propias emociones.<br>
+                Nuestros sistemas utilizan datos objetivos para guiar cada movimiento. 
                 Cuando el mercado entra en euforia o pánico, nuestros sistemas mantienen la calma matemática.
+            </p>
+            <p class="mt-8 text-slate-400">
+                Encuentra las estrategias que necesitas para complementar tu cartera o ayudarte en tu viaje de inversión.
             </p>
         </div>
 
         <!-- Grid de Estrategias -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
+
             <a href="smart-dca-stock/" class="strategy-card group bg-slate-900 border border-slate-700 rounded-3xl overflow-hidden hover:border-blue-500">
-                <div class="p-8 pb-6 border-b border-slate-700">
-                    <h3 class="text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors">Smart DCA Acciones</h3>
-                </div>
-                <div class="p-8 pt-6">
+                <div class="strategy-header h-2"></div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors">Smart DCA Acciones</h3>
                     <p class="text-slate-400">Modelo de acumulación mensual optimizada para ETFs de renta variable. Siempre invertidos, pero rotando entre los mejores mercados de acciones.</p>
                     <div class="mt-6 text-xs uppercase tracking-widest text-blue-400 font-medium">Mensual • ETFs</div>
                 </div>
             </a>
 
             <a href="smart-dca-defensive/" class="strategy-card group bg-slate-900 border border-slate-700 rounded-3xl overflow-hidden hover:border-blue-500">
-                <div class="p-8 pb-6 border-b border-slate-700">
-                    <h3 class="text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors">Smart DCA Defensivo</h3>
-                </div>
-                <div class="p-8 pt-6">
+                <div class="strategy-header h-2"></div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors">Smart DCA Defensivo</h3>
                     <p class="text-slate-400">Modelo de acumulación mensual optimizada para ETFs defensivos. Siempre invertidos, pero rotando entre activos con menor volatilidad.</p>
                     <div class="mt-6 text-xs uppercase tracking-widest text-blue-400 font-medium">Mensual • ETFs</div>
                 </div>
             </a>
 
             <a href="smart-60-40/" class="strategy-card group bg-slate-900 border border-slate-700 rounded-3xl overflow-hidden hover:border-blue-500">
-                <div class="p-8 pb-6 border-b border-slate-700">
-                    <h3 class="text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors">Smart Global 60/40</h3>
-                </div>
-                <div class="p-8 pt-6">
+                <div class="strategy-header h-2"></div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors">Smart Global 60/40</h3>
                     <p class="text-slate-400">Balance clásico entre bonos y acciones utilizando nuestros modelos inteligentes. Menor volatilidad y mejor retorno que modelos tradicionales.</p>
                     <div class="mt-6 text-xs uppercase tracking-widest text-blue-400 font-medium">Mensual • ETFs</div>
                 </div>
             </a>
 
             <a href="satellite-synergy/" class="strategy-card group bg-slate-900 border border-slate-700 rounded-3xl overflow-hidden hover:border-blue-500">
-                <div class="p-8 pb-6 border-b border-slate-700">
-                    <h3 class="text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors">Satellite Synergy</h3>
-                </div>
-                <div class="p-8 pt-6">
+                <div class="strategy-header h-2"></div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors">Satellite Synergy</h3>
                     <p class="text-slate-400">Modelo dinámico compuesto por 5 sistemas de rotación táctica. Menor volatilidad que el mercado sin sacrificar retornos a largo plazo.</p>
                     <div class="mt-6 text-xs uppercase tracking-widest text-blue-400 font-medium">Mensual • ETFs</div>
                 </div>
             </a>
 
             <a href="allweather-flex/" class="strategy-card group bg-slate-900 border border-slate-700 rounded-3xl overflow-hidden hover:border-blue-500">
-                <div class="p-8 pb-6 border-b border-slate-700">
-                    <h3 class="text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors">AllWeather FLEX</h3>
-                </div>
-                <div class="p-8 pt-6">
+                <div class="strategy-header h-2"></div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors">AllWeather FLEX</h3>
                     <p class="text-slate-400">Modelo multi-activo inspirado en el AllWeather de Ray Dalio. Diseñado para cualquier entorno económico con mecanismos defensivos.</p>
                     <div class="mt-6 text-xs uppercase tracking-widest text-blue-400 font-medium">Mensual • ETFs</div>
                 </div>
             </a>
 
             <a href="allweather-leverage/" class="strategy-card group bg-slate-900 border border-slate-700 rounded-3xl overflow-hidden hover:border-blue-500">
-                <div class="p-8 pb-6 border-b border-slate-700">
-                    <h3 class="text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors">AllWeather Leverage</h3>
-                </div>
-                <div class="p-8 pt-6">
+                <div class="strategy-header h-2"></div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors">AllWeather Leverage</h3>
                     <p class="text-slate-400">Versión con apalancamiento controlado del modelo AllWeather FLEX. Máximo retorno con volatilidad controlada.</p>
                     <div class="mt-6 text-xs uppercase tracking-widest text-blue-400 font-medium">Mensual • ETFs</div>
                 </div>
@@ -107,7 +102,7 @@
         </div>
 
         <!-- Disclaimer -->
-        <div class="mt-24 max-w-3xl mx-auto">
+        <div class="mt-20 max-w-3xl mx-auto">
             <div class="bg-slate-900 border border-slate-700 rounded-3xl p-10 text-sm text-slate-400 leading-relaxed text-center">
                 <strong class="text-amber-400 block mb-3">DISCLAIMER:</strong>
                 Toda la información presente en esta web debe considerarse como una opinión y en ningún caso como un asesoramiento financiero o de inversión. 
