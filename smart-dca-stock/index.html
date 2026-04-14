@@ -18,7 +18,9 @@
             <h1 class="text-xl font-bold text-blue-400">
                 <i class="fa-solid fa-chart-line mr-2"></i>Smart-DCA Global 60/40
             </h1>
-            <span id="fecha-update" class="text-xs md:text-sm text-slate-400 font-mono italic underline decoration-blue-500/50">Cargando fecha...</span>
+             <span id="fecha-update" class="text-xs md:text-sm text-slate-400 font-mono italic underline decoration-blue-500/50">
+        {{data.Fecha || 'Cargando fecha...'}}
+    </span>
         </div>
     </nav>
 
@@ -118,6 +120,6 @@
         </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?t={{data.Fecha.replace(/\//g, '')}}"></script>
 </body>
 </html>
