@@ -6,7 +6,7 @@
         {
             "Accion": "VENDER",
             "Simbolo": "IEF",
-            "Cantidad": "100%",
+            "Cantidad": "100% de la Posición",
             "Nombre": "Bonos del Tesoro Mediano Plazo",
             "Instruccion": "Vender al mercado en la apertura",
             "MGC": NaN
@@ -14,7 +14,7 @@
         {
             "Accion": "COMPRAR",
             "Simbolo": "FLOT",
-            "Cantidad": "25%",
+            "Cantidad": "25% del Portafolio",
             "Nombre": "Bonos Tasa Flotante",
             "Instruccion": "Comprar al mercado en la apertura",
             "MGC": NaN
@@ -22,7 +22,7 @@
         {
             "Accion": "VENDER",
             "Simbolo": "SPY",
-            "Cantidad": "100%",
+            "Cantidad": "100% de la Posición",
             "Nombre": "S&P 500",
             "Instruccion": "Vender al mercado en la apertura",
             "MGC": "CSPX / VOO / SPXS"
@@ -30,7 +30,7 @@
         {
             "Accion": "VENDER",
             "Simbolo": "TLH",
-            "Cantidad": "100%",
+            "Cantidad": "100% de la Posición",
             "Nombre": "Bonos del Tesoro Largo Plazo",
             "Instruccion": "Vender al mercado en la apertura",
             "MGC": NaN

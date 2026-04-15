@@ -6,7 +6,7 @@
         {
             "Accion": "VENDER",
             "Simbolo": "QLD",
-            "Cantidad": "100%",
+            "Cantidad": "100% de la Posición",
             "Nombre": "Nasdaq 100 Apalancado",
             "Instruccion": "Vender al mercado en la apertura",
             "MGC": NaN
@@ -14,7 +14,7 @@
         {
             "Accion": "COMPRAR",
             "Simbolo": "DBC",
-            "Cantidad": "14%",
+            "Cantidad": "14% del Portafolio",
             "Nombre": "Materias Primas",
             "Instruccion": "Comprar al mercado en la apertura",
             "MGC": "IB01*"

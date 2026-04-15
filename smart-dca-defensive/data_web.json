@@ -6,7 +6,7 @@
         {
             "Accion": "VENDER",
             "Simbolo": "TLT",
-            "Cantidad": "100%",
+            "Cantidad": "100% de la Posición",
             "Nombre": "Bonos del Tesoro Largo Plazo",
             "Instruccion": "Vender al mercado en la apertura",
             "MGC": "SGLD"
@@ -14,7 +14,7 @@
         {
             "Accion": "COMPRAR",
             "Simbolo": "UUP",
-            "Cantidad": "50%",
+            "Cantidad": "50% del Portafolio",
             "Nombre": "Dólar Estadounidense",
             "Instruccion": "Comprar al mercado en la apertura",
             "MGC": "CBU0"
