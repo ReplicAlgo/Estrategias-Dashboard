@@ -2,21 +2,38 @@
     "StrategyName": "AllWeather FLEX",
     "MesActual": "Abril 2026",
     "Fecha": "15/04/2026",
-    "Ordenes": [],
-    "Portafolio": [
+    "Ordenes": [
         {
-            "Simbolo": "DBB",
-            "Nombre": "Metales Básicos",
-            "Peso": "14%",
-            "Estado": "MANTENER",
-            "MGC": "IDTP"
+            "Accion": "VENDER",
+            "Simbolo": "QLD",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Nasdaq 100 Apalancado",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": NaN
         },
         {
-            "Simbolo": "EEM",
-            "Nombre": "Mercados Emergentes",
+            "Accion": "COMPRAR",
+            "Simbolo": "DBC",
+            "Cantidad": "14% del Portafolio",
+            "Nombre": "Materias Primas",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": "IB01*"
+        }
+    ],
+    "Portafolio": [
+        {
+            "Simbolo": "EET",
+            "Nombre": "Mercados Emergentes Apalancados",
             "Peso": "14%",
             "Estado": "MANTENER",
-            "MGC": "EIMI "
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "EFO",
+            "Nombre": "Mercados Desarrollados Apalancados",
+            "Peso": "14%",
+            "Estado": "MANTENER",
+            "MGC": NaN
         },
         {
             "Simbolo": "GLD",
@@ -26,15 +43,8 @@
             "MGC": NaN
         },
         {
-            "Simbolo": "IAU",
-            "Nombre": "Oro",
-            "Peso": "14%",
-            "Estado": "MANTENER",
-            "MGC": NaN
-        },
-        {
-            "Simbolo": "VEA",
-            "Nombre": "Mercados Desarrollados",
+            "Simbolo": "UGL",
+            "Nombre": "Oro Apalancado",
             "Peso": "14%",
             "Estado": "MANTENER",
             "MGC": NaN
@@ -45,6 +55,13 @@
             "Peso": "14%",
             "Estado": "MANTENER",
             "MGC": NaN
+        },
+        {
+            "Simbolo": "DBC",
+            "Nombre": "Materias Primas",
+            "Peso": "14%",
+            "Estado": "NUEVA COMPRA",
+            "MGC": "IB01*"
         }
     ],
     "Historico": {
