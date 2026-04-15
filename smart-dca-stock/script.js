@@ -25,21 +25,35 @@ document.addEventListener('DOMContentLoaded', () => {
             if (document.getElementById('mes-ordenes')) document.getElementById('mes-ordenes').textContent = mesActual;
             if (document.getElementById('mes-portafolio')) document.getElementById('mes-portafolio').textContent = mesActual;
 
-            // 4. Órdenes del Mes (Coincidiendo con el orden de las columnas del HTML)
+            // 4. Órdenes del Mes (Con validación de lista vacía)
             const ordenesBody = document.getElementById('tabla-ordenes');
-            if (ordenesBody && data.Ordenes) {
-                ordenesBody.innerHTML = data.Ordenes.map(ord => `
-                    <tr class="hover:bg-white/5 transition-colors">
-                        <td class="p-5"><span class="${ord.Accion === 'COMPRAR' ? 'accion-comprar' : 'accion-vender'}">${ord.Accion}</span></td>
-                        <td class="p-5 font-bold mono text-blue-400">${ord.Simbolo}</td>
-                        <td class="p-5 text-slate-300 font-medium">${ord.Nombre}</td>
-                        <td class="p-5 text-slate-400 text-xs italic">${ord.Instruccion}</td>
-                        <td class="p-5 text-right pr-12 font-bold mono text-white">${ord.Cantidad}</td>
-                    </tr>
-                `).join('');
+            if (ordenesBody) {
+                if (data.Ordenes && data.Ordenes.length > 0) {
+                    ordenesBody.innerHTML = data.Ordenes.map(ord => `
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-5"><span class="${ord.Accion === 'COMPRAR' ? 'accion-comprar' : 'accion-vender'}">${ord.Accion}</span></td>
+                            <td class="p-5 font-bold mono text-blue-400">${ord.Simbolo}</td>
+                            <td class="p-5 text-slate-300 font-medium">${ord.Nombre}</td>
+                            <td class="p-5 text-slate-400 text-xs italic">${ord.Instruccion}</td>
+                            <td class="p-5 text-right pr-12 font-bold mono text-white">${ord.Cantidad}</td>
+                        </tr>
+                    `).join('');
+                } else {
+                    // Mensaje cuando NO hay órdenes
+                    ordenesBody.innerHTML = `
+                        <tr>
+                            <td colspan="5" class="p-12 text-center">
+                                <div class="inline-flex items-center px-4 py-2 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                                    <i class="fa-solid fa-circle-check mr-2"></i>
+                                    <span class="text-sm font-medium uppercase tracking-wider">No se requieren cambios para este periodo</span>
+                                </div>
+                            </td>
+                        </tr>
+                    `;
+                }
             }
 
-            // 5. Portafolio Actual (Coincidiendo con el orden de las columnas del HTML)
+            // 5. Portafolio Actual (Ticker, Activo, Peso, Estado)
             const portafolioBody = document.getElementById('tabla-portafolio');
             if (portafolioBody && data.Portafolio) {
                 portafolioBody.innerHTML = data.Portafolio.map(p => `
@@ -52,13 +66,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 `).join('');
             }
 
-            // 6. Resumen Performance (Mantiene los cambios de MaxDD solicitados)
+            // 6. Resumen Performance (Mantiene MaxDD)
             const res = data.Historico?.resumen;
             if (res) {
                 if (document.getElementById('strat-return')) document.getElementById('strat-return').textContent = res.Strategy || "--%";
                 if (document.getElementById('bench-return')) document.getElementById('bench-return').textContent = res.Benchmark || "--%";
                 
-                // Campos MaxDD inyectados correctamente
+                // Campos MaxDD
                 if (document.getElementById('strat-maxdd')) document.getElementById('strat-maxdd').textContent = res.MaxDD_Strat || "--%";
                 if (document.getElementById('bench-maxdd')) document.getElementById('bench-maxdd').textContent = res.MaxDD_Bench || "--%";
             }
