@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Usamos un timestamp para evitar que el navegador guarde en caché una versión vieja del JSON
     const timestamp = new Date().getTime();
 
     fetch(`data_web.json?t=${timestamp}`)
@@ -9,67 +10,71 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             console.log("✅ Datos cargados correctamente:", data.StrategyName);
 
-            // 1. Título principal y nav
+            // 1. Actualizar Título de la Estrategia en la Navbar
             const navTitle = document.getElementById('nav-title');
             if (navTitle) {
-                navTitle.textContent = data.StrategyName;
+                navTitle.innerHTML = `<i class="fa-solid fa-chart-line text-blue-400"></i> ${data.StrategyName}`;
             }
-            document.title = `ReplicAlgo | ${data.StrategyName || "Dashboard"}`;
+            document.title = `ReplicAlgo | ${data.StrategyName}`;
 
-            // 2. Fecha en la barra superior
+            // 2. Actualizar Fecha de última actualización (barra superior)
             const fechaEl = document.getElementById('fecha-update');
             if (fechaEl) {
                 fechaEl.textContent = data.Fecha || data.MesActual || "Actualizado";
             }
 
-            // 3. Mes en los títulos de secciones
+            // 3. Mes al lado de los títulos de las secciones
             const mesActual = data.MesActual || "";
             const tituloOrdenes = document.getElementById('mes-ordenes');
             const tituloPortafolio = document.getElementById('mes-portafolio');
 
-            if (tituloOrdenes) tituloOrdenes.textContent = mesActual ? `/ ${mesActual}` : '';
-            if (tituloPortafolio) tituloPortafolio.textContent = mesActual ? `/ ${mesActual}` : '';
+            if (tituloOrdenes) tituloOrdenes.textContent = mesActual ? `(${mesActual})` : '';
+            if (tituloPortafolio) tituloPortafolio.textContent = mesActual ? `(${mesActual})` : '';
 
-            // 4. Tabla de Órdenes (Cantidad alineada a la derecha)
+            // 4. TABLA DE ÓRDENES - (5 Columnas)
             const ordersBody = document.getElementById('tabla-ordenes');
             if (ordersBody && data.Ordenes) {
-                ordersBody.innerHTML = data.Ordenes.map(order => {
-                    const claccion = order.Accion === 'COMPRAR' ? 'accion-comprar' : 'accion-vender';
-                    return `
-                        <tr class="hover:bg-white/5 transition-colors">
-                            <td class="p-5 ${claccion}">${order.Accion}</td>
-                            <td class="p-5 mono text-blue-400 font-medium">${order.Ticker}</td>
-                            <td class="p-5 text-slate-300">${order.Nombre}</td>
-                            <td class="p-5 text-slate-400 italic">${order.Instruccion}</td>
-                            <td class="p-5 text-right pr-12 mono text-slate-300">${order.Cantidad || order.MGC || '-'}</td>
-                        </tr>
-                    `;
-                }).join('');
+                ordersBody.innerHTML = data.Ordenes.map(o => `
+                    <tr class="hover:bg-white/5 transition-colors">
+                        <td class="p-5 ${o.Accion === 'COMPRAR' ? 'accion-comprar' : 'accion-vender'} font-bold">
+                            ${o.Accion}
+                        </td>
+                        <td class="p-5 font-bold text-blue-400 mono italic">${o.Simbolo || o.Ticker}</td>
+                        <td class="p-5 text-slate-300 font-medium">${o.Nombre}</td>
+                        <td class="p-5 text-slate-400 italic">${o.Instruccion}</td>
+                        <td class="p-5 text-right pr-12 mono text-slate-200 font-bold">
+                            ${o.Cantidad || o.MGC || '-'}
+                        </td>
+                    </tr>
+                `).join('');
             }
 
-            // 5. Tabla de Portafolio (Se eliminó la columna MGC para coincidir con el HTML)
+            // 5. TABLA DE PORTAFOLIO - (4 Columnas: Ticker, Activo, Peso, Estado)
+            // Se elimina por completo la inyección de la columna MGC aquí
             const portfolioBody = document.getElementById('tabla-portafolio');
             if (portfolioBody && data.Portafolio) {
-                portfolioBody.innerHTML = data.Portafolio.map(item => {
-                    const clEstado = item.Estado === 'NUEVA COMPRA' ? 'estado-nueva-compra' : 'estado-mantenido';
+                portfolioBody.innerHTML = data.Portafolio.map(p => {
+                    const clEstado = p.Estado === 'NUEVA COMPRA' ? 'estado-nueva-compra' : 'estado-mantenido';
                     return `
                         <tr class="hover:bg-white/5 transition-colors">
-                            <td class="p-5 mono text-blue-400 font-bold">${item.Ticker}</td>
-                            <td class="p-5 text-slate-300">${item.Nombre}</td>
-                            <td class="p-5 text-right mono font-bold text-white">${item.Peso}</td>
-                            <td class="p-5 text-center"><span class="${clEstado}">${item.Estado}</span></td>
+                            <td class="p-5 font-bold text-blue-400 mono italic">${p.Simbolo || p.Ticker}</td>
+                            <td class="p-5 text-slate-300 font-medium">${p.Nombre || p.Activo}</td>
+                            <td class="p-5 text-right font-bold text-white mono text-base">${p.Peso || p.PesoActual}</td>
+                            <td class="p-5 text-center">
+                                <span class="${clEstado}">${p.Estado}</span>
+                            </td>
                         </tr>
                     `;
                 }).join('');
             }
 
-            // 6. Resumen de Performance
-            if (data.Historico?.resumen) {
-                const stratRet = document.getElementById('strat-return');
-                const benchRet = document.getElementById('bench-return');
-                if (stratRet) stratRet.textContent = data.Historico.resumen.Estrategia;
-                if (benchRet) benchRet.textContent = data.Historico.resumen.Benchmark;
-            }
+            // 6. Resumen de Performance (Cajas superiores)
+            const stratReturn = document.getElementById('strat-return');
+            const benchReturn = document.getElementById('bench-return');
+            
+            const res = data.Historico?.resumen;
+            if (stratReturn && res) stratReturn.textContent = res.Strategy || res.Estrategia || "--%";
+            if (benchReturn && res) benchReturn.textContent = res.Benchmark || "--%";
 
             // 7. Tabla Histórico Anual
             const annualBody = document.getElementById('tabla-historico');
@@ -78,18 +83,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     const retorno = row.Retorno || '';
                     const esPositivo = retorno && !retorno.includes('-');
                     return `
-                        <tr>
-                            <td class="p-4 text-slate-400">${row.Año}</td>
-                            <td class="p-4 font-bold ${esPositivo ? 'text-emerald-400' : 'text-red-400'}">${retorno}</td>
-                            <td class="p-4 text-red-400/70">${row.MaxPerdida}</td>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4 text-slate-400 font-medium">${row.Año}</td>
+                            <td class="p-4 font-bold ${esPositivo ? 'text-emerald-400' : 'text-red-400'}">
+                                ${retorno}
+                            </td>
+                            <td class="p-4 text-red-400/80 mono">${row.MaxPerdida || row.MaxDD || '-'}</td>
                         </tr>
                     `;
                 }).join('');
             }
 
-            console.log("🎉 Dashboard actualizado con éxito");
+            console.log("🎉 Interfaz actualizada con los últimos datos");
         })
         .catch(err => {
-            console.error("❌ Error:", err);
+            console.error("❌ Error cargando el JSON:", err);
         });
 });
