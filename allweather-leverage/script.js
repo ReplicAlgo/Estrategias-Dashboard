@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (document.getElementById('mes-ordenes')) document.getElementById('mes-ordenes').textContent = mesActual;
             if (document.getElementById('mes-portafolio')) document.getElementById('mes-portafolio').textContent = mesActual;
 
-            // 4. Órdenes del Mes (Con validación de lista vacía)
+            // 4. Órdenes del Mes (Símbolo en Azul)
             const ordenesBody = document.getElementById('tabla-ordenes');
             if (ordenesBody) {
                 if (data.Ordenes && data.Ordenes.length > 0) {
@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         </tr>
                     `).join('');
                 } else {
-                    // Mensaje cuando NO hay órdenes
                     ordenesBody.innerHTML = `
                         <tr>
                             <td colspan="5" class="p-12 text-center">
@@ -53,12 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
-            // 5. Portafolio Actual (Ticker, Activo, Peso, Estado)
+            // 5. Portafolio Actual (Ticker ahora en Azul para coincidir con Órdenes)
             const portafolioBody = document.getElementById('tabla-portafolio');
             if (portafolioBody && data.Portafolio) {
                 portafolioBody.innerHTML = data.Portafolio.map(p => `
                     <tr class="hover:bg-white/5 transition-colors">
-                        <td class="p-5 font-bold mono text-emerald-400">${p.Simbolo}</td>
+                        <td class="p-5 font-bold mono text-blue-400">${p.Simbolo}</td>
                         <td class="p-5 text-slate-300 font-medium">${p.Nombre}</td>
                         <td class="p-5 text-right font-bold mono text-white">${p.Peso}</td>
                         <td class="p-5 text-center"><span class="${p.Estado === 'MANTENER' ? 'estado-mantenido' : 'estado-nueva-compra'}">${p.Estado}</span></td>
@@ -66,13 +65,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 `).join('');
             }
 
-            // 6. Resumen Performance (Mantiene MaxDD)
+            // 6. Resumen Performance
             const res = data.Historico?.resumen;
             if (res) {
                 if (document.getElementById('strat-return')) document.getElementById('strat-return').textContent = res.Strategy || "--%";
                 if (document.getElementById('bench-return')) document.getElementById('bench-return').textContent = res.Benchmark || "--%";
-                
-                // Campos MaxDD
                 if (document.getElementById('strat-maxdd')) document.getElementById('strat-maxdd').textContent = res.MaxDD_Strat || "--%";
                 if (document.getElementById('bench-maxdd')) document.getElementById('bench-maxdd').textContent = res.MaxDD_Bench || "--%";
             }
