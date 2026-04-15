@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // 1. Título principal y nav
             const navTitle = document.getElementById('nav-title');
             if (navTitle) {
-                navTitle.innerHTML = `<i class="fa-solid fa-chart-line"></i> ${data.StrategyName}`;
+                navTitle.textContent = data.StrategyName;
             }
-            document.title = data.StrategyName || "ReplicAlgo Dashboard";
+            document.title = `ReplicAlgo | ${data.StrategyName || "Dashboard"}`;
 
             // 2. Fecha en la barra superior
             const fechaEl = document.getElementById('fecha-update');
@@ -22,61 +22,56 @@ document.addEventListener('DOMContentLoaded', () => {
                 fechaEl.textContent = data.Fecha || data.MesActual || "Actualizado";
             }
 
-            // 3. Mes y Año en los títulos (Órdenes y Portafolio)
+            // 3. Mes en los títulos de secciones
             const mesActual = data.MesActual || "";
             const tituloOrdenes = document.getElementById('mes-ordenes');
             const tituloPortafolio = document.getElementById('mes-portafolio');
 
-            if (tituloOrdenes) tituloOrdenes.textContent = mesActual ? `(${mesActual})` : '';
-            if (tituloPortafolio) tituloPortafolio.textContent = mesActual ? `(${mesActual})` : '';
+            if (tituloOrdenes) tituloOrdenes.textContent = mesActual ? `/ ${mesActual}` : '';
+            if (tituloPortafolio) tituloPortafolio.textContent = mesActual ? `/ ${mesActual}` : '';
 
-            // 4. ÓRDENES DEL MES - con colores
+            // 4. Tabla de Órdenes (Cantidad alineada a la derecha)
             const ordersBody = document.getElementById('tabla-ordenes');
-            if (ordersBody && data.Ordenes && data.Ordenes.length > 0) {
-                ordersBody.innerHTML = data.Ordenes.map(o => `
-                    <tr>
-                        <td class="p-5 ${o.Accion === 'COMPRAR' ? 'accion-comprar' : 'accion-vender'}">
-                            ${o.Accion}
-                        </td>
-                        <td class="p-5 font-medium">${o.Simbolo}</td>
-                        <td class="p-5">${o.Nombre}</td>
-                        <td class="p-5">${o.Instruccion}</td>
-                        <td class="p-5">${o.MGC}</td>
-                    </tr>
-                `).join('');
-            } else if (ordersBody) {
-                ordersBody.innerHTML = `<tr><td colspan="5" class="p-8 text-center text-slate-400">Sin órdenes este mes</td></tr>`;
+            if (ordersBody && data.Ordenes) {
+                ordersBody.innerHTML = data.Ordenes.map(order => {
+                    const claccion = order.Accion === 'COMPRAR' ? 'accion-comprar' : 'accion-vender';
+                    return `
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-5 ${claccion}">${order.Accion}</td>
+                            <td class="p-5 mono text-blue-400 font-medium">${order.Ticker}</td>
+                            <td class="p-5 text-slate-300">${order.Nombre}</td>
+                            <td class="p-5 text-slate-400 italic">${order.Instruccion}</td>
+                            <td class="p-5 text-right pr-12 mono text-slate-300">${order.Cantidad || order.MGC || '-'}</td>
+                        </tr>
+                    `;
+                }).join('');
             }
 
-            // 5. PORTAFOLIO ACTUAL - con formato especial en Estado
+            // 5. Tabla de Portafolio (Se eliminó la columna MGC para coincidir con el HTML)
             const portfolioBody = document.getElementById('tabla-portafolio');
-            if (portfolioBody && data.Portafolio && data.Portafolio.length > 0) {
-                portfolioBody.innerHTML = data.Portafolio.map(p => `
-                    <tr>
-                        <td class="p-5">${p.Simbolo}</td>
-                        <td class="p-5">${p.Nombre}</td>
-                        <td class="p-5 text-right font-medium">${p.Peso}</td>
-                        <td class="p-5 text-center">
-                            ${p.Estado === 'NUEVA COMPRA' 
-                                ? `<span class="estado-nueva-compra">NUEVA COMPRA</span>` 
-                                : `<span class="estado-mantenido">Mantenido</span>`}
-                        </td>
-                        <td class="p-5 text-center">${p.MGC}</td>
-                    </tr>
-                `).join('');
+            if (portfolioBody && data.Portafolio) {
+                portfolioBody.innerHTML = data.Portafolio.map(item => {
+                    const clEstado = item.Estado === 'NUEVA COMPRA' ? 'estado-nueva-compra' : 'estado-mantenido';
+                    return `
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-5 mono text-blue-400 font-bold">${item.Ticker}</td>
+                            <td class="p-5 text-slate-300">${item.Nombre}</td>
+                            <td class="p-5 text-right mono font-bold text-white">${item.Peso}</td>
+                            <td class="p-5 text-center"><span class="${clEstado}">${item.Estado}</span></td>
+                        </tr>
+                    `;
+                }).join('');
             }
 
-            // 6. Resumen de Rendimiento
-            const stratReturn = document.getElementById('strat-return');
-            const benchReturn = document.getElementById('bench-return');
-            if (stratReturn && data.Historico?.resumen?.Strategy) {
-                stratReturn.textContent = data.Historico.resumen.Strategy;
-            }
-            if (benchReturn && data.Historico?.resumen?.Benchmark) {
-                benchReturn.textContent = data.Historico.resumen.Benchmark;
+            // 6. Resumen de Performance
+            if (data.Historico?.resumen) {
+                const stratRet = document.getElementById('strat-return');
+                const benchRet = document.getElementById('bench-return');
+                if (stratRet) stratRet.textContent = data.Historico.resumen.Estrategia;
+                if (benchRet) benchRet.textContent = data.Historico.resumen.Benchmark;
             }
 
-            // 7. Tabla Anual con colores (positivo verde, negativo rojo)
+            // 7. Tabla Histórico Anual
             const annualBody = document.getElementById('tabla-historico');
             if (annualBody && data.Historico?.tabla_anual) {
                 annualBody.innerHTML = data.Historico.tabla_anual.map(row => {
@@ -84,25 +79,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     const esPositivo = retorno && !retorno.includes('-');
                     return `
                         <tr>
-                            <td class="p-5">${row.Año}</td>
-                            <td class="p-5 font-medium ${esPositivo ? 'text-emerald-400' : 'text-red-400'}">
-                                ${retorno}
-                            </td>
-                            <td class="p-5 text-red-400">${row.MaxPerdida}</td>
+                            <td class="p-4 text-slate-400">${row.Año}</td>
+                            <td class="p-4 font-bold ${esPositivo ? 'text-emerald-400' : 'text-red-400'}">${retorno}</td>
+                            <td class="p-4 text-red-400/70">${row.MaxPerdida}</td>
                         </tr>
                     `;
                 }).join('');
             }
 
-            console.log("🎉 Dashboard actualizado correctamente");
+            console.log("🎉 Dashboard actualizado con éxito");
         })
         .catch(err => {
-            console.error("❌ Error al cargar data_web.json:", err);
-            const bodies = document.querySelectorAll('tbody');
-            bodies.forEach(body => {
-                if (body) {
-                    body.innerHTML = `<tr><td colspan="5" class="p-12 text-center text-red-400">Error al cargar datos. Intenta recargar con Ctrl + F5</td></tr>`;
-                }
-            });
+            console.error("❌ Error:", err);
         });
 });
