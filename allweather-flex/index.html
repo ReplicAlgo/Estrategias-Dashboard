@@ -16,7 +16,6 @@
             --bg-dark: #020617;
             --glass-bg: rgba(15, 23, 42, 0.6);
             --glass-border: rgba(255, 255, 255, 0.08);
-            --accent-blue: #3b82f6;
         }
 
         body {
@@ -25,7 +24,6 @@
             color: #f1f5f9;
         }
 
-        /* Animación de fondo */
         .bg-mesh {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -39,65 +37,12 @@
             backdrop-filter: blur(12px);
             border: 1px solid var(--glass-border);
             border-radius: 1.5rem;
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-        }
-
-        .table-container { 
-            overflow-x: auto; 
-            scrollbar-width: thin;
-            scrollbar-color: #334155 transparent;
-        }
-
-        .card-rendimiento { 
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .card-rendimiento:hover { 
-            transform: translateY(-6px);
-            border-color: rgba(59, 130, 246, 0.4);
         }
 
         .mono { font-family: 'JetBrains Mono', monospace; }
 
-        .accion-comprar { color: #4ade80; font-weight: 700; }
-        .accion-vender  { color: #f87171; font-weight: 700; }
-        
-        .estado-mantenido {
-            background: rgba(51, 65, 85, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: #94a3b8;
-            padding: 4px 12px;
-            border-radius: 2rem;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .estado-nueva-compra {
-            background: rgba(22, 101, 52, 0.3);
-            border: 1px solid rgba(74, 222, 128, 0.2);
-            color: #4ade80;
-            padding: 4px 12px;
-            border-radius: 2rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
         .nav-glow {
             text-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
-        }
-
-        th {
-            background: rgba(15, 23, 42, 0.8);
-            border-bottom: 1px solid var(--glass-border);
-        }
-
-        tr:hover td {
-            background: rgba(255, 255, 255, 0.02);
         }
     </style>
 </head>
@@ -112,7 +57,7 @@
                 <a href="index.html" class="text-slate-400 hover:text-white transition-colors">
                     <i class="fa-solid fa-arrow-left"></i>
                 </a>
-                <h1 id="nav-title" class="text-xl font-bold text-white flex items-center gap-3">
+                <h1 class="text-xl font-bold text-white flex items-center gap-3">
                     <span class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center">
                         <i class="fa-solid fa-chart-pie text-blue-400 text-sm"></i>
                     </span>
@@ -120,7 +65,7 @@
                 </h1>
             </div>
             <div class="flex items-center gap-4">
-                <div id="fecha-update" class="text-[10px] mono text-slate-500 bg-slate-800/50 px-3 py-1 rounded-full border border-white/5 uppercase tracking-widest">
+                <div class="text-[10px] mono text-slate-500 bg-slate-800/50 px-3 py-1 rounded-full border border-white/5 uppercase tracking-widest">
                     Actualizado: 12 OCT 2026
                 </div>
             </div>
@@ -134,38 +79,38 @@
             <div class="flex items-end justify-between mb-8">
                 <div>
                     <h2 class="text-sm font-bold text-blue-500 uppercase tracking-[0.2em] mb-2">Sección Operativa</h2>
-                    <h3 id="titulo-ordenes" class="text-3xl font-bold text-white tracking-tight">
-                        Órdenes del Mes <span id="mes-ordenes" class="text-slate-500 font-bold ml-2">/ OCTUBRE</span>
+                    <h3 class="text-3xl font-bold text-white tracking-tight">
+                        Órdenes del Mes <span class="text-slate-500 font-bold ml-2">/ OCTUBRE</span>
                     </h3>
                 </div>
             </div>
 
             <div class="glass-panel overflow-hidden">
-                <div class="table-container">
+                <div class="overflow-x-auto">
                     <table class="w-full text-left border-collapse">
                         <thead>
-                            <tr class="text-slate-400 uppercase text-[10px] tracking-[0.15em]">
+                            <tr class="text-slate-400 uppercase text-[10px] tracking-[0.15em] bg-slate-900/50 border-b border-white/5">
                                 <th class="p-5 font-semibold">Acción</th>
                                 <th class="p-5 font-semibold">Símbolo</th>
                                 <th class="p-5 font-semibold">Nombre del Activo</th>
                                 <th class="p-5 font-semibold">Instrucción</th>
-                                <th class="p-5 font-semibold text-right pr-8">Cantidad</th>
+                                <th class="p-5 font-semibold text-right pr-12">Cantidad</th>
                             </tr>
                         </thead>
-                        <tbody id="tabla-ordenes" class="divide-y divide-white/5 text-sm">
-                            <tr>
-                                <td class="p-5 accion-comprar">COMPRAR</td>
-                                <td class="p-5 mono text-blue-400">VTI</td>
-                                <td class="p-5 text-slate-300 font-medium">Vanguard Total Stock Market</td>
+                        <tbody class="divide-y divide-white/5 text-sm">
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="p-5 font-bold text-emerald-400">COMPRAR</td>
+                                <td class="p-5 mono text-blue-400 font-medium">VTI</td>
+                                <td class="p-5 text-slate-300">Vanguard Total Stock Market</td>
                                 <td class="p-5 text-slate-400 italic">Optimización de cartera según algoritmo</td>
-                                <td class="p-5 text-right pr-8 mono text-slate-300">12.50</td>
+                                <td class="p-5 text-right pr-12 mono text-slate-300">12.50</td>
                             </tr>
-                            <tr>
-                                <td class="p-5 accion-vender">VENDER</td>
-                                <td class="p-5 mono text-blue-400">BND</td>
-                                <td class="p-5 text-slate-300 font-medium">Vanguard Total Bond Market</td>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="p-5 font-bold text-red-400">VENDER</td>
+                                <td class="p-5 mono text-blue-400 font-medium">BND</td>
+                                <td class="p-5 text-slate-300">Vanguard Total Bond Market</td>
                                 <td class="p-5 text-slate-400 italic">Ajuste táctico de exposición</td>
-                                <td class="p-5 text-right pr-8 mono text-slate-300">5.20</td>
+                                <td class="p-5 text-right pr-12 mono text-slate-300">5.20</td>
                             </tr>
                         </tbody>
                     </table>
@@ -177,34 +122,36 @@
         <section>
             <div class="mb-8">
                 <h2 class="text-sm font-bold text-emerald-500 uppercase tracking-[0.2em] mb-2">Composición</h2>
-                <h3 id="titulo-portafolio" class="text-3xl font-bold text-white tracking-tight">
-                    Portafolio Actual
-                </h3>
+                <h3 class="text-3xl font-bold text-white tracking-tight">Portafolio Actual</h3>
             </div>
 
             <div class="glass-panel overflow-hidden">
-                <div class="table-container">
+                <div class="overflow-x-auto">
                     <table class="w-full text-left border-collapse">
                         <thead>
-                            <tr class="text-slate-400 uppercase text-[10px] tracking-[0.15em]">
+                            <tr class="text-slate-400 uppercase text-[10px] tracking-[0.15em] bg-slate-900/50 border-b border-white/5">
                                 <th class="p-5 font-semibold">Ticker</th>
                                 <th class="p-5 font-semibold">Activo</th>
                                 <th class="p-5 font-semibold text-right">Peso Actual</th>
                                 <th class="p-5 font-semibold text-center">Estado</th>
                             </tr>
                         </thead>
-                        <tbody id="tabla-portafolio" class="divide-y divide-white/5 text-sm">
-                            <tr>
+                        <tbody class="divide-y divide-white/5 text-sm">
+                            <tr class="hover:bg-white/5 transition-colors">
                                 <td class="p-5 mono text-blue-400 font-bold">VTI</td>
                                 <td class="p-5 text-slate-300">Acciones Globales Total</td>
-                                <td class="p-5 text-right mono font-bold">60.2%</td>
-                                <td class="p-5 text-center"><span class="estado-nueva-compra">NUEVA COMPRA</span></td>
+                                <td class="p-5 text-right mono font-bold text-white">60.2%</td>
+                                <td class="p-5 text-center">
+                                    <span class="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-[10px] font-bold tracking-wider">NUEVA COMPRA</span>
+                                </td>
                             </tr>
-                            <tr>
+                            <tr class="hover:bg-white/5 transition-colors">
                                 <td class="p-5 mono text-blue-400 font-bold">VXUS</td>
                                 <td class="p-5 text-slate-300">Acciones Ex-US</td>
-                                <td class="p-5 text-right mono font-bold">15.4%</td>
-                                <td class="p-5 text-center"><span class="estado-mantenido">MANTENIDO</span></td>
+                                <td class="p-5 text-right mono font-bold text-white">15.4%</td>
+                                <td class="p-5 text-center">
+                                    <span class="bg-slate-700/30 border border-white/10 text-slate-400 px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase">Mantenido</span>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -212,7 +159,7 @@
             </div>
         </section>
 
-        <!-- RESUMEN + GRÁFICA -->
+        <!-- PERFORMANCE Y VISUALIZACIÓN -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <section>
                 <div class="mb-8">
@@ -221,21 +168,21 @@
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="card-rendimiento glass-panel p-8 bg-gradient-to-br from-blue-600/10 to-transparent border-blue-500/20">
+                    <div class="glass-panel p-8 bg-gradient-to-br from-blue-600/10 to-transparent border-blue-500/20">
                         <div class="flex justify-between items-start mb-4">
                             <div class="text-blue-400 text-[10px] font-bold tracking-[0.2em] uppercase">Estrategia</div>
                             <i class="fa-solid fa-bolt-lightning text-blue-500/50"></i>
                         </div>
-                        <div id="strat-return" class="text-5xl font-bold text-white mono tracking-tighter mb-2">+14.2%</div>
+                        <div class="text-5xl font-bold text-white mono tracking-tighter mb-2">+14.2%</div>
                         <div class="text-xs text-blue-400/60 mono uppercase tracking-widest">Retorno Acumulado</div>
                     </div>
                     
-                    <div class="card-rendimiento glass-panel p-8 border-slate-700/50">
+                    <div class="glass-panel p-8 border-slate-700/50">
                         <div class="flex justify-between items-start mb-4">
                             <div class="text-slate-400 text-[10px] font-bold tracking-[0.2em] uppercase">Benchmark</div>
                             <i class="fa-solid fa-gauge-high text-slate-600"></i>
                         </div>
-                        <div id="bench-return" class="text-5xl font-bold text-slate-300 mono tracking-tighter mb-2">+8.4%</div>
+                        <div class="text-5xl font-bold text-slate-300 mono tracking-tighter mb-2">+8.4%</div>
                         <div class="text-xs text-slate-500 mono uppercase tracking-widest">Retorno Mercado</div>
                     </div>
                 </div>
@@ -244,7 +191,6 @@
                     <div class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center flex-shrink-0">
                         <i class="fa-solid fa-circle-info text-blue-400"></i>
                     </div>
-                    <!-- Corregido: eliminado 'uppercase' y 'tracking-wider' para mostrar texto natural -->
                     <p class="text-[10px] text-slate-400 leading-relaxed italic">
                         El rendimiento incluye la optimización algorítmica de activos frente al Benchmark tradicional. Incluye comisiones y slippage. No incluye impuestos.
                     </p>
@@ -256,63 +202,26 @@
                     <h2 class="text-sm font-bold text-purple-500 uppercase tracking-[0.2em] mb-2">Visualización</h2>
                     <h3 class="text-3xl font-bold text-white tracking-tight">Evolución Histórica</h3>
                 </div>
-                <div class="glass-panel p-3 group">
-                    <div class="relative rounded-2xl overflow-hidden bg-slate-900/30">
-                        <div class="w-full aspect-[16/9] flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
-                             <img src="graph2.png" alt="Gráfica" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'text-slate-600 mono text-xs\'>[ HISTORICAL CHART DATA ]</div>'">
-                        </div>
+                <div class="glass-panel p-3">
+                    <div class="relative rounded-2xl overflow-hidden bg-slate-900/30 aspect-[16/9] flex items-center justify-center">
+                         <img src="graph2.png" alt="Gráfica" class="w-full h-full object-cover opacity-80" onerror="this.parentElement.innerHTML='<div class=\'text-slate-600 mono text-xs\'>[ HISTORICAL CHART DATA ]</div>'">
                     </div>
                 </div>
             </section>
         </div>
 
-        <!-- RENDIMIENTO ANUAL -->
-        <section>
-            <div class="mb-8">
-                <h2 class="text-sm font-bold text-amber-500 uppercase tracking-[0.2em] mb-2">Historial</h2>
-                <h3 class="text-3xl font-bold text-white tracking-tight">Detalle Anual</h3>
-            </div>
-            
-            <div class="glass-panel overflow-hidden border-amber-500/10">
-                <div class="table-container">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="text-slate-400 uppercase text-[10px] tracking-[0.15em]">
-                                <th class="p-5 font-semibold">Año Fiscal</th>
-                                <th class="p-5 font-semibold">Retorno Anualizado</th>
-                                <th class="p-5 font-semibold">Max Drawdown (Pérdida Máxima)</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tabla-historico" class="divide-y divide-white/5 mono text-sm">
-                            <tr>
-                                <td class="p-5 text-white font-bold">2025</td>
-                                <td class="p-5 text-emerald-400">+18.4%</td>
-                                <td class="p-5 text-red-400/70">-4.2%</td>
-                            </tr>
-                            <tr>
-                                <td class="p-5 text-white font-bold">2024</td>
-                                <td class="p-5 text-emerald-400">+12.1%</td>
-                                <td class="p-5 text-red-400/70">-6.8%</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Disclaimer y Footer -->
-        <footer class="space-y-12">
-            <div class="max-w-3xl mx-auto">
+        <!-- FOOTER -->
+        <footer class="pt-12 border-t border-white/5">
+            <div class="max-w-3xl mx-auto mb-12">
                 <div class="glass-panel p-10 bg-amber-500/5 border-amber-500/10 text-center">
                     <h4 class="text-amber-500 font-bold uppercase tracking-widest text-[10px] mb-4">Aviso Legal Importante</h4>
                     <p class="text-slate-400 text-xs leading-relaxed">
                         Toda la información presente en esta web debe considerarse como una opinión y en ningún caso como un asesoramiento financiero o de inversión. 
-                        Las rentabilidades pasadas no garantizan resultados futuros. El usuario es el único responsable de sus decisiones de inversión.
+                        Las rentabilidades pasadas no garantizan resultados futuros.
                     </p>
                 </div>
             </div>
-
-            <div class="text-center">
+            <div class="text-center pb-8">
                 <p class="text-slate-600 text-[10px] font-bold uppercase tracking-[0.3em]">
                     © 2026 REPLICALGO <span class="mx-3 text-slate-800">|</span> 
                     <span class="inline-flex items-center"><i class="fa-solid fa-robot mr-2 text-blue-500/50"></i> Master Bot Protocol</span>
@@ -321,6 +230,5 @@
         </footer>
     </div>
 
-    <script src="script.js?t=20260415114128"></script>
 </body>
 </html>
