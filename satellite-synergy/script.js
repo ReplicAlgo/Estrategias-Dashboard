@@ -1,86 +1,81 @@
 /**
- * Script Dashboard - Versión Ultra-Robusta
- * Soluciona problemas de rutas y caché en GitHub Pages
+ * Script Dashboard - Versión con Limpieza de Datos
+ * Soluciona el error de valores 'NaN' provenientes de Python/RealTest
  */
 document.addEventListener('DOMContentLoaded', () => {
-    // Generamos un parámetro único basado en el tiempo para evitar la caché de GitHub
     const cacheBuster = new Date().getTime();
-    
-    // Intentamos cargar el archivo con el parámetro anti-caché
     const jsonUrl = `data_web.json?v=${cacheBuster}`;
 
-    console.log(`Solicitando datos a: ${jsonUrl}`);
+    console.log(`Iniciando carga de: ${jsonUrl}`);
 
-    function loadData() {
-        fetch(jsonUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`No se pudo cargar el JSON (Status: ${response.status})`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log("Datos cargados con éxito:", data);
-                renderDashboard(data);
-            })
-            .catch(error => {
-                console.error("Error crítico:", error);
-                // Si falla, mostramos un mensaje visual en el dashboard
-                const container = document.getElementById('nav-title');
-                if (container) {
-                    container.innerHTML = `<span class="text-red-500 font-bold">Error: Verifica data_web.json</span>`;
-                }
-            });
+    async function loadAndFixData() {
+        try {
+            const response = await fetch(jsonUrl);
+            if (!response.ok) throw new Error("Archivo no encontrado en el servidor");
+
+            let rawText = await response.text();
+            
+            // LIMPIEZA CRÍTICA: 
+            // El JSON estándar no permite NaN. Lo reemplazamos por null para que no rompa el script.
+            const cleanText = rawText.replace(/:\s?NaN/g, ': null');
+            
+            const data = JSON.parse(cleanText);
+            console.log("JSON procesado y limpiado con éxito");
+            renderDashboard(data);
+            
+        } catch (error) {
+            console.error("Error cargando datos:", error);
+            const container = document.getElementById('nav-title');
+            if (container) {
+                container.innerHTML = `<span class="text-red-500 font-bold">Error de Formato en data_web.json</span>`;
+            }
+        }
     }
 
     function renderDashboard(data) {
-        // 1. Actualizar Títulos
-        const strategyName = data.StrategyName || "Estrategia";
-        document.title = `ReplicAlgo | ${strategyName}`;
+        // Títulos y Meta
+        document.title = `ReplicAlgo | ${data.StrategyName || 'Estrategia'}`;
         const navTitle = document.getElementById('nav-title');
-        if (navTitle) navTitle.textContent = strategyName;
-
+        if (navTitle) navTitle.textContent = data.StrategyName || "Sin Nombre";
+        
         const fechaEl = document.getElementById('fecha-update');
-        if (fechaEl) fechaEl.textContent = data.Fecha || "Actualizado";
+        if (fechaEl) fechaEl.textContent = data.Fecha || "---";
 
+        // Actualizar Mes en encabezados
         const mesActual = data.MesActual || "";
         ['mes-ordenes', 'mes-portafolio'].forEach(id => {
             const el = document.getElementById(id);
             if (el) el.textContent = mesActual ? `(${mesActual})` : "";
         });
 
-        // 2. Tabla de Órdenes (Según lógica de RealTest_Automation.py)
+        // Renderizar Órdenes
         const ordenesBody = document.getElementById('tabla-ordenes');
         if (ordenesBody) {
             const ordenes = data.Ordenes || [];
-            if (ordenes.length > 0) {
-                ordenesBody.innerHTML = ordenes.map(o => `
-                    <tr class="hover:bg-white/5 border-b border-white/5 transition-colors">
-                        <td class="p-5">
-                            <span class="${o.Accion === 'COMPRAR' ? 'text-emerald-400' : 'text-red-400'} font-bold text-xs uppercase">
-                                ${o.Accion}
-                            </span>
-                        </td>
-                        <td class="p-5 font-bold mono text-blue-400">${o.Simbolo}</td>
-                        <td class="p-5">
-                            <div class="text-slate-200 font-medium">${o.Nombre}</div>
-                            <div class="text-[10px] text-slate-500 uppercase">${o.MGC !== '-' ? 'MGC: ' + o.MGC : ''}</div>
-                        </td>
-                        <td class="p-5 text-slate-400 text-xs italic">${o.Instruccion}</td>
-                        <td class="p-5 text-right font-bold mono text-white">${o.Cantidad}</td>
-                    </tr>
-                `).join('');
-            } else {
-                ordenesBody.innerHTML = `<tr><td colspan="5" class="p-10 text-center text-slate-500 italic">No hay órdenes para este periodo</td></tr>`;
-            }
+            ordenesBody.innerHTML = ordenes.length > 0 ? ordenes.map(o => `
+                <tr class="hover:bg-white/5 border-b border-white/5">
+                    <td class="p-5">
+                        <span class="${o.Accion === 'COMPRAR' ? 'text-emerald-400' : 'text-red-400'} font-bold text-xs">
+                            ${o.Accion}
+                        </span>
+                    </td>
+                    <td class="p-5 font-bold mono text-blue-400">${o.Simbolo}</td>
+                    <td class="p-5">
+                        <div class="text-slate-200 font-medium">${o.Nombre}</div>
+                        <div class="text-[10px] text-slate-500 uppercase">${(o.MGC && o.MGC !== 'NaN') ? 'MGC: ' + o.MGC : ''}</div>
+                    </td>
+                    <td class="p-5 text-slate-400 text-xs italic">${o.Instruccion}</td>
+                    <td class="p-5 text-right font-bold mono text-white">${o.Cantidad}</td>
+                </tr>
+            `).join('') : '<tr><td colspan="5" class="p-10 text-center text-slate-500 italic">No hay órdenes pendientes</td></tr>';
         }
 
-        // 3. Portafolio Actual
+        // Renderizar Portafolio
         const portafolioBody = document.getElementById('tabla-portafolio');
         if (portafolioBody) {
             const portafolio = data.Portafolio || [];
             portafolioBody.innerHTML = portafolio.map(p => `
-                <tr class="hover:bg-white/5 border-b border-white/5 transition-colors">
+                <tr class="hover:bg-white/5 border-b border-white/5">
                     <td class="p-5 font-bold mono text-blue-400">${p.Simbolo}</td>
                     <td class="p-5 text-slate-300">${p.Nombre}</td>
                     <td class="p-5 text-right font-bold mono text-white">${p.Peso}</td>
@@ -93,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `).join('');
         }
 
-        // 4. Performance Metrics
+        // Performance Metrics
         const res = data.Historico?.resumen || {};
         const updateVal = (id, val) => {
             const el = document.getElementById(id);
@@ -104,10 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
         updateVal('strat-maxdd', res.MaxDD_Strat);
         updateVal('bench-maxdd', res.MaxDD_Bench);
 
-        // 5. Tabla Anual
+        // Tabla Anual
         const annualBody = document.getElementById('tabla-historico');
-        const historico = data.Historico?.tabla_anual || [];
         if (annualBody) {
+            const historico = data.Historico?.tabla_anual || [];
             annualBody.innerHTML = historico.map(h => `
                 <tr class="border-b border-white/5">
                     <td class="p-4 text-slate-400">${h.Año}</td>
@@ -119,14 +114,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function getEstadoClass(estado) {
-        switch(estado) {
-            case 'NUEVA COMPRA': return 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30';
-            case 'AUMENTAR': return 'bg-blue-500/20 text-blue-400 border border-blue-500/30';
-            case 'REDUCIR': return 'bg-amber-500/20 text-amber-400 border border-amber-500/30';
-            case 'CERRAR': return 'bg-red-500/20 text-red-400 border border-red-500/30';
-            default: return 'bg-slate-800 text-slate-500 border border-white/5';
-        }
+        if (!estado) return '';
+        const e = estado.toUpperCase();
+        if (e.includes('COMPRA')) return 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30';
+        if (e.includes('AUMENTAR')) return 'bg-blue-500/20 text-blue-400 border border-blue-500/30';
+        if (e.includes('CERRAR') || e.includes('VENDER')) return 'bg-red-500/20 text-red-400 border border-red-500/30';
+        return 'bg-slate-800 text-slate-400 border border-white/10';
     }
 
-    loadData();
+    loadAndFixData();
 });
