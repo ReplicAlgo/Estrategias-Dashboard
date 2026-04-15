@@ -1,6 +1,7 @@
 /**
  * Script para el Dashboard de Estrategias Individuales
  * Maneja la carga de datos con limpieza de errores 'NaN' e inyecta el contenido original.
+ * Versión final sin referencias internas.
  */
 document.addEventListener('DOMContentLoaded', () => {
     const timestamp = new Date().getTime();
@@ -11,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch(jsonUrl);
             if (!response.ok) throw new Error(`HTTP ${response.status}`);
             
-            // Leemos como texto para poder limpiar los 'NaN' antes de que rompan el JSON.parse
+            // Limpieza preventiva de valores NaN en el JSON
             let rawText = await response.text();
             const cleanText = rawText.replace(/:\s?NaN/g, ': null');
             const data = JSON.parse(cleanText);
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (document.getElementById('mes-ordenes')) document.getElementById('mes-ordenes').textContent = mesActual;
             if (document.getElementById('mes-portafolio')) document.getElementById('mes-portafolio').textContent = mesActual;
 
-            // 4. Órdenes del Mes (Restaurando el diseño original del Check Mark)
+            // 4. Órdenes del Mes (Diseño Original con Check Mark)
             const ordenesBody = document.getElementById('tabla-ordenes');
             if (ordenesBody) {
                 if (data.Ordenes && data.Ordenes.length > 0) {
@@ -38,16 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         <tr class="hover:bg-white/5 transition-colors">
                             <td class="p-5"><span class="${ord.Accion === 'COMPRAR' ? 'accion-comprar' : 'accion-vender'}">${ord.Accion}</span></td>
                             <td class="p-5 font-bold mono text-blue-400">${ord.Simbolo}</td>
-                            <td class="p-5 text-slate-300 font-medium">
-                                ${ord.Nombre}
-                                ${ord.MGC ? `<div class="text-[10px] text-slate-500 uppercase">MGC: ${ord.MGC}</div>` : ''}
-                            </td>
+                            <td class="p-5 text-slate-300 font-medium">${ord.Nombre}</td>
                             <td class="p-5 text-slate-400 text-xs italic">${ord.Instruccion}</td>
                             <td class="p-5 text-right pr-12 font-bold mono text-white">${ord.Cantidad}</td>
                         </tr>
                     `).join('');
                 } else {
-                    // EL DISEÑO ORIGINAL DEL CHECK MARK:
                     ordenesBody.innerHTML = `
                         <tr>
                             <td colspan="5" class="p-12 text-center">
@@ -99,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }).join('');
             }
         } catch (err) {
-            console.error("❌ Error cargando o procesando el JSON:", err);
+            console.error("❌ Error en la carga de datos:", err);
         }
     }
 
