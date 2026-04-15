@@ -38,24 +38,39 @@ document.addEventListener('DOMContentLoaded', () => {
             // 4. TABLA DE ÓRDENES - (5 Columnas en el HTML)
             // Se alinea la Cantidad a la derecha y se mantiene el estilo azul para los Tickers
             const ordersBody = document.getElementById('tabla-ordenes');
-            if (ordersBody && data.Ordenes) {
-                ordersBody.innerHTML = data.Ordenes.map(o => `
-                    <tr class="hover:bg-white/5 transition-colors">
-                        <td class="p-5 ${o.Accion === 'COMPRAR' ? 'accion-comprar' : 'accion-vender'} font-bold">
-                            ${o.Accion}
-                        </td>
-                        <td class="p-5 font-bold text-blue-400 mono italic">${o.Simbolo || o.Ticker}</td>
-                        <td class="p-5 text-slate-300 font-medium">${o.Nombre}</td>
-                        <td class="p-5 text-slate-400 italic">${o.Instruccion}</td>
-                        <td class="p-5 text-right pr-12 mono text-slate-200 font-bold">
-                            ${o.Cantidad || o.MGC || '-'}
-                        </td>
-                    </tr>
-                `).join('');
+            if (ordersBody) {
+                // Verificamos si hay órdenes y si el array tiene contenido
+                if (data.Ordenes && data.Ordenes.length > 0) {
+                    ordersBody.innerHTML = data.Ordenes.map(o => `
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-5 ${o.Accion === 'COMPRAR' ? 'accion-comprar' : 'accion-vender'} font-bold">
+                                ${o.Accion}
+                            </td>
+                            <td class="p-5 font-bold text-blue-400 mono italic">${o.Simbolo || o.Ticker}</td>
+                            <td class="p-5 text-slate-300 font-medium">${o.Nombre}</td>
+                            <td class="p-5 text-slate-400 italic">${o.Instruccion}</td>
+                            <td class="p-5 text-right pr-12 mono text-slate-200 font-bold">
+                                ${o.Cantidad || o.MGC || '-'}
+                            </td>
+                        </tr>
+                    `).join('');
+                } else {
+                    // Si NO hay órdenes, mostramos el letrero de "No hay cambios"
+                    ordersBody.innerHTML = `
+                        <tr>
+                            <td colspan="5" class="p-12 text-center">
+                                <div class="flex flex-col items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-slate-600 text-xl"></i>
+                                    <span class="text-slate-500 font-medium tracking-wide">No hay cambios este mes.</span>
+                                    <span class="text-slate-600 text-[10px] uppercase tracking-widest">Mantener posiciones actuales</span>
+                                </div>
+                            </td>
+                        </tr>
+                    `;
+                }
             }
 
             // 5. TABLA DE PORTAFOLIO - (4 Columnas en el HTML)
-            // IMPORTANTE: Se ha eliminado la columna extra de MGC para evitar desalineación
             const portfolioBody = document.getElementById('tabla-portafolio');
             if (portfolioBody && data.Portafolio) {
                 portfolioBody.innerHTML = data.Portafolio.map(p => {
