@@ -6,6 +6,7 @@
         {
             "Accion": "VENDER",
             "Simbolo": "IEF",
+            "Cantidad": "100%",
             "Nombre": "Bonos del Tesoro Mediano Plazo",
             "Instruccion": "Vender al mercado en la apertura",
             "MGC": NaN
@@ -13,6 +14,7 @@
         {
             "Accion": "COMPRAR",
             "Simbolo": "FLOT",
+            "Cantidad": "25%",
             "Nombre": "Bonos Tasa Flotante",
             "Instruccion": "Comprar al mercado en la apertura",
             "MGC": NaN
@@ -20,6 +22,7 @@
         {
             "Accion": "VENDER",
             "Simbolo": "SPY",
+            "Cantidad": "100%",
             "Nombre": "S&P 500",
             "Instruccion": "Vender al mercado en la apertura",
             "MGC": "CSPX / VOO / SPXS"
@@ -27,6 +30,7 @@
         {
             "Accion": "VENDER",
             "Simbolo": "TLH",
+            "Cantidad": "100%",
             "Nombre": "Bonos del Tesoro Largo Plazo",
             "Instruccion": "Vender al mercado en la apertura",
             "MGC": NaN
@@ -41,15 +45,15 @@
             "MGC": "-"
         },
         {
-            "Simbolo": "GLD",
-            "Nombre": "Oro",
+            "Simbolo": "DBA",
+            "Nombre": "Agricultura",
             "Peso": "3%",
             "Estado": "MANTENER",
             "MGC": NaN
         },
         {
-            "Simbolo": "DBA",
-            "Nombre": "Agricultura",
+            "Simbolo": "GLD",
+            "Nombre": "Oro",
             "Peso": "3%",
             "Estado": "MANTENER",
             "MGC": NaN

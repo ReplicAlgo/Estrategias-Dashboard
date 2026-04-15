@@ -5,18 +5,18 @@
     "Ordenes": [],
     "Portafolio": [
         {
-            "Simbolo": "QQQ",
-            "Nombre": "Nasdaq 100",
-            "Peso": "50%",
-            "Estado": "MANTENER",
-            "MGC": "EQAC"
-        },
-        {
             "Simbolo": "EEM",
             "Nombre": "Mercados Emergentes",
             "Peso": "50%",
             "Estado": "MANTENER",
             "MGC": "EIMI "
+        },
+        {
+            "Simbolo": "QQQ",
+            "Nombre": "Nasdaq 100",
+            "Peso": "50%",
+            "Estado": "MANTENER",
+            "MGC": "EQAC"
         }
     ],
     "Historico": {

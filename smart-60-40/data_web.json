@@ -6,6 +6,7 @@
         {
             "Accion": "VENDER",
             "Simbolo": "TLT",
+            "Cantidad": "100%",
             "Nombre": "Bonos del Tesoro Largo Plazo",
             "Instruccion": "Vender al mercado en la apertura",
             "MGC": "SGLD"
@@ -13,6 +14,7 @@
         {
             "Accion": "COMPRAR",
             "Simbolo": "UUP",
+            "Cantidad": "20%",
             "Nombre": "Dólar Estadounidense",
             "Instruccion": "Comprar al mercado en la apertura",
             "MGC": "CBU0"
@@ -20,18 +22,18 @@
     ],
     "Portafolio": [
         {
-            "Simbolo": "QQQ",
-            "Nombre": "Nasdaq 100",
-            "Peso": "30%",
-            "Estado": "MANTENER",
-            "MGC": "EQAC"
-        },
-        {
             "Simbolo": "EEM",
             "Nombre": "Mercados Emergentes",
             "Peso": "30%",
             "Estado": "MANTENER",
             "MGC": "EIMI "
+        },
+        {
+            "Simbolo": "QQQ",
+            "Nombre": "Nasdaq 100",
+            "Peso": "30%",
+            "Estado": "MANTENER",
+            "MGC": "EQAC"
         },
         {
             "Simbolo": "VTIP",
