@@ -23,7 +23,10 @@
         /* Animación de fondo */
         .bg-mesh {
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
                         radial-gradient(circle at 10% 20%, rgba(30, 64, 175, 0.05) 0%, transparent 40%);
             z-index: -1;
@@ -41,7 +44,10 @@
         .glass-card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 100%);
             pointer-events: none;
         }
@@ -67,12 +73,14 @@
         .gradient-border {
             position: relative;
         }
-        
+
         .gradient-border::after {
             content: '';
             position: absolute;
-            bottom: 0; left: 50%;
-            width: 0; height: 2px;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
             background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
             transition: width 0.4s ease, left 0.4s ease;
         }
@@ -89,7 +97,8 @@
         .badge-pulse::before {
             content: '';
             position: absolute;
-            width: 100%; height: 100%;
+            width: 100%;
+            height: 100%;
             background: inherit;
             border-radius: inherit;
             animation: pulse-ring 2s infinite;
@@ -110,18 +119,19 @@
     <main class="max-w-7xl mx-auto px-6 py-24 relative">
         
         <!-- Header -->
-        <header class="text-center mb-24">
+        <header class="text-center mb-16">
             <div class="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-8 badge-pulse">
                 <span class="mr-2">●</span> Sistemas Algorítmicos Activos
             </div>
             <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6">
-                Nuestros<span class="text-blue-500 glow-text">Modelos</span>
+                Nuestros <span class="text-blue-500 glow-text">Modelos</span>
             </h1>
             <p class="text-xl text-slate-400 max-w-4xl mx-auto leading-relaxed">
                 El mayor enemigo del inversionista no es el mercado, sino sus propias emociones. 
                 <span class="text-slate-200 block md:inline">Mantenemos la calma matemática sin importar el mercado.</span>
             </p>
-            <p class="mt-8 text-slate-400 max-w-2xl mx-auto italic opacity-80">
+            <!-- Cambio solicitado: Sin max-w para una sola línea, texto más grande y margen inferior reducido -->
+            <p class="mt-8 text-slate-400 text-xl italic opacity-80 whitespace-nowrap overflow-hidden text-ellipsis">
                 Accede a herramientas que complementan tu cartera y acompañan tu camino de inversión.
             </p>
         </header>
@@ -215,7 +225,7 @@
                 <h4 class="text-amber-400 font-bold uppercase tracking-widest text-sm mb-4">Aviso de Riesgo</h4>
                 <p class="text-slate-400 text-sm leading-relaxed">
                     Toda la información presente en esta web debe considerarse como una opinión y en ningún caso como un asesoramiento financiero o de inversión. 
-                    Las rentabilidades pasadas no garantizan resultados futuros. Tú eres el único responsable de tus decisiones financieras. Consulta a tu asesor tributario y fianciero antes de invertir. 
+                    Las rentabilidades pasadas no garantizan resultados futuros. Tú eres el único responsable de tus decisiones financieras. Consulta a tu asesor tributario y financiero antes de invertir. 
                 </p>
             </div>
             
