@@ -3,7 +3,7 @@
  * Maneja la carga de datos desde data_web.json e inyecta el contenido en las tablas.
  */
 document.addEventListener('DOMContentLoaded', () => {
-    // Usamos un timestamp para evitar que el navegador guarde en caché versiones viejas del JSON
+    // Usamos un timestamp para evitar caché
     const timestamp = new Date().getTime();
 
     fetch(`data_web.json?t=${timestamp}`)
@@ -14,109 +14,107 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             console.log("✅ Datos cargados correctamente:", data.StrategyName);
 
-            // 1. Actualizar Título de la Estrategia en la Navbar
+            // 1. Títulos y Fecha
             const navTitle = document.getElementById('nav-title');
-            if (navTitle) {
-                navTitle.innerHTML = `<i class="fa-solid fa-chart-line text-blue-400"></i> ${data.StrategyName}`;
-            }
+            if (navTitle) navTitle.innerHTML = `<i class="fa-solid fa-chart-line text-blue-400"></i> ${data.StrategyName}`;
             document.title = `ReplicAlgo | ${data.StrategyName}`;
 
-            // 2. Actualizar Fecha de última actualización (barra superior)
             const fechaEl = document.getElementById('fecha-update');
-            if (fechaEl) {
-                fechaEl.textContent = data.Fecha || data.MesActual || "Actualizado";
-            }
+            if (fechaEl) fechaEl.textContent = data.Fecha || data.MesActual || "Actualizado";
 
-            // 3. Mes al lado de los títulos de las secciones
             const mesActual = data.MesActual || "";
-            const tituloOrdenes = document.getElementById('mes-ordenes');
-            const tituloPortafolio = document.getElementById('mes-portafolio');
+            const tOrdenes = document.getElementById('mes-ordenes');
+            const tPortafolio = document.getElementById('mes-portafolio');
+            if (tOrdenes) tOrdenes.textContent = mesActual ? `(${mesActual})` : '';
+            if (tPortafolio) tPortafolio.textContent = mesActual ? `(${mesActual})` : '';
 
-            if (tituloOrdenes) tituloOrdenes.textContent = mesActual ? `(${mesActual})` : '';
-            if (tituloPortafolio) tituloPortafolio.textContent = mesActual ? `(${mesActual})` : '';
-
-            // 4. TABLA DE ÓRDENES - (5 Columnas en el HTML)
-            // Se alinea la Cantidad a la derecha y se mantiene el estilo azul para los Tickers
+            // 2. Tabla de Órdenes
             const ordersBody = document.getElementById('tabla-ordenes');
             if (ordersBody) {
-                // Verificamos si hay órdenes y si el array tiene contenido
                 if (data.Ordenes && data.Ordenes.length > 0) {
                     ordersBody.innerHTML = data.Ordenes.map(o => `
-                        <tr class="hover:bg-white/5 transition-colors">
-                            <td class="p-5 ${o.Accion === 'COMPRAR' ? 'accion-comprar' : 'accion-vender'} font-bold">
+                        <tr>
+                            <td class="p-5 ${o.Accion === 'COMPRAR' ? 'text-emerald-400 font-bold' : 'text-red-400 font-bold'}">
                                 ${o.Accion}
                             </td>
-                            <td class="p-5 font-bold text-blue-400 mono italic">${o.Simbolo || o.Ticker}</td>
-                            <td class="p-5 text-slate-300 font-medium">${o.Nombre}</td>
-                            <td class="p-5 text-slate-400 italic">${o.Instruccion}</td>
-                            <td class="p-5 text-right pr-12 mono text-slate-200 font-bold">
-                                ${o.Cantidad || o.MGC || '-'}
+                            <td class="p-5 font-bold text-blue-400 mono">${o.Simbolo}</td>
+                            <td class="p-5 text-slate-300">
+                                <div class="font-medium">${o.Nombre}</div>
+                                <div class="text-[10px] text-slate-500 uppercase tracking-tighter">${o.Cantidad}</div>
                             </td>
+                            <td class="p-5 italic text-slate-400 text-xs">${o.Instruccion}</td>
+                            <td class="p-5 text-right font-mono text-slate-500 pr-10">${o.MGC || '-'}</td>
                         </tr>
                     `).join('');
                 } else {
-                    // Si NO hay órdenes, mostramos el letrero de "No hay cambios"
-                    ordersBody.innerHTML = `
-                        <tr>
-                            <td colspan="5" class="p-12 text-center">
-                                <div class="flex flex-col items-center gap-2">
-                                    <i class="fa-solid fa-circle-check text-slate-600 text-xl"></i>
-                                    <span class="text-slate-500 font-medium tracking-wide">No hay cambios este mes.</span>
-                                    <span class="text-slate-600 text-[10px] uppercase tracking-widest">Mantener posiciones actuales</span>
-                                </div>
-                            </td>
-                        </tr>
-                    `;
+                    ordersBody.innerHTML = `<tr><td colspan="5" class="p-10 text-center text-slate-500 italic">No hay órdenes para este periodo. Mantener posiciones actuales.</td></tr>`;
                 }
             }
 
-            // 5. TABLA DE PORTAFOLIO - (4 Columnas en el HTML)
+            // 3. Tabla de Portafolio
             const portfolioBody = document.getElementById('tabla-portafolio');
             if (portfolioBody && data.Portafolio) {
                 portfolioBody.innerHTML = data.Portafolio.map(p => {
-                    const clEstado = p.Estado === 'NUEVA COMPRA' ? 'estado-nueva-compra' : 'estado-mantenido';
+                    const statusClass = p.Estado === 'NUEVA COMPRA' ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 
+                                      p.Estado === 'CERRAR' ? 'bg-red-500/10 text-red-400 border border-red-500/20' : 
+                                      'bg-slate-800 text-slate-400 border border-white/5';
                     return `
-                        <tr class="hover:bg-white/5 transition-colors">
-                            <td class="p-5 font-bold text-blue-400 mono italic">${p.Simbolo || p.Ticker}</td>
-                            <td class="p-5 text-slate-300 font-medium">${p.Nombre || p.Activo}</td>
-                            <td class="p-5 text-right font-bold text-white mono text-base">${p.Peso || p.PesoActual}</td>
+                        <tr>
+                            <td class="p-5 font-bold text-blue-400 mono">${p.Simbolo}</td>
+                            <td class="p-5 text-slate-300">${p.Nombre}</td>
+                            <td class="p-5 text-right font-bold text-slate-200 mono">${p.Peso}</td>
                             <td class="p-5 text-center">
-                                <span class="${clEstado}">${p.Estado}</span>
+                                <span class="px-3 py-1 rounded-full text-[10px] uppercase font-bold ${statusClass}">
+                                    ${p.Estado}
+                                </span>
                             </td>
+                            <td class="p-5 text-right font-mono text-slate-500 pr-10">${p.MGC || '-'}</td>
                         </tr>
                     `;
                 }).join('');
             }
 
-            // 6. Resumen de Performance (Cajas de Rentabilidad)
-            const stratReturn = document.getElementById('strat-return');
-            const benchReturn = document.getElementById('bench-return');
-            
+            // 4. Rendimiento y MaxDD (CAMBIO SOLICITADO)
             const res = data.Historico?.resumen;
-            if (stratReturn && res) stratReturn.textContent = res.Strategy || res.Estrategia || "--%";
-            if (benchReturn && res) benchReturn.textContent = res.Benchmark || "--%";
+            if (res) {
+                // Retornos Acumulados
+                const sReturn = document.getElementById('strat-return');
+                const bReturn = document.getElementById('bench-return');
+                if (sReturn) sReturn.textContent = res.Strategy || res.Estrategia || "--%";
+                if (bReturn) bReturn.textContent = res.Benchmark || "--%";
 
-            // 7. Tabla Histórico Anual (Año, Retorno, Max DD)
+                // Max Drawdowns (Nuevos campos)
+                const sMaxDD = document.getElementById('strat-maxdd');
+                const bMaxDD = document.getElementById('bench-maxdd');
+                
+                // MaxDD Estrategia
+                if (sMaxDD) {
+                    const val = res.MaxDD_Strat || res.MaxDD_Strategy || "--%";
+                    sMaxDD.textContent = val;
+                }
+                
+                // MaxDD Benchmark
+                if (bMaxDD) {
+                    const val = res.MaxDD_Bench || res.MaxDD_Benchmark || "--%";
+                    bMaxDD.textContent = val;
+                }
+            }
+
+            // 5. Tabla Histórica Anual
             const annualBody = document.getElementById('tabla-historico');
             if (annualBody && data.Historico?.tabla_anual) {
                 annualBody.innerHTML = data.Historico.tabla_anual.map(row => {
-                    const retorno = row.Retorno || '';
-                    const esPositivo = retorno && !retorno.includes('-');
+                    const ret = row.Retorno || '';
+                    const isPos = ret && !ret.includes('-');
                     return `
                         <tr class="hover:bg-white/5 transition-colors">
                             <td class="p-4 text-slate-400 font-medium">${row.Año}</td>
-                            <td class="p-4 font-bold ${esPositivo ? 'text-emerald-400' : 'text-red-400'}">
-                                ${retorno}
-                            </td>
+                            <td class="p-4 font-bold ${isPos ? 'text-emerald-400' : 'text-red-400'}">${ret}</td>
                             <td class="p-4 text-red-400/80 mono">${row.MaxPerdida || row.MaxDD || '-'}</td>
                         </tr>
                     `;
                 }).join('');
             }
-
-            console.log("🎉 Dashboard actualizado con éxito");
         })
-        .catch(err => {
-            console.error("❌ Error cargando el JSON:", err);
-        });
+        .catch(err => console.error("❌ Error cargando JSON:", err));
 });
