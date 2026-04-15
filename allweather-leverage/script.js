@@ -1,5 +1,9 @@
+/**
+ * Script para el Dashboard de Estrategias Individuales
+ * Maneja la carga de datos desde data_web.json e inyecta el contenido en las tablas.
+ */
 document.addEventListener('DOMContentLoaded', () => {
-    // Usamos un timestamp para evitar que el navegador guarde en caché una versión vieja del JSON
+    // Usamos un timestamp para evitar que el navegador guarde en caché versiones viejas del JSON
     const timestamp = new Date().getTime();
 
     fetch(`data_web.json?t=${timestamp}`)
@@ -31,7 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (tituloOrdenes) tituloOrdenes.textContent = mesActual ? `(${mesActual})` : '';
             if (tituloPortafolio) tituloPortafolio.textContent = mesActual ? `(${mesActual})` : '';
 
-            // 4. TABLA DE ÓRDENES - (5 Columnas)
+            // 4. TABLA DE ÓRDENES - (5 Columnas en el HTML)
+            // Se alinea la Cantidad a la derecha y se mantiene el estilo azul para los Tickers
             const ordersBody = document.getElementById('tabla-ordenes');
             if (ordersBody && data.Ordenes) {
                 ordersBody.innerHTML = data.Ordenes.map(o => `
@@ -49,8 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 `).join('');
             }
 
-            // 5. TABLA DE PORTAFOLIO - (4 Columnas: Ticker, Activo, Peso, Estado)
-            // Se elimina por completo la inyección de la columna MGC aquí
+            // 5. TABLA DE PORTAFOLIO - (4 Columnas en el HTML)
+            // IMPORTANTE: Se ha eliminado la columna extra de MGC para evitar desalineación
             const portfolioBody = document.getElementById('tabla-portafolio');
             if (portfolioBody && data.Portafolio) {
                 portfolioBody.innerHTML = data.Portafolio.map(p => {
@@ -68,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }).join('');
             }
 
-            // 6. Resumen de Performance (Cajas superiores)
+            // 6. Resumen de Performance (Cajas de Rentabilidad)
             const stratReturn = document.getElementById('strat-return');
             const benchReturn = document.getElementById('bench-return');
             
@@ -76,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (stratReturn && res) stratReturn.textContent = res.Strategy || res.Estrategia || "--%";
             if (benchReturn && res) benchReturn.textContent = res.Benchmark || "--%";
 
-            // 7. Tabla Histórico Anual
+            // 7. Tabla Histórico Anual (Año, Retorno, Max DD)
             const annualBody = document.getElementById('tabla-historico');
             if (annualBody && data.Historico?.tabla_anual) {
                 annualBody.innerHTML = data.Historico.tabla_anual.map(row => {
@@ -94,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }).join('');
             }
 
-            console.log("🎉 Interfaz actualizada con los últimos datos");
+            console.log("🎉 Dashboard actualizado con éxito");
         })
         .catch(err => {
             console.error("❌ Error cargando el JSON:", err);
