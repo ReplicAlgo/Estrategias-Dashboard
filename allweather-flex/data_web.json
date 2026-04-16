@@ -1,56 +1,176 @@
 {
     "StrategyName": "AllWeather FLEX",
-    "MesActual": "Abril 2026",
-    "Fecha": "4/1/26",
-    "Ordenes": [],
-    "Portafolio": [
+    "MesActual": "Abril 2025",
+    "Fecha": "4/1/25",
+    "Ordenes": [
         {
-            "Simbolo": "DBB",
-            "Nombre": "Metales Básicos",
-            "Peso": "14%",
-            "Estado": "MANTENER",
-            "MGC": "IDTP"
+            "Accion": "VENDER",
+            "Simbolo": "GLD",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Oro",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": NaN
         },
         {
-            "Simbolo": "EEM",
-            "Nombre": "Mercados Emergentes",
-            "Peso": "14%",
-            "Estado": "MANTENER",
-            "MGC": "EIMI "
+            "Accion": "VENDER",
+            "Simbolo": "IAU",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Oro",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "VENDER",
+            "Simbolo": "IVV",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "S&P 500",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "VENDER",
+            "Simbolo": "QQQ",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Nasdaq 100",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": "EQAC"
+        },
+        {
+            "Accion": "VENDER",
+            "Simbolo": "SPY",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "S&P 500",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": "CSPX / VOO / SPXS"
+        },
+        {
+            "Accion": "VENDER",
+            "Simbolo": "VUG",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Acciones de Crecimiento",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "VENDER",
+            "Simbolo": "GBTC",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Bitcoin",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "GLD",
+            "Cantidad": "14% del Portafolio",
+            "Nombre": "Oro",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "IAU",
+            "Cantidad": "14% del Portafolio",
+            "Nombre": "Oro",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "GBTC",
+            "Cantidad": "5% del Portafolio",
+            "Nombre": "Bitcoin",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "XLE",
+            "Cantidad": "14% del Portafolio",
+            "Nombre": "Energía",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "EFA",
+            "Cantidad": "14% del Portafolio",
+            "Nombre": "Mercados Desarrollados",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": "IDSE / ISAC //CEUU"
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "DBC",
+            "Cantidad": "14% del Portafolio",
+            "Nombre": "Materias Primas",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": "IB01*"
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "VEA",
+            "Cantidad": "14% del Portafolio",
+            "Nombre": "Mercados Desarrollados",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": NaN
+        }
+    ],
+    "Portafolio": [
+        {
+            "Simbolo": "GBTC",
+            "Nombre": "Bitcoin",
+            "Peso": "5%",
+            "Estado": "AUMENTAR",
+            "MGC": NaN
         },
         {
             "Simbolo": "GLD",
             "Nombre": "Oro",
             "Peso": "14%",
-            "Estado": "MANTENER",
+            "Estado": "AUMENTAR",
             "MGC": NaN
         },
         {
             "Simbolo": "IAU",
             "Nombre": "Oro",
             "Peso": "14%",
-            "Estado": "MANTENER",
-            "MGC": NaN
-        },
-        {
-            "Simbolo": "VEA",
-            "Nombre": "Mercados Desarrollados",
-            "Peso": "14%",
-            "Estado": "MANTENER",
+            "Estado": "AUMENTAR",
             "MGC": NaN
         },
         {
             "Simbolo": "XLE",
             "Nombre": "Energía",
             "Peso": "14%",
-            "Estado": "MANTENER",
+            "Estado": "NUEVA COMPRA",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "EFA",
+            "Nombre": "Mercados Desarrollados",
+            "Peso": "14%",
+            "Estado": "NUEVA COMPRA",
+            "MGC": "IDSE / ISAC //CEUU"
+        },
+        {
+            "Simbolo": "DBC",
+            "Nombre": "Materias Primas",
+            "Peso": "14%",
+            "Estado": "NUEVA COMPRA",
+            "MGC": "IB01*"
+        },
+        {
+            "Simbolo": "VEA",
+            "Nombre": "Mercados Desarrollados",
+            "Peso": "14%",
+            "Estado": "NUEVA COMPRA",
             "MGC": NaN
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "147.70%",
-            "Strategy": "589.26%",
+            "Benchmark": "105.61%",
+            "Strategy": "425.94%",
             "MaxDD_Bench": "-23.82%",
             "MaxDD_Strat": "-18.85%"
         },
@@ -147,13 +267,8 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "21.7%",
-                "MaxPerdida": "-13.7%"
-            },
-            {
-                "Año": 2026,
-                "Retorno": "4.2%",
-                "MaxPerdida": "-9.5%"
+                "Retorno": "0.6%",
+                "MaxPerdida": "-7.5%"
             }
         ]
     }
