@@ -5,19 +5,19 @@
     "Ordenes": [
         {
             "Accion": "VENDER",
-            "Simbolo": "TLT",
+            "Simbolo": "JNK",
             "Cantidad": "100% de la Posición",
-            "Nombre": "Bonos del Tesoro Largo Plazo",
+            "Nombre": "Bonos Alto Riesgo",
             "Instruccion": "Vender al mercado en la apertura",
-            "MGC": "SGLD"
+            "MGC": NaN
         },
         {
             "Accion": "COMPRAR",
-            "Simbolo": "UUP",
+            "Simbolo": "GLD",
             "Cantidad": "50% del Portafolio",
-            "Nombre": "Dólar Estadounidense",
+            "Nombre": "Oro",
             "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": "CBU0"
+            "MGC": NaN
         }
     ],
     "Portafolio": [
@@ -29,17 +29,17 @@
             "MGC": "IHYA"
         },
         {
-            "Simbolo": "UUP",
-            "Nombre": "Dólar Estadounidense",
+            "Simbolo": "GLD",
+            "Nombre": "Oro",
             "Peso": "50%",
             "Estado": "NUEVA COMPRA",
-            "MGC": "CBU0"
+            "MGC": NaN
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "76.04%",
-            "Strategy": "139.16%",
+            "Benchmark": "51.15%",
+            "Strategy": "99.45%",
             "MaxDD_Bench": "-14.43%",
             "MaxDD_Strat": "-19.20%"
         },
@@ -136,13 +136,8 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "24.1%",
-                "MaxPerdida": "-5.5%"
-            },
-            {
-                "Año": 2026,
-                "Retorno": "8.8%",
-                "MaxPerdida": "-7.7%"
+                "Retorno": "19.1%",
+                "MaxPerdida": "-4.1%"
             }
         ]
     }

@@ -12,12 +12,76 @@
             "MGC": NaN
         },
         {
+            "Accion": "VENDER",
+            "Simbolo": "UGL",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Oro Apalancado",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "VENDER",
+            "Simbolo": "EET",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Mercados Emergentes Apalancados",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "VENDER",
+            "Simbolo": "EFO",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Mercados Desarrollados Apalancados",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "VENDER",
+            "Simbolo": "GBTC",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Bitcoin",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
             "Accion": "COMPRAR",
-            "Simbolo": "DBC",
+            "Simbolo": "UGL",
             "Cantidad": "14% del Portafolio",
-            "Nombre": "Materias Primas",
+            "Nombre": "Oro Apalancado",
             "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": "IB01*"
+            "MGC": NaN
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "GBTC",
+            "Cantidad": "5% del Portafolio",
+            "Nombre": "Bitcoin",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "QLD",
+            "Cantidad": "14% del Portafolio",
+            "Nombre": "Nasdaq 100 Apalancado",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "EET",
+            "Cantidad": "14% del Portafolio",
+            "Nombre": "Mercados Emergentes Apalancados",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "EFO",
+            "Cantidad": "14% del Portafolio",
+            "Nombre": "Mercados Desarrollados Apalancados",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": NaN
         }
     ],
     "Portafolio": [
@@ -25,14 +89,21 @@
             "Simbolo": "EET",
             "Nombre": "Mercados Emergentes Apalancados",
             "Peso": "14%",
-            "Estado": "MANTENER",
+            "Estado": "AUMENTAR",
             "MGC": NaN
         },
         {
             "Simbolo": "EFO",
             "Nombre": "Mercados Desarrollados Apalancados",
             "Peso": "14%",
-            "Estado": "MANTENER",
+            "Estado": "AUMENTAR",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "GBTC",
+            "Nombre": "Bitcoin",
+            "Peso": "5%",
+            "Estado": "AUMENTAR",
             "MGC": NaN
         },
         {
@@ -43,31 +114,31 @@
             "MGC": NaN
         },
         {
+            "Simbolo": "QLD",
+            "Nombre": "Nasdaq 100 Apalancado",
+            "Peso": "14%",
+            "Estado": "AUMENTAR",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "SSO",
+            "Nombre": "S&P 500 Apalancado",
+            "Peso": "14%",
+            "Estado": "MANTENER",
+            "MGC": NaN
+        },
+        {
             "Simbolo": "UGL",
             "Nombre": "Oro Apalancado",
             "Peso": "14%",
-            "Estado": "MANTENER",
+            "Estado": "AUMENTAR",
             "MGC": NaN
-        },
-        {
-            "Simbolo": "XLE",
-            "Nombre": "Energía",
-            "Peso": "14%",
-            "Estado": "MANTENER",
-            "MGC": NaN
-        },
-        {
-            "Simbolo": "DBC",
-            "Nombre": "Materias Primas",
-            "Peso": "14%",
-            "Estado": "NUEVA COMPRA",
-            "MGC": "IB01*"
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "247.99%",
-            "Strategy": "1,291.38%",
+            "Benchmark": "254.28%",
+            "Strategy": "1,177.97%",
             "MaxDD_Bench": "-31.00%",
             "MaxDD_Strat": "-22.30%"
         },
@@ -164,13 +235,8 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "35.9%",
+                "Retorno": "28.5%",
                 "MaxPerdida": "-16.0%"
-            },
-            {
-                "Año": 2026,
-                "Retorno": "2.4%",
-                "MaxPerdida": "-16.8%"
             }
         ]
     }

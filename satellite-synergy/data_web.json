@@ -2,40 +2,7 @@
     "StrategyName": "Satellite Synergy",
     "MesActual": "Abril 2026",
     "Fecha": "16/04/2026",
-    "Ordenes": [
-        {
-            "Accion": "VENDER",
-            "Simbolo": "IEF",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Bonos del Tesoro Mediano Plazo",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "FLOT",
-            "Cantidad": "25% del Portafolio",
-            "Nombre": "Bonos Tasa Flotante",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "VENDER",
-            "Simbolo": "SPY",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "S&P 500",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": "CSPX / VOO / SPXS"
-        },
-        {
-            "Accion": "VENDER",
-            "Simbolo": "TLH",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Bonos del Tesoro Largo Plazo",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
-        }
-    ],
+    "Ordenes": [],
     "Portafolio": [
         {
             "Simbolo": "AOR",
@@ -52,6 +19,13 @@
             "MGC": NaN
         },
         {
+            "Simbolo": "EEM",
+            "Nombre": "Mercados Emergentes",
+            "Peso": "25%",
+            "Estado": "MANTENER",
+            "MGC": "EIMI "
+        },
+        {
             "Simbolo": "GLD",
             "Nombre": "Oro",
             "Peso": "3%",
@@ -66,17 +40,24 @@
             "MGC": NaN
         },
         {
-            "Simbolo": "FLOT",
-            "Nombre": "Bonos Tasa Flotante",
+            "Simbolo": "SPY",
+            "Nombre": "S&P 500",
             "Peso": "25%",
-            "Estado": "NUEVA COMPRA",
+            "Estado": "MANTENER",
+            "MGC": "CSPX / VOO / SPXS"
+        },
+        {
+            "Simbolo": "TIP",
+            "Nombre": "Bonos Protegidos contra Inflación",
+            "Peso": "20%",
+            "Estado": "MANTENER",
             "MGC": NaN
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "247.99%",
-            "Strategy": "267.93%",
+            "Benchmark": "254.28%",
+            "Strategy": "256.05%",
             "MaxDD_Bench": "-31.00%",
             "MaxDD_Strat": "-10.90%"
         },
@@ -173,13 +154,8 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "11.2%",
+                "Retorno": "8.7%",
                 "MaxPerdida": "-5.2%"
-            },
-            {
-                "Año": 2026,
-                "Retorno": "0.3%",
-                "MaxPerdida": "-6.8%"
             }
         ]
     }

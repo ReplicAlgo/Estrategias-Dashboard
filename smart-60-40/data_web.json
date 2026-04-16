@@ -5,35 +5,35 @@
     "Ordenes": [
         {
             "Accion": "VENDER",
-            "Simbolo": "TLT",
+            "Simbolo": "JNK",
             "Cantidad": "100% de la Posición",
-            "Nombre": "Bonos del Tesoro Largo Plazo",
+            "Nombre": "Bonos Alto Riesgo",
             "Instruccion": "Vender al mercado en la apertura",
-            "MGC": "SGLD"
+            "MGC": NaN
         },
         {
             "Accion": "COMPRAR",
-            "Simbolo": "UUP",
+            "Simbolo": "GLD",
             "Cantidad": "20% del Portafolio",
-            "Nombre": "Dólar Estadounidense",
+            "Nombre": "Oro",
             "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": "CBU0"
+            "MGC": NaN
         }
     ],
     "Portafolio": [
-        {
-            "Simbolo": "EEM",
-            "Nombre": "Mercados Emergentes",
-            "Peso": "30%",
-            "Estado": "MANTENER",
-            "MGC": "EIMI "
-        },
         {
             "Simbolo": "QQQ",
             "Nombre": "Nasdaq 100",
             "Peso": "30%",
             "Estado": "MANTENER",
             "MGC": "EQAC"
+        },
+        {
+            "Simbolo": "SPY",
+            "Nombre": "S&P 500",
+            "Peso": "30%",
+            "Estado": "MANTENER",
+            "MGC": "CSPX / VOO / SPXS"
         },
         {
             "Simbolo": "VTIP",
@@ -43,17 +43,17 @@
             "MGC": "IHYA"
         },
         {
-            "Simbolo": "UUP",
-            "Nombre": "Dólar Estadounidense",
+            "Simbolo": "GLD",
+            "Nombre": "Oro",
             "Peso": "20%",
             "Estado": "NUEVA COMPRA",
-            "MGC": "CBU0"
+            "MGC": NaN
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "236.67%",
-            "Strategy": "561.04%",
+            "Benchmark": "239.98%",
+            "Strategy": "531.24%",
             "MaxDD_Bench": "-31.90%",
             "MaxDD_Strat": "-36.91%"
         },
@@ -150,13 +150,8 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "22.4%",
+                "Retorno": "18.4%",
                 "MaxPerdida": "-13.3%"
-            },
-            {
-                "Año": 2026,
-                "Retorno": "0.7%",
-                "MaxPerdida": "-7.5%"
             }
         ]
     }

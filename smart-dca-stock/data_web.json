@@ -5,24 +5,24 @@
     "Ordenes": [],
     "Portafolio": [
         {
-            "Simbolo": "EEM",
-            "Nombre": "Mercados Emergentes",
-            "Peso": "50%",
-            "Estado": "MANTENER",
-            "MGC": "EIMI "
-        },
-        {
             "Simbolo": "QQQ",
             "Nombre": "Nasdaq 100",
             "Peso": "50%",
             "Estado": "MANTENER",
             "MGC": "EQAC"
+        },
+        {
+            "Simbolo": "SPY",
+            "Nombre": "S&P 500",
+            "Peso": "50%",
+            "Estado": "MANTENER",
+            "MGC": "CSPX / VOO / SPXS"
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "227.55%",
-            "Strategy": "803.24%",
+            "Benchmark": "217.75%",
+            "Strategy": "822.29%",
             "MaxDD_Bench": "-56.77%",
             "MaxDD_Strat": "-60.98%"
         },
@@ -119,13 +119,8 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "19.5%",
+                "Retorno": "16.4%",
                 "MaxPerdida": "-21.1%"
-            },
-            {
-                "Año": 2026,
-                "Retorno": "-4.4%",
-                "MaxPerdida": "-11.8%"
             }
         ]
     }
