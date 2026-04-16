@@ -1,8 +1,25 @@
 {
     "StrategyName": "AllWeather Leverage",
-    "MesActual": "Febrero 2026",
-    "Fecha": "2/2/26",
-    "Ordenes": [],
+    "MesActual": "Marzo 2026",
+    "Fecha": "3/2/26",
+    "Ordenes": [
+        {
+            "Accion": "VENDER",
+            "Simbolo": "SSO",
+            "Cantidad": "200% de la Posición",
+            "Nombre": "S&P 500 Apalancado",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "XLE",
+            "Cantidad": "14% del Portafolio",
+            "Nombre": "Energía",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": NaN
+        }
+    ],
     "Portafolio": [
         {
             "Simbolo": "EET",
@@ -33,24 +50,24 @@
             "MGC": NaN
         },
         {
-            "Simbolo": "SSO",
-            "Nombre": "S&P 500 Apalancado",
-            "Peso": "14%",
-            "Estado": "MANTENER",
-            "MGC": NaN
-        },
-        {
             "Simbolo": "UGL",
             "Nombre": "Oro Apalancado",
             "Peso": "14%",
             "Estado": "MANTENER",
             "MGC": NaN
+        },
+        {
+            "Simbolo": "XLE",
+            "Nombre": "Energía",
+            "Peso": "14%",
+            "Estado": "NUEVA COMPRA",
+            "MGC": NaN
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "263.62%",
-            "Strategy": "1,391.13%",
+            "Benchmark": "269.84%",
+            "Strategy": "1,489.46%",
             "MaxDD_Bench": "-31.00%",
             "MaxDD_Strat": "-22.30%"
         },
@@ -152,8 +169,8 @@
             },
             {
                 "Año": 2026,
-                "Retorno": "9.2%",
-                "MaxPerdida": "-7.1%"
+                "Retorno": "15.9%",
+                "MaxPerdida": "-9.2%"
             }
         ]
     }

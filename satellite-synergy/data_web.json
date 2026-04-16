@@ -1,23 +1,31 @@
 {
     "StrategyName": "Satellite Synergy",
-    "MesActual": "Febrero 2026",
-    "Fecha": "2/2/26",
+    "MesActual": "Marzo 2026",
+    "Fecha": "3/2/26",
     "Ordenes": [
         {
             "Accion": "VENDER",
-            "Simbolo": "SHY",
+            "Simbolo": "EEM",
             "Cantidad": "100% de la Posición",
-            "Nombre": "Bonos del Tesoro Corto Plazo",
+            "Nombre": "Mercados Emergentes",
             "Instruccion": "Vender al mercado en la apertura",
+            "MGC": "EIMI "
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "IEF",
+            "Cantidad": "25% del Portafolio",
+            "Nombre": "Bonos del Tesoro Mediano Plazo",
+            "Instruccion": "Comprar al mercado en la apertura",
             "MGC": NaN
         },
         {
             "Accion": "COMPRAR",
-            "Simbolo": "EEM",
-            "Cantidad": "25% del Portafolio",
-            "Nombre": "Mercados Emergentes",
+            "Simbolo": "TLH",
+            "Cantidad": "20% del Portafolio",
+            "Nombre": "Bonos del Tesoro Largo Plazo",
             "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": "EIMI "
+            "MGC": NaN
         }
     ],
     "Portafolio": [
@@ -57,17 +65,24 @@
             "MGC": "CSPX / VOO / SPXS"
         },
         {
-            "Simbolo": "EEM",
-            "Nombre": "Mercados Emergentes",
+            "Simbolo": "IEF",
+            "Nombre": "Bonos del Tesoro Mediano Plazo",
             "Peso": "25%",
             "Estado": "NUEVA COMPRA",
-            "MGC": "EIMI "
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "TLH",
+            "Nombre": "Bonos del Tesoro Largo Plazo",
+            "Peso": "20%",
+            "Estado": "NUEVA COMPRA",
+            "MGC": NaN
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "263.62%",
-            "Strategy": "278.66%",
+            "Benchmark": "269.84%",
+            "Strategy": "291.16%",
             "MaxDD_Bench": "-31.00%",
             "MaxDD_Strat": "-10.90%"
         },
@@ -169,8 +184,8 @@
             },
             {
                 "Año": 2026,
-                "Retorno": "2.6%",
-                "MaxPerdida": "-0.9%"
+                "Retorno": "5.3%",
+                "MaxPerdida": "-1.6%"
             }
         ]
     }

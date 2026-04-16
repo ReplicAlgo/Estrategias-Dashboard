@@ -1,39 +1,48 @@
 {
     "StrategyName": "Smart Global 60/40",
-    "MesActual": "Febrero 2026",
-    "Fecha": "2/2/26",
+    "MesActual": "Marzo 2026",
+    "Fecha": "3/2/26",
     "Ordenes": [
         {
             "Accion": "VENDER",
-            "Simbolo": "SPY",
+            "Simbolo": "GLD",
             "Cantidad": "100% de la Posición",
-            "Nombre": "S&P 500",
+            "Nombre": "Oro",
             "Instruccion": "Vender al mercado en la apertura",
-            "MGC": "CSPX / VOO / SPXS"
+            "MGC": NaN
+        },
+        {
+            "Accion": "VENDER",
+            "Simbolo": "JNK",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Bonos Alto Riesgo",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": NaN
         },
         {
             "Accion": "COMPRAR",
-            "Simbolo": "EEM",
-            "Cantidad": "30% del Portafolio",
-            "Nombre": "Mercados Emergentes",
+            "Simbolo": "TLT",
+            "Cantidad": "20% del Portafolio",
+            "Nombre": "Bonos del Tesoro Largo Plazo",
             "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": "EIMI "
+            "MGC": "SGLD"
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "VTIP",
+            "Cantidad": "20% del Portafolio",
+            "Nombre": "Bonos ST Protegidos Inflación",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": "IHYA"
         }
     ],
     "Portafolio": [
         {
-            "Simbolo": "GLD",
-            "Nombre": "Oro",
-            "Peso": "20%",
+            "Simbolo": "EEM",
+            "Nombre": "Mercados Emergentes",
+            "Peso": "30%",
             "Estado": "MANTENER",
-            "MGC": NaN
-        },
-        {
-            "Simbolo": "JNK",
-            "Nombre": "Bonos Alto Riesgo",
-            "Peso": "20%",
-            "Estado": "MANTENER",
-            "MGC": NaN
+            "MGC": "EIMI "
         },
         {
             "Simbolo": "QQQ",
@@ -43,17 +52,24 @@
             "MGC": "EQAC"
         },
         {
-            "Simbolo": "EEM",
-            "Nombre": "Mercados Emergentes",
-            "Peso": "30%",
+            "Simbolo": "TLT",
+            "Nombre": "Bonos del Tesoro Largo Plazo",
+            "Peso": "20%",
             "Estado": "NUEVA COMPRA",
-            "MGC": "EIMI "
+            "MGC": "SGLD"
+        },
+        {
+            "Simbolo": "VTIP",
+            "Nombre": "Bonos ST Protegidos Inflación",
+            "Peso": "20%",
+            "Estado": "NUEVA COMPRA",
+            "MGC": "IHYA"
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "252.23%",
-            "Strategy": "578.59%",
+            "Benchmark": "254.36%",
+            "Strategy": "601.45%",
             "MaxDD_Bench": "-31.90%",
             "MaxDD_Strat": "-36.91%"
         },
@@ -155,8 +171,8 @@
             },
             {
                 "Año": 2026,
-                "Retorno": "3.0%",
-                "MaxPerdida": "-3.2%"
+                "Retorno": "6.0%",
+                "MaxPerdida": "-4.8%"
             }
         ]
     }

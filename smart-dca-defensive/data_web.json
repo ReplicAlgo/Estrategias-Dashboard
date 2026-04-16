@@ -1,28 +1,61 @@
 {
     "StrategyName": "Smart DCA Defensivo",
-    "MesActual": "Febrero 2026",
-    "Fecha": "2/2/26",
-    "Ordenes": [],
-    "Portafolio": [
+    "MesActual": "Marzo 2026",
+    "Fecha": "3/2/26",
+    "Ordenes": [
         {
+            "Accion": "VENDER",
             "Simbolo": "GLD",
+            "Cantidad": "100% de la Posición",
             "Nombre": "Oro",
-            "Peso": "50%",
-            "Estado": "MANTENER",
+            "Instruccion": "Vender al mercado en la apertura",
             "MGC": NaN
         },
         {
+            "Accion": "VENDER",
             "Simbolo": "JNK",
+            "Cantidad": "100% de la Posición",
             "Nombre": "Bonos Alto Riesgo",
-            "Peso": "50%",
-            "Estado": "MANTENER",
+            "Instruccion": "Vender al mercado en la apertura",
             "MGC": NaN
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "TLT",
+            "Cantidad": "50% del Portafolio",
+            "Nombre": "Bonos del Tesoro Largo Plazo",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": "SGLD"
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "VTIP",
+            "Cantidad": "50% del Portafolio",
+            "Nombre": "Bonos ST Protegidos Inflación",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": "IHYA"
+        }
+    ],
+    "Portafolio": [
+        {
+            "Simbolo": "TLT",
+            "Nombre": "Bonos del Tesoro Largo Plazo",
+            "Peso": "50%",
+            "Estado": "NUEVA COMPRA",
+            "MGC": "SGLD"
+        },
+        {
+            "Simbolo": "VTIP",
+            "Nombre": "Bonos ST Protegidos Inflación",
+            "Peso": "50%",
+            "Estado": "NUEVA COMPRA",
+            "MGC": "IHYA"
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "81.21%",
-            "Strategy": "128.89%",
+            "Benchmark": "96.03%",
+            "Strategy": "144.10%",
             "MaxDD_Bench": "-14.43%",
             "MaxDD_Strat": "-19.20%"
         },
@@ -124,8 +157,8 @@
             },
             {
                 "Año": 2026,
-                "Retorno": "5.5%",
-                "MaxPerdida": "-5.8%"
+                "Retorno": "10.3%",
+                "MaxPerdida": "-7.7%"
             }
         ]
     }
