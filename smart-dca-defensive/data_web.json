@@ -45,94 +45,9 @@
         },
         "tabla_anual": [
             {
-                "Año": 2026,
-                "Retorno": "8.8%",
-                "MaxPerdida": "-7.7%"
-            },
-            {
-                "Año": 2025,
-                "Retorno": "24.1%",
-                "MaxPerdida": "-5.5%"
-            },
-            {
-                "Año": 2024,
-                "Retorno": "8.6%",
-                "MaxPerdida": "-3.1%"
-            },
-            {
-                "Año": 2023,
-                "Retorno": "5.4%",
-                "MaxPerdida": "-7.6%"
-            },
-            {
-                "Año": 2022,
-                "Retorno": "-0.1%",
-                "MaxPerdida": "-11.5%"
-            },
-            {
-                "Año": 2021,
-                "Retorno": "0.2%",
-                "MaxPerdida": "-4.5%"
-            },
-            {
-                "Año": 2020,
-                "Retorno": "16.5%",
-                "MaxPerdida": "-5.4%"
-            },
-            {
-                "Año": 2019,
-                "Retorno": "-3.3%",
-                "MaxPerdida": "-8.5%"
-            },
-            {
-                "Año": 2018,
-                "Retorno": "6.2%",
-                "MaxPerdida": "-3.1%"
-            },
-            {
-                "Año": 2017,
-                "Retorno": "0.1%",
-                "MaxPerdida": "-5.1%"
-            },
-            {
-                "Año": 2016,
-                "Retorno": "11.2%",
-                "MaxPerdida": "-4.0%"
-            },
-            {
-                "Año": 2015,
-                "Retorno": "-5.9%",
-                "MaxPerdida": "-12.2%"
-            },
-            {
-                "Año": 2014,
-                "Retorno": "7.3%",
-                "MaxPerdida": "-4.3%"
-            },
-            {
-                "Año": 2013,
-                "Retorno": "-10.8%",
-                "MaxPerdida": "-13.5%"
-            },
-            {
-                "Año": 2012,
-                "Retorno": "1.6%",
-                "MaxPerdida": "-5.5%"
-            },
-            {
-                "Año": 2011,
-                "Retorno": "17.5%",
-                "MaxPerdida": "-10.7%"
-            },
-            {
-                "Año": 2010,
-                "Retorno": "7.3%",
-                "MaxPerdida": "-6.1%"
-            },
-            {
-                "Año": 2009,
-                "Retorno": "5.9%",
-                "MaxPerdida": "-16.4%"
+                "Año": 2007,
+                "Retorno": "17.3%",
+                "MaxPerdida": "-6.5%"
             },
             {
                 "Año": 2008,
@@ -140,9 +55,94 @@
                 "MaxPerdida": "-16.0%"
             },
             {
-                "Año": 2007,
-                "Retorno": "17.3%",
-                "MaxPerdida": "-6.5%"
+                "Año": 2009,
+                "Retorno": "5.9%",
+                "MaxPerdida": "-16.4%"
+            },
+            {
+                "Año": 2010,
+                "Retorno": "7.3%",
+                "MaxPerdida": "-6.1%"
+            },
+            {
+                "Año": 2011,
+                "Retorno": "17.5%",
+                "MaxPerdida": "-10.7%"
+            },
+            {
+                "Año": 2012,
+                "Retorno": "1.6%",
+                "MaxPerdida": "-5.5%"
+            },
+            {
+                "Año": 2013,
+                "Retorno": "-10.8%",
+                "MaxPerdida": "-13.5%"
+            },
+            {
+                "Año": 2014,
+                "Retorno": "7.3%",
+                "MaxPerdida": "-4.3%"
+            },
+            {
+                "Año": 2015,
+                "Retorno": "-5.9%",
+                "MaxPerdida": "-12.2%"
+            },
+            {
+                "Año": 2016,
+                "Retorno": "11.2%",
+                "MaxPerdida": "-4.0%"
+            },
+            {
+                "Año": 2017,
+                "Retorno": "0.1%",
+                "MaxPerdida": "-5.1%"
+            },
+            {
+                "Año": 2018,
+                "Retorno": "6.2%",
+                "MaxPerdida": "-3.1%"
+            },
+            {
+                "Año": 2019,
+                "Retorno": "-3.3%",
+                "MaxPerdida": "-8.5%"
+            },
+            {
+                "Año": 2020,
+                "Retorno": "16.5%",
+                "MaxPerdida": "-5.4%"
+            },
+            {
+                "Año": 2021,
+                "Retorno": "0.2%",
+                "MaxPerdida": "-4.5%"
+            },
+            {
+                "Año": 2022,
+                "Retorno": "-0.1%",
+                "MaxPerdida": "-11.5%"
+            },
+            {
+                "Año": 2023,
+                "Retorno": "5.4%",
+                "MaxPerdida": "-7.6%"
+            },
+            {
+                "Año": 2024,
+                "Retorno": "8.6%",
+                "MaxPerdida": "-3.1%"
+            },
+            {
+                "Año": 2025,
+                "Retorno": "24.1%",
+                "MaxPerdida": "-5.5%"
+            },
+            {
+                "Año": 2026,
+                "Retorno": "8.8%",
+                "MaxPerdida": "-7.7%"
             }
         ]
     }
