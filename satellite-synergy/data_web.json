@@ -1,8 +1,33 @@
 {
     "StrategyName": "Satellite Synergy",
     "MesActual": "Abril 2026",
-    "Fecha": "4/17/26",
-    "Ordenes": [],
+    "Fecha": "1/2/26",
+    "Ordenes": [
+        {
+            "Accion": "VENDER",
+            "Simbolo": "EEM",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Mercados Emergentes",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": "EIMI "
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "SHY",
+            "Cantidad": "25% del Portafolio",
+            "Nombre": "Bonos del Tesoro Corto Plazo",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "VENDER",
+            "Simbolo": "TIP",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Bonos Protegidos contra Inflación",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": NaN
+        }
+    ],
     "Portafolio": [
         {
             "Simbolo": "AOR",
@@ -19,13 +44,6 @@
             "MGC": NaN
         },
         {
-            "Simbolo": "FLOT",
-            "Nombre": "Bonos Tasa Flotante",
-            "Peso": "25%",
-            "Estado": "MANTENER",
-            "MGC": NaN
-        },
-        {
             "Simbolo": "GLD",
             "Nombre": "Oro",
             "Peso": "3%",
@@ -38,12 +56,26 @@
             "Peso": "3%",
             "Estado": "MANTENER",
             "MGC": NaN
+        },
+        {
+            "Simbolo": "SPY",
+            "Nombre": "S&P 500",
+            "Peso": "25%",
+            "Estado": "MANTENER",
+            "MGC": "CSPX / VOO / SPXS"
+        },
+        {
+            "Simbolo": "SHY",
+            "Nombre": "Bonos del Tesoro Corto Plazo",
+            "Peso": "25%",
+            "Estado": "NUEVA COMPRA",
+            "MGC": NaN
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "269.00%",
-            "Strategy": "273.91%",
+            "Benchmark": "259.61%",
+            "Strategy": "266.24%",
             "MaxDD_Bench": "-31.00%",
             "MaxDD_Strat": "-10.90%"
         },
@@ -140,13 +172,8 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "11.2%",
+                "Retorno": "11.1%",
                 "MaxPerdida": "-5.2%"
-            },
-            {
-                "Año": 2026,
-                "Retorno": "1.6%",
-                "MaxPerdida": "-6.8%"
             }
         ]
     }

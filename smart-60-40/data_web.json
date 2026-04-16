@@ -1,16 +1,42 @@
 {
     "StrategyName": "Smart Global 60/40",
     "MesActual": "Abril 2026",
-    "Fecha": "4/17/26",
-    "Ordenes": [],
-    "Portafolio": [
+    "Fecha": "1/2/26",
+    "Ordenes": [
         {
-            "Simbolo": "EEM",
-            "Nombre": "Mercados Emergentes",
-            "Peso": "30%",
-            "Estado": "MANTENER",
-            "MGC": "EIMI "
+            "Accion": "VENDER",
+            "Simbolo": "UUP",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Dólar Estadounidense",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": "CBU0"
         },
+        {
+            "Accion": "VENDER",
+            "Simbolo": "VTIP",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Bonos ST Protegidos Inflación",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": "IHYA"
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "GLD",
+            "Cantidad": "20% del Portafolio",
+            "Nombre": "Oro",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "JNK",
+            "Cantidad": "20% del Portafolio",
+            "Nombre": "Bonos Alto Riesgo",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": NaN
+        }
+    ],
+    "Portafolio": [
         {
             "Simbolo": "QQQ",
             "Nombre": "Nasdaq 100",
@@ -19,24 +45,31 @@
             "MGC": "EQAC"
         },
         {
-            "Simbolo": "UUP",
-            "Nombre": "Dólar Estadounidense",
-            "Peso": "20%",
+            "Simbolo": "SPY",
+            "Nombre": "S&P 500",
+            "Peso": "30%",
             "Estado": "MANTENER",
-            "MGC": "CBU0"
+            "MGC": "CSPX / VOO / SPXS"
         },
         {
-            "Simbolo": "VTIP",
-            "Nombre": "Bonos ST Protegidos Inflación",
+            "Simbolo": "GLD",
+            "Nombre": "Oro",
             "Peso": "20%",
-            "Estado": "MANTENER",
-            "MGC": "IHYA"
+            "Estado": "NUEVA COMPRA",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "JNK",
+            "Nombre": "Bonos Alto Riesgo",
+            "Peso": "20%",
+            "Estado": "NUEVA COMPRA",
+            "MGC": NaN
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "257.83%",
-            "Strategy": "609.95%",
+            "Benchmark": "248.67%",
+            "Strategy": "555.16%",
             "MaxDD_Bench": "-31.90%",
             "MaxDD_Strat": "-36.91%"
         },
@@ -133,13 +166,8 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "22.4%",
+                "Retorno": "22.2%",
                 "MaxPerdida": "-13.3%"
-            },
-            {
-                "Año": 2026,
-                "Retorno": "7.1%",
-                "MaxPerdida": "-7.5%"
             }
         ]
     }

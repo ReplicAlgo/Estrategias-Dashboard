@@ -1,8 +1,25 @@
 {
     "StrategyName": "AllWeather FLEX",
     "MesActual": "Abril 2026",
-    "Fecha": "4/17/26",
-    "Ordenes": [],
+    "Fecha": "1/2/26",
+    "Ordenes": [
+        {
+            "Accion": "VENDER",
+            "Simbolo": "VWO",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Mercados Emergentes",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "VEA",
+            "Cantidad": "14% del Portafolio",
+            "Nombre": "Mercados Desarrollados",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": NaN
+        }
+    ],
     "Portafolio": [
         {
             "Simbolo": "DBB",
@@ -33,24 +50,31 @@
             "MGC": NaN
         },
         {
-            "Simbolo": "VEA",
-            "Nombre": "Mercados Desarrollados",
+            "Simbolo": "QQQ",
+            "Nombre": "Nasdaq 100",
+            "Peso": "14%",
+            "Estado": "MANTENER",
+            "MGC": "EQAC"
+        },
+        {
+            "Simbolo": "VUG",
+            "Nombre": "Acciones de Crecimiento",
             "Peso": "14%",
             "Estado": "MANTENER",
             "MGC": NaN
         },
         {
-            "Simbolo": "XLE",
-            "Nombre": "Energía",
+            "Simbolo": "VEA",
+            "Nombre": "Mercados Desarrollados",
             "Peso": "14%",
-            "Estado": "MANTENER",
+            "Estado": "NUEVA COMPRA",
             "MGC": NaN
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "157.25%",
-            "Strategy": "610.89%",
+            "Benchmark": "140.49%",
+            "Strategy": "556.82%",
             "MaxDD_Bench": "-23.82%",
             "MaxDD_Strat": "-18.85%"
         },
@@ -147,13 +171,8 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "21.7%",
+                "Retorno": "21.6%",
                 "MaxPerdida": "-13.7%"
-            },
-            {
-                "Año": 2026,
-                "Retorno": "7.0%",
-                "MaxPerdida": "-9.5%"
             }
         ]
     }

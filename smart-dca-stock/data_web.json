@@ -1,28 +1,28 @@
 {
     "StrategyName": "Smart DCA Acciones",
     "MesActual": "Abril 2026",
-    "Fecha": "4/17/26",
+    "Fecha": "1/2/26",
     "Ordenes": [],
     "Portafolio": [
-        {
-            "Simbolo": "EEM",
-            "Nombre": "Mercados Emergentes",
-            "Peso": "50%",
-            "Estado": "MANTENER",
-            "MGC": "EIMI "
-        },
         {
             "Simbolo": "QQQ",
             "Nombre": "Nasdaq 100",
             "Peso": "50%",
             "Estado": "MANTENER",
             "MGC": "EQAC"
+        },
+        {
+            "Simbolo": "SPY",
+            "Nombre": "S&P 500",
+            "Peso": "50%",
+            "Estado": "MANTENER",
+            "MGC": "CSPX / VOO / SPXS"
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "257.03%",
-            "Strategy": "912.35%",
+            "Benchmark": "231.99%",
+            "Strategy": "848.51%",
             "MaxDD_Bench": "-56.77%",
             "MaxDD_Strat": "-60.98%"
         },
@@ -119,13 +119,8 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "19.5%",
+                "Retorno": "19.4%",
                 "MaxPerdida": "-21.1%"
-            },
-            {
-                "Año": 2026,
-                "Retorno": "6.0%",
-                "MaxPerdida": "-11.8%"
             }
         ]
     }

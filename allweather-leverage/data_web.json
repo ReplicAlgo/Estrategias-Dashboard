@@ -1,16 +1,9 @@
 {
     "StrategyName": "AllWeather Leverage",
     "MesActual": "Abril 2026",
-    "Fecha": "4/17/26",
+    "Fecha": "1/2/26",
     "Ordenes": [],
     "Portafolio": [
-        {
-            "Simbolo": "DBC",
-            "Nombre": "Materias Primas",
-            "Peso": "14%",
-            "Estado": "MANTENER",
-            "MGC": "IB01*"
-        },
         {
             "Simbolo": "EET",
             "Nombre": "Mercados Emergentes Apalancados",
@@ -33,15 +26,22 @@
             "MGC": NaN
         },
         {
-            "Simbolo": "UGL",
-            "Nombre": "Oro Apalancado",
+            "Simbolo": "QLD",
+            "Nombre": "Nasdaq 100 Apalancado",
             "Peso": "14%",
             "Estado": "MANTENER",
             "MGC": NaN
         },
         {
-            "Simbolo": "XLE",
-            "Nombre": "Energía",
+            "Simbolo": "SSO",
+            "Nombre": "S&P 500 Apalancado",
+            "Peso": "14%",
+            "Estado": "MANTENER",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "UGL",
+            "Nombre": "Oro Apalancado",
             "Peso": "14%",
             "Estado": "MANTENER",
             "MGC": NaN
@@ -49,8 +49,8 @@
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "269.00%",
-            "Strategy": "1,360.51%",
+            "Benchmark": "259.61%",
+            "Strategy": "1,255.73%",
             "MaxDD_Bench": "-31.00%",
             "MaxDD_Strat": "-22.30%"
         },
@@ -147,13 +147,8 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "35.9%",
+                "Retorno": "35.8%",
                 "MaxPerdida": "-16.0%"
-            },
-            {
-                "Año": 2026,
-                "Retorno": "7.1%",
-                "MaxPerdida": "-16.8%"
             }
         ]
     }
