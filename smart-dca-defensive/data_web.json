@@ -2,44 +2,27 @@
     "StrategyName": "Smart DCA Defensivo",
     "MesActual": "Abril 2026",
     "Fecha": "16/04/2026",
-    "Ordenes": [
-        {
-            "Accion": "VENDER",
-            "Simbolo": "JNK",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Bonos Alto Riesgo",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "GLD",
-            "Cantidad": "50% del Portafolio",
-            "Nombre": "Oro",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
-        }
-    ],
+    "Ordenes": [],
     "Portafolio": [
+        {
+            "Simbolo": "UUP",
+            "Nombre": "Dólar Estadounidense",
+            "Peso": "50%",
+            "Estado": "MANTENER",
+            "MGC": "CBU0"
+        },
         {
             "Simbolo": "VTIP",
             "Nombre": "Bonos ST Protegidos Inflación",
             "Peso": "50%",
             "Estado": "MANTENER",
             "MGC": "IHYA"
-        },
-        {
-            "Simbolo": "GLD",
-            "Nombre": "Oro",
-            "Peso": "50%",
-            "Estado": "NUEVA COMPRA",
-            "MGC": NaN
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "51.15%",
-            "Strategy": "99.45%",
+            "Benchmark": "79.97%",
+            "Strategy": "137.55%",
             "MaxDD_Bench": "-14.43%",
             "MaxDD_Strat": "-19.20%"
         },
@@ -136,8 +119,13 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "19.1%",
-                "MaxPerdida": "-4.1%"
+                "Retorno": "24.1%",
+                "MaxPerdida": "-5.5%"
+            },
+            {
+                "Año": 2026,
+                "Retorno": "8.2%",
+                "MaxPerdida": "-7.7%"
             }
         ]
     }

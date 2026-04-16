@@ -2,44 +2,27 @@
     "StrategyName": "Smart DCA Acciones",
     "MesActual": "Abril 2026",
     "Fecha": "16/04/2026",
-    "Ordenes": [
-        {
-            "Accion": "VENDER",
-            "Simbolo": "SPY",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "S&P 500",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": "CSPX / VOO / SPXS"
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "EEM",
-            "Cantidad": "50% del Portafolio",
-            "Nombre": "Mercados Emergentes",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": "EIMI "
-        }
-    ],
+    "Ordenes": [],
     "Portafolio": [
+        {
+            "Simbolo": "EEM",
+            "Nombre": "Mercados Emergentes",
+            "Peso": "50%",
+            "Estado": "MANTENER",
+            "MGC": "EIMI "
+        },
         {
             "Simbolo": "QQQ",
             "Nombre": "Nasdaq 100",
             "Peso": "50%",
             "Estado": "MANTENER",
             "MGC": "EQAC"
-        },
-        {
-            "Simbolo": "EEM",
-            "Nombre": "Mercados Emergentes",
-            "Peso": "50%",
-            "Estado": "NUEVA COMPRA",
-            "MGC": "EIMI "
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "248.98%",
-            "Strategy": "862.63%",
+            "Benchmark": "257.03%",
+            "Strategy": "912.35%",
             "MaxDD_Bench": "-56.77%",
             "MaxDD_Strat": "-60.98%"
         },
@@ -141,8 +124,8 @@
             },
             {
                 "Año": 2026,
-                "Retorno": "1.2%",
-                "MaxPerdida": "-2.8%"
+                "Retorno": "6.0%",
+                "MaxPerdida": "-11.8%"
             }
         ]
     }
