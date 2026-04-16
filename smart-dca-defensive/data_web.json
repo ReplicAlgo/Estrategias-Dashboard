@@ -1,61 +1,45 @@
 {
     "StrategyName": "Smart DCA Defensivo",
-    "MesActual": "Marzo 2026",
-    "Fecha": "3/2/26",
+    "MesActual": "Abril 2026",
+    "Fecha": "4/1/26",
     "Ordenes": [
         {
             "Accion": "VENDER",
-            "Simbolo": "GLD",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Oro",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "VENDER",
-            "Simbolo": "JNK",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Bonos Alto Riesgo",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
             "Simbolo": "TLT",
-            "Cantidad": "50% del Portafolio",
+            "Cantidad": "100% de la Posición",
             "Nombre": "Bonos del Tesoro Largo Plazo",
-            "Instruccion": "Comprar al mercado en la apertura",
+            "Instruccion": "Vender al mercado en la apertura",
             "MGC": "SGLD"
         },
         {
             "Accion": "COMPRAR",
-            "Simbolo": "VTIP",
+            "Simbolo": "UUP",
             "Cantidad": "50% del Portafolio",
-            "Nombre": "Bonos ST Protegidos Inflación",
+            "Nombre": "Dólar Estadounidense",
             "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": "IHYA"
+            "MGC": "CBU0"
         }
     ],
     "Portafolio": [
         {
-            "Simbolo": "TLT",
-            "Nombre": "Bonos del Tesoro Largo Plazo",
-            "Peso": "50%",
-            "Estado": "NUEVA COMPRA",
-            "MGC": "SGLD"
-        },
-        {
             "Simbolo": "VTIP",
             "Nombre": "Bonos ST Protegidos Inflación",
             "Peso": "50%",
-            "Estado": "NUEVA COMPRA",
+            "Estado": "MANTENER",
             "MGC": "IHYA"
+        },
+        {
+            "Simbolo": "UUP",
+            "Nombre": "Dólar Estadounidense",
+            "Peso": "50%",
+            "Estado": "NUEVA COMPRA",
+            "MGC": "CBU0"
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "96.03%",
-            "Strategy": "144.10%",
+            "Benchmark": "76.04%",
+            "Strategy": "139.16%",
             "MaxDD_Bench": "-14.43%",
             "MaxDD_Strat": "-19.20%"
         },
@@ -157,7 +141,7 @@
             },
             {
                 "Año": 2026,
-                "Retorno": "10.3%",
+                "Retorno": "8.8%",
                 "MaxPerdida": "-7.7%"
             }
         ]

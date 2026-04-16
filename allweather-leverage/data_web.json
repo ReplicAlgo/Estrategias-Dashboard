@@ -1,23 +1,23 @@
 {
     "StrategyName": "AllWeather Leverage",
-    "MesActual": "Marzo 2026",
-    "Fecha": "3/2/26",
+    "MesActual": "Abril 2026",
+    "Fecha": "4/1/26",
     "Ordenes": [
         {
             "Accion": "VENDER",
-            "Simbolo": "SSO",
-            "Cantidad": "200% de la Posición",
-            "Nombre": "S&P 500 Apalancado",
+            "Simbolo": "QLD",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Nasdaq 100 Apalancado",
             "Instruccion": "Vender al mercado en la apertura",
             "MGC": NaN
         },
         {
             "Accion": "COMPRAR",
-            "Simbolo": "XLE",
+            "Simbolo": "DBC",
             "Cantidad": "14% del Portafolio",
-            "Nombre": "Energía",
+            "Nombre": "Materias Primas",
             "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
+            "MGC": "IB01*"
         }
     ],
     "Portafolio": [
@@ -43,13 +43,6 @@
             "MGC": NaN
         },
         {
-            "Simbolo": "QLD",
-            "Nombre": "Nasdaq 100 Apalancado",
-            "Peso": "14%",
-            "Estado": "MANTENER",
-            "MGC": NaN
-        },
-        {
             "Simbolo": "UGL",
             "Nombre": "Oro Apalancado",
             "Peso": "14%",
@@ -60,14 +53,21 @@
             "Simbolo": "XLE",
             "Nombre": "Energía",
             "Peso": "14%",
-            "Estado": "NUEVA COMPRA",
+            "Estado": "MANTENER",
             "MGC": NaN
+        },
+        {
+            "Simbolo": "DBC",
+            "Nombre": "Materias Primas",
+            "Peso": "14%",
+            "Estado": "NUEVA COMPRA",
+            "MGC": "IB01*"
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "269.84%",
-            "Strategy": "1,489.46%",
+            "Benchmark": "247.99%",
+            "Strategy": "1,291.38%",
             "MaxDD_Bench": "-31.00%",
             "MaxDD_Strat": "-22.30%"
         },
@@ -169,8 +169,8 @@
             },
             {
                 "Año": 2026,
-                "Retorno": "15.9%",
-                "MaxPerdida": "-9.2%"
+                "Retorno": "2.4%",
+                "MaxPerdida": "-16.8%"
             }
         ]
     }

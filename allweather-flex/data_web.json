@@ -1,25 +1,8 @@
 {
     "StrategyName": "AllWeather FLEX",
-    "MesActual": "Marzo 2026",
-    "Fecha": "3/2/26",
-    "Ordenes": [
-        {
-            "Accion": "VENDER",
-            "Simbolo": "QQQ",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Nasdaq 100",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": "EQAC"
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "XLE",
-            "Cantidad": "14% del Portafolio",
-            "Nombre": "Energía",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
-        }
-    ],
+    "MesActual": "Abril 2026",
+    "Fecha": "4/1/26",
+    "Ordenes": [],
     "Portafolio": [
         {
             "Simbolo": "DBB",
@@ -60,14 +43,14 @@
             "Simbolo": "XLE",
             "Nombre": "Energía",
             "Peso": "14%",
-            "Estado": "NUEVA COMPRA",
+            "Estado": "MANTENER",
             "MGC": NaN
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "162.15%",
-            "Strategy": "637.06%",
+            "Benchmark": "147.70%",
+            "Strategy": "589.26%",
             "MaxDD_Bench": "-23.82%",
             "MaxDD_Strat": "-18.85%"
         },
@@ -169,8 +152,8 @@
             },
             {
                 "Año": 2026,
-                "Retorno": "10.5%",
-                "MaxPerdida": "-6.1%"
+                "Retorno": "4.2%",
+                "MaxPerdida": "-9.5%"
             }
         ]
     }

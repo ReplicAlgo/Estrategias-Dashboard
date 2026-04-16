@@ -1,7 +1,7 @@
 {
     "StrategyName": "Smart DCA Acciones",
-    "MesActual": "Marzo 2026",
-    "Fecha": "3/2/26",
+    "MesActual": "Abril 2026",
+    "Fecha": "4/1/26",
     "Ordenes": [],
     "Portafolio": [
         {
@@ -21,8 +21,8 @@
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "257.70%",
-            "Strategy": "882.35%",
+            "Benchmark": "227.55%",
+            "Strategy": "803.24%",
             "MaxDD_Bench": "-56.77%",
             "MaxDD_Strat": "-60.98%"
         },
@@ -124,8 +124,8 @@
             },
             {
                 "Año": 2026,
-                "Retorno": "3.1%",
-                "MaxPerdida": "-3.6%"
+                "Retorno": "-4.4%",
+                "MaxPerdida": "-11.8%"
             }
         ]
     }
