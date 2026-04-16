@@ -1,16 +1,8 @@
 {
     "StrategyName": "AllWeather Leverage",
-    "MesActual": "Abril 2025",
-    "Fecha": "4/1/25",
+    "MesActual": "Abril 2026",
+    "Fecha": "4/1/26",
     "Ordenes": [
-        {
-            "Accion": "VENDER",
-            "Simbolo": "GLD",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Oro",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
-        },
         {
             "Accion": "VENDER",
             "Simbolo": "QLD",
@@ -20,157 +12,62 @@
             "MGC": NaN
         },
         {
-            "Accion": "VENDER",
-            "Simbolo": "SSO",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "S&P 500 Apalancado",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "VENDER",
-            "Simbolo": "UGL",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Oro Apalancado",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "VENDER",
-            "Simbolo": "XLU",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Servicios Públicos",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "VENDER",
-            "Simbolo": "EUO",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Dólar  Apalancado",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "VENDER",
-            "Simbolo": "GBTC",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Bitcoin",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
             "Accion": "COMPRAR",
-            "Simbolo": "UGL",
+            "Simbolo": "DBC",
             "Cantidad": "14% del Portafolio",
-            "Nombre": "Oro Apalancado",
+            "Nombre": "Materias Primas",
             "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "GLD",
-            "Cantidad": "14% del Portafolio",
-            "Nombre": "Oro",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "GBTC",
-            "Cantidad": "5% del Portafolio",
-            "Nombre": "Bitcoin",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "XLU",
-            "Cantidad": "14% del Portafolio",
-            "Nombre": "Servicios Públicos",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "XLE",
-            "Cantidad": "14% del Portafolio",
-            "Nombre": "Energía",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "EFO",
-            "Cantidad": "14% del Portafolio",
-            "Nombre": "Mercados Desarrollados Apalancados",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "EFA",
-            "Cantidad": "14% del Portafolio",
-            "Nombre": "Mercados Desarrollados",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": "IDSE / ISAC //CEUU"
+            "MGC": "IB01*"
         }
     ],
     "Portafolio": [
         {
-            "Simbolo": "GBTC",
-            "Nombre": "Bitcoin",
-            "Peso": "5%",
-            "Estado": "AUMENTAR",
-            "MGC": NaN
-        },
-        {
-            "Simbolo": "GLD",
-            "Nombre": "Oro",
+            "Simbolo": "EET",
+            "Nombre": "Mercados Emergentes Apalancados",
             "Peso": "14%",
-            "Estado": "AUMENTAR",
-            "MGC": NaN
-        },
-        {
-            "Simbolo": "UGL",
-            "Nombre": "Oro Apalancado",
-            "Peso": "14%",
-            "Estado": "AUMENTAR",
-            "MGC": NaN
-        },
-        {
-            "Simbolo": "XLU",
-            "Nombre": "Servicios Públicos",
-            "Peso": "14%",
-            "Estado": "AUMENTAR",
-            "MGC": NaN
-        },
-        {
-            "Simbolo": "XLE",
-            "Nombre": "Energía",
-            "Peso": "14%",
-            "Estado": "NUEVA COMPRA",
+            "Estado": "MANTENER",
             "MGC": NaN
         },
         {
             "Simbolo": "EFO",
             "Nombre": "Mercados Desarrollados Apalancados",
             "Peso": "14%",
-            "Estado": "NUEVA COMPRA",
+            "Estado": "MANTENER",
             "MGC": NaN
         },
         {
-            "Simbolo": "EFA",
-            "Nombre": "Mercados Desarrollados",
+            "Simbolo": "GLD",
+            "Nombre": "Oro",
+            "Peso": "14%",
+            "Estado": "MANTENER",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "UGL",
+            "Nombre": "Oro Apalancado",
+            "Peso": "14%",
+            "Estado": "MANTENER",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "XLE",
+            "Nombre": "Energía",
+            "Peso": "14%",
+            "Estado": "MANTENER",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "DBC",
+            "Nombre": "Materias Primas",
             "Peso": "14%",
             "Estado": "NUEVA COMPRA",
-            "MGC": "IDSE / ISAC //CEUU"
+            "MGC": "IB01*"
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "205.99%",
-            "Strategy": "900.82%",
+            "Benchmark": "247.99%",
+            "Strategy": "1,291.38%",
             "MaxDD_Bench": "-31.00%",
             "MaxDD_Strat": "-22.30%"
         },
@@ -267,8 +164,13 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "2.7%",
-                "MaxPerdida": "-9.6%"
+                "Retorno": "35.9%",
+                "MaxPerdida": "-16.0%"
+            },
+            {
+                "Año": 2026,
+                "Retorno": "2.4%",
+                "MaxPerdida": "-16.8%"
             }
         ]
     }

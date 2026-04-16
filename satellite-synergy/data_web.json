@@ -1,8 +1,24 @@
 {
     "StrategyName": "Satellite Synergy",
-    "MesActual": "Abril 2025",
-    "Fecha": "4/1/25",
+    "MesActual": "Abril 2026",
+    "Fecha": "4/1/26",
     "Ordenes": [
+        {
+            "Accion": "VENDER",
+            "Simbolo": "IEF",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Bonos del Tesoro Mediano Plazo",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "FLOT",
+            "Cantidad": "25% del Portafolio",
+            "Nombre": "Bonos Tasa Flotante",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": NaN
+        },
         {
             "Accion": "VENDER",
             "Simbolo": "SPY",
@@ -12,11 +28,11 @@
             "MGC": "CSPX / VOO / SPXS"
         },
         {
-            "Accion": "COMPRAR",
-            "Simbolo": "TIP",
-            "Cantidad": "20% del Portafolio",
-            "Nombre": "Bonos Protegidos contra Inflación",
-            "Instruccion": "Comprar al mercado en la apertura",
+            "Accion": "VENDER",
+            "Simbolo": "TLH",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Bonos del Tesoro Largo Plazo",
+            "Instruccion": "Vender al mercado en la apertura",
             "MGC": NaN
         }
     ],
@@ -43,31 +59,24 @@
             "MGC": NaN
         },
         {
-            "Simbolo": "IEF",
-            "Nombre": "Bonos del Tesoro Mediano Plazo",
-            "Peso": "25%",
-            "Estado": "MANTENER",
-            "MGC": NaN
-        },
-        {
-            "Simbolo": "USO",
-            "Nombre": "Petróleo",
+            "Simbolo": "IGF",
+            "Nombre": "Infraestructura Global",
             "Peso": "3%",
             "Estado": "MANTENER",
             "MGC": NaN
         },
         {
-            "Simbolo": "TIP",
-            "Nombre": "Bonos Protegidos contra Inflación",
-            "Peso": "20%",
+            "Simbolo": "FLOT",
+            "Nombre": "Bonos Tasa Flotante",
+            "Peso": "25%",
             "Estado": "NUEVA COMPRA",
             "MGC": NaN
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "205.99%",
-            "Strategy": "220.46%",
+            "Benchmark": "247.99%",
+            "Strategy": "267.93%",
             "MaxDD_Bench": "-31.00%",
             "MaxDD_Strat": "-10.90%"
         },
@@ -164,8 +173,13 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "0.2%",
-                "MaxPerdida": "-3.8%"
+                "Retorno": "11.2%",
+                "MaxPerdida": "-5.2%"
+            },
+            {
+                "Año": 2026,
+                "Retorno": "0.3%",
+                "MaxPerdida": "-6.8%"
             }
         ]
     }
