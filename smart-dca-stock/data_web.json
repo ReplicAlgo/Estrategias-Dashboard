@@ -21,8 +21,8 @@
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "230.19%",
-            "Strategy": "860.01%",
+            "Benchmark": "227.49%",
+            "Strategy": "851.94%",
             "MaxDD_Bench": "-56.77%",
             "MaxDD_Strat": "-60.98%"
         },
@@ -119,7 +119,7 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "20.7%",
+                "Retorno": "19.8%",
                 "MaxPerdida": "-21.1%"
             }
         ]

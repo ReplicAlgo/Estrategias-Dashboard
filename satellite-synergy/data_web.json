@@ -2,7 +2,24 @@
     "StrategyName": "Satellite Synergy",
     "MesActual": "Abril 2026",
     "Fecha": "16/04/2026",
-    "Ordenes": [],
+    "Ordenes": [
+        {
+            "Accion": "VENDER",
+            "Simbolo": "QQQ",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Nasdaq 100",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": "EQAC"
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "EEM",
+            "Cantidad": "25% del Portafolio",
+            "Nombre": "Mercados Emergentes",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": "EIMI "
+        }
+    ],
     "Portafolio": [
         {
             "Simbolo": "AOR",
@@ -17,13 +34,6 @@
             "Peso": "3%",
             "Estado": "MANTENER",
             "MGC": NaN
-        },
-        {
-            "Simbolo": "EEM",
-            "Nombre": "Mercados Emergentes",
-            "Peso": "25%",
-            "Estado": "MANTENER",
-            "MGC": "EIMI "
         },
         {
             "Simbolo": "GLD",
@@ -52,12 +62,19 @@
             "Peso": "20%",
             "Estado": "MANTENER",
             "MGC": NaN
+        },
+        {
+            "Simbolo": "EEM",
+            "Nombre": "Mercados Emergentes",
+            "Peso": "25%",
+            "Estado": "NUEVA COMPRA",
+            "MGC": "EIMI "
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "254.28%",
-            "Strategy": "256.05%",
+            "Benchmark": "264.34%",
+            "Strategy": "266.17%",
             "MaxDD_Bench": "-31.00%",
             "MaxDD_Strat": "-10.90%"
         },
@@ -154,7 +171,7 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "8.7%",
+                "Retorno": "11.1%",
                 "MaxPerdida": "-5.2%"
             }
         ]

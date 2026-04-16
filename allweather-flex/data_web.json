@@ -37,6 +37,14 @@
         },
         {
             "Accion": "VENDER",
+            "Simbolo": "DBB",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Metales Básicos",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": "IDTP"
+        },
+        {
+            "Accion": "VENDER",
             "Simbolo": "EEM",
             "Cantidad": "100% de la Posición",
             "Nombre": "Mercados Emergentes",
@@ -53,9 +61,9 @@
         },
         {
             "Accion": "COMPRAR",
-            "Simbolo": "GBTC",
-            "Cantidad": "5% del Portafolio",
-            "Nombre": "Bitcoin",
+            "Simbolo": "GLD",
+            "Cantidad": "14% del Portafolio",
+            "Nombre": "Oro",
             "Instruccion": "Comprar al mercado en la apertura",
             "MGC": NaN
         },
@@ -69,11 +77,11 @@
         },
         {
             "Accion": "COMPRAR",
-            "Simbolo": "GLD",
+            "Simbolo": "QQQ",
             "Cantidad": "14% del Portafolio",
-            "Nombre": "Oro",
+            "Nombre": "Nasdaq 100",
             "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
+            "MGC": "EQAC"
         },
         {
             "Accion": "COMPRAR",
@@ -85,35 +93,43 @@
         },
         {
             "Accion": "COMPRAR",
-            "Simbolo": "QQQ",
-            "Cantidad": "14% del Portafolio",
-            "Nombre": "Nasdaq 100",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": "EQAC"
-        },
-        {
-            "Accion": "COMPRAR",
             "Simbolo": "EEM",
             "Cantidad": "14% del Portafolio",
             "Nombre": "Mercados Emergentes",
             "Instruccion": "Comprar al mercado en la apertura",
             "MGC": "EIMI "
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "DBB",
+            "Cantidad": "14% del Portafolio",
+            "Nombre": "Metales Básicos",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": "IDTP"
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "VWO",
+            "Cantidad": "14% del Portafolio",
+            "Nombre": "Mercados Emergentes",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": NaN
         }
     ],
     "Portafolio": [
+        {
+            "Simbolo": "DBB",
+            "Nombre": "Metales Básicos",
+            "Peso": "14%",
+            "Estado": "AUMENTAR",
+            "MGC": "IDTP"
+        },
         {
             "Simbolo": "EEM",
             "Nombre": "Mercados Emergentes",
             "Peso": "14%",
             "Estado": "AUMENTAR",
             "MGC": "EIMI "
-        },
-        {
-            "Simbolo": "GBTC",
-            "Nombre": "Bitcoin",
-            "Peso": "5%",
-            "Estado": "AUMENTAR",
-            "MGC": NaN
         },
         {
             "Simbolo": "GLD",
@@ -147,14 +163,14 @@
             "Simbolo": "VWO",
             "Nombre": "Mercados Emergentes",
             "Peso": "14%",
-            "Estado": "MANTENER",
+            "Estado": "NUEVA COMPRA",
             "MGC": NaN
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "133.40%",
-            "Strategy": "526.53%",
+            "Benchmark": "143.42%",
+            "Strategy": "545.26%",
             "MaxDD_Bench": "-23.82%",
             "MaxDD_Strat": "-18.85%"
         },
@@ -251,7 +267,7 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "16.7%",
+                "Retorno": "19.7%",
                 "MaxPerdida": "-13.7%"
             }
         ]

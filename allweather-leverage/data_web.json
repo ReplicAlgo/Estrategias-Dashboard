@@ -6,7 +6,7 @@
         {
             "Accion": "VENDER",
             "Simbolo": "QLD",
-            "Cantidad": "100% de la Posición",
+            "Cantidad": "200% de la Posición",
             "Nombre": "Nasdaq 100 Apalancado",
             "Instruccion": "Vender al mercado en la apertura",
             "MGC": NaN
@@ -48,14 +48,6 @@
             "Simbolo": "UGL",
             "Cantidad": "14% del Portafolio",
             "Nombre": "Oro Apalancado",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "GBTC",
-            "Cantidad": "5% del Portafolio",
-            "Nombre": "Bitcoin",
             "Instruccion": "Comprar al mercado en la apertura",
             "MGC": NaN
         },
@@ -100,13 +92,6 @@
             "MGC": NaN
         },
         {
-            "Simbolo": "GBTC",
-            "Nombre": "Bitcoin",
-            "Peso": "5%",
-            "Estado": "AUMENTAR",
-            "MGC": NaN
-        },
-        {
             "Simbolo": "GLD",
             "Nombre": "Oro",
             "Peso": "14%",
@@ -137,8 +122,8 @@
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "254.28%",
-            "Strategy": "1,177.97%",
+            "Benchmark": "264.34%",
+            "Strategy": "1,234.84%",
             "MaxDD_Bench": "-31.00%",
             "MaxDD_Strat": "-22.30%"
         },
@@ -235,7 +220,7 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "28.5%",
+                "Retorno": "33.8%",
                 "MaxPerdida": "-16.0%"
             }
         ]
