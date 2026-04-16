@@ -1,42 +1,40 @@
 {
     "StrategyName": "Smart Global 60/40",
-    "MesActual": "Enero 2026",
-    "Fecha": "1/2/26",
+    "MesActual": "Febrero 2026",
+    "Fecha": "2/2/26",
     "Ordenes": [
         {
             "Accion": "VENDER",
-            "Simbolo": "UUP",
+            "Simbolo": "SPY",
             "Cantidad": "100% de la Posición",
-            "Nombre": "Dólar Estadounidense",
+            "Nombre": "S&P 500",
             "Instruccion": "Vender al mercado en la apertura",
-            "MGC": "CBU0"
-        },
-        {
-            "Accion": "VENDER",
-            "Simbolo": "VTIP",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Bonos ST Protegidos Inflación",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": "IHYA"
+            "MGC": "CSPX / VOO / SPXS"
         },
         {
             "Accion": "COMPRAR",
-            "Simbolo": "GLD",
-            "Cantidad": "20% del Portafolio",
-            "Nombre": "Oro",
+            "Simbolo": "EEM",
+            "Cantidad": "30% del Portafolio",
+            "Nombre": "Mercados Emergentes",
             "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "JNK",
-            "Cantidad": "20% del Portafolio",
-            "Nombre": "Bonos Alto Riesgo",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
+            "MGC": "EIMI "
         }
     ],
     "Portafolio": [
+        {
+            "Simbolo": "GLD",
+            "Nombre": "Oro",
+            "Peso": "20%",
+            "Estado": "MANTENER",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "JNK",
+            "Nombre": "Bonos Alto Riesgo",
+            "Peso": "20%",
+            "Estado": "MANTENER",
+            "MGC": NaN
+        },
         {
             "Simbolo": "QQQ",
             "Nombre": "Nasdaq 100",
@@ -45,31 +43,17 @@
             "MGC": "EQAC"
         },
         {
-            "Simbolo": "SPY",
-            "Nombre": "S&P 500",
+            "Simbolo": "EEM",
+            "Nombre": "Mercados Emergentes",
             "Peso": "30%",
-            "Estado": "MANTENER",
-            "MGC": "CSPX / VOO / SPXS"
-        },
-        {
-            "Simbolo": "GLD",
-            "Nombre": "Oro",
-            "Peso": "20%",
             "Estado": "NUEVA COMPRA",
-            "MGC": NaN
-        },
-        {
-            "Simbolo": "JNK",
-            "Nombre": "Bonos Alto Riesgo",
-            "Peso": "20%",
-            "Estado": "NUEVA COMPRA",
-            "MGC": NaN
+            "MGC": "EIMI "
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "248.67%",
-            "Strategy": "555.16%",
+            "Benchmark": "252.23%",
+            "Strategy": "578.59%",
             "MaxDD_Bench": "-31.90%",
             "MaxDD_Strat": "-36.91%"
         },
@@ -166,8 +150,13 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "22.2%",
+                "Retorno": "22.4%",
                 "MaxPerdida": "-13.3%"
+            },
+            {
+                "Año": 2026,
+                "Retorno": "3.0%",
+                "MaxPerdida": "-3.2%"
             }
         ]
     }

@@ -1,22 +1,14 @@
 {
     "StrategyName": "AllWeather FLEX",
-    "MesActual": "Enero 2026",
-    "Fecha": "1/2/26",
+    "MesActual": "Febrero 2026",
+    "Fecha": "2/2/26",
     "Ordenes": [
         {
             "Accion": "VENDER",
-            "Simbolo": "VWO",
+            "Simbolo": "VUG",
             "Cantidad": "100% de la Posición",
-            "Nombre": "Mercados Emergentes",
+            "Nombre": "Acciones de Crecimiento",
             "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "VEA",
-            "Cantidad": "14% del Portafolio",
-            "Nombre": "Mercados Desarrollados",
-            "Instruccion": "Comprar al mercado en la apertura",
             "MGC": NaN
         }
     ],
@@ -57,24 +49,17 @@
             "MGC": "EQAC"
         },
         {
-            "Simbolo": "VUG",
-            "Nombre": "Acciones de Crecimiento",
-            "Peso": "14%",
-            "Estado": "MANTENER",
-            "MGC": NaN
-        },
-        {
             "Simbolo": "VEA",
             "Nombre": "Mercados Desarrollados",
             "Peso": "14%",
-            "Estado": "NUEVA COMPRA",
+            "Estado": "MANTENER",
             "MGC": NaN
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "140.49%",
-            "Strategy": "556.82%",
+            "Benchmark": "149.95%",
+            "Strategy": "604.10%",
             "MaxDD_Bench": "-23.82%",
             "MaxDD_Strat": "-18.85%"
         },
@@ -171,8 +156,13 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "21.6%",
+                "Retorno": "21.7%",
                 "MaxPerdida": "-13.7%"
+            },
+            {
+                "Año": 2026,
+                "Retorno": "6.1%",
+                "MaxPerdida": "-4.8%"
             }
         ]
     }

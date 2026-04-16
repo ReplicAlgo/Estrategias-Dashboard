@@ -1,8 +1,25 @@
 {
     "StrategyName": "Smart DCA Acciones",
-    "MesActual": "Enero 2026",
-    "Fecha": "1/2/26",
-    "Ordenes": [],
+    "MesActual": "Febrero 2026",
+    "Fecha": "2/2/26",
+    "Ordenes": [
+        {
+            "Accion": "VENDER",
+            "Simbolo": "SPY",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "S&P 500",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": "CSPX / VOO / SPXS"
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "EEM",
+            "Cantidad": "50% del Portafolio",
+            "Nombre": "Mercados Emergentes",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": "EIMI "
+        }
+    ],
     "Portafolio": [
         {
             "Simbolo": "QQQ",
@@ -12,17 +29,17 @@
             "MGC": "EQAC"
         },
         {
-            "Simbolo": "SPY",
-            "Nombre": "S&P 500",
+            "Simbolo": "EEM",
+            "Nombre": "Mercados Emergentes",
             "Peso": "50%",
-            "Estado": "MANTENER",
-            "MGC": "CSPX / VOO / SPXS"
+            "Estado": "NUEVA COMPRA",
+            "MGC": "EIMI "
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "231.99%",
-            "Strategy": "848.51%",
+            "Benchmark": "248.98%",
+            "Strategy": "862.63%",
             "MaxDD_Bench": "-56.77%",
             "MaxDD_Strat": "-60.98%"
         },
@@ -119,8 +136,13 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "19.4%",
+                "Retorno": "19.5%",
                 "MaxPerdida": "-21.1%"
+            },
+            {
+                "Año": 2026,
+                "Retorno": "1.2%",
+                "MaxPerdida": "-2.8%"
             }
         ]
     }

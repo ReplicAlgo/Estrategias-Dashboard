@@ -1,7 +1,7 @@
 {
     "StrategyName": "AllWeather Leverage",
-    "MesActual": "Enero 2026",
-    "Fecha": "1/2/26",
+    "MesActual": "Febrero 2026",
+    "Fecha": "2/2/26",
     "Ordenes": [],
     "Portafolio": [
         {
@@ -49,8 +49,8 @@
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "259.61%",
-            "Strategy": "1,255.73%",
+            "Benchmark": "263.62%",
+            "Strategy": "1,391.13%",
             "MaxDD_Bench": "-31.00%",
             "MaxDD_Strat": "-22.30%"
         },
@@ -147,8 +147,13 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "35.8%",
+                "Retorno": "35.9%",
                 "MaxPerdida": "-16.0%"
+            },
+            {
+                "Año": 2026,
+                "Retorno": "9.2%",
+                "MaxPerdida": "-7.1%"
             }
         ]
     }

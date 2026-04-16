@@ -1,31 +1,23 @@
 {
     "StrategyName": "Satellite Synergy",
-    "MesActual": "Enero 2026",
-    "Fecha": "1/2/26",
+    "MesActual": "Febrero 2026",
+    "Fecha": "2/2/26",
     "Ordenes": [
         {
             "Accion": "VENDER",
-            "Simbolo": "EEM",
+            "Simbolo": "SHY",
             "Cantidad": "100% de la Posición",
-            "Nombre": "Mercados Emergentes",
+            "Nombre": "Bonos del Tesoro Corto Plazo",
             "Instruccion": "Vender al mercado en la apertura",
-            "MGC": "EIMI "
+            "MGC": NaN
         },
         {
             "Accion": "COMPRAR",
-            "Simbolo": "SHY",
+            "Simbolo": "EEM",
             "Cantidad": "25% del Portafolio",
-            "Nombre": "Bonos del Tesoro Corto Plazo",
+            "Nombre": "Mercados Emergentes",
             "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "VENDER",
-            "Simbolo": "TIP",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Bonos Protegidos contra Inflación",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
+            "MGC": "EIMI "
         }
     ],
     "Portafolio": [
@@ -65,17 +57,17 @@
             "MGC": "CSPX / VOO / SPXS"
         },
         {
-            "Simbolo": "SHY",
-            "Nombre": "Bonos del Tesoro Corto Plazo",
+            "Simbolo": "EEM",
+            "Nombre": "Mercados Emergentes",
             "Peso": "25%",
             "Estado": "NUEVA COMPRA",
-            "MGC": NaN
+            "MGC": "EIMI "
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "259.61%",
-            "Strategy": "266.24%",
+            "Benchmark": "263.62%",
+            "Strategy": "278.66%",
             "MaxDD_Bench": "-31.00%",
             "MaxDD_Strat": "-10.90%"
         },
@@ -172,8 +164,13 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "11.1%",
+                "Retorno": "11.2%",
                 "MaxPerdida": "-5.2%"
+            },
+            {
+                "Año": 2026,
+                "Retorno": "2.6%",
+                "MaxPerdida": "-0.9%"
             }
         ]
     }
