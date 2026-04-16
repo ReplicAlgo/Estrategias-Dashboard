@@ -2,38 +2,21 @@
     "StrategyName": "Smart Global 60/40",
     "MesActual": "Abril 2026",
     "Fecha": "16/04/2026",
-    "Ordenes": [
-        {
-            "Accion": "VENDER",
-            "Simbolo": "GLD",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Oro",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "VTIP",
-            "Cantidad": "20% del Portafolio",
-            "Nombre": "Bonos ST Protegidos Inflación",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": "IHYA"
-        }
-    ],
+    "Ordenes": [],
     "Portafolio": [
+        {
+            "Simbolo": "EEM",
+            "Nombre": "Mercados Emergentes",
+            "Peso": "30%",
+            "Estado": "MANTENER",
+            "MGC": "EIMI "
+        },
         {
             "Simbolo": "QQQ",
             "Nombre": "Nasdaq 100",
             "Peso": "30%",
             "Estado": "MANTENER",
             "MGC": "EQAC"
-        },
-        {
-            "Simbolo": "SPY",
-            "Nombre": "S&P 500",
-            "Peso": "30%",
-            "Estado": "MANTENER",
-            "MGC": "CSPX / VOO / SPXS"
         },
         {
             "Simbolo": "UUP",
@@ -46,14 +29,14 @@
             "Simbolo": "VTIP",
             "Nombre": "Bonos ST Protegidos Inflación",
             "Peso": "20%",
-            "Estado": "NUEVA COMPRA",
+            "Estado": "MANTENER",
             "MGC": "IHYA"
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "249.83%",
-            "Strategy": "557.32%",
+            "Benchmark": "257.83%",
+            "Strategy": "609.95%",
             "MaxDD_Bench": "-31.90%",
             "MaxDD_Strat": "-36.91%"
         },
@@ -150,8 +133,13 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "22.6%",
+                "Retorno": "22.4%",
                 "MaxPerdida": "-13.3%"
+            },
+            {
+                "Año": 2026,
+                "Retorno": "7.1%",
+                "MaxPerdida": "-7.5%"
             }
         ]
     }

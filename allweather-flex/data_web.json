@@ -2,175 +2,55 @@
     "StrategyName": "AllWeather FLEX",
     "MesActual": "Abril 2026",
     "Fecha": "16/04/2026",
-    "Ordenes": [
-        {
-            "Accion": "VENDER",
-            "Simbolo": "GLD",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Oro",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "VENDER",
-            "Simbolo": "IAU",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Oro",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "VENDER",
-            "Simbolo": "QQQ",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Nasdaq 100",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": "EQAC"
-        },
-        {
-            "Accion": "VENDER",
-            "Simbolo": "VUG",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Acciones de Crecimiento",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "VENDER",
-            "Simbolo": "DBB",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Metales Básicos",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": "IDTP"
-        },
-        {
-            "Accion": "VENDER",
-            "Simbolo": "EEM",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Mercados Emergentes",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": "EIMI "
-        },
-        {
-            "Accion": "VENDER",
-            "Simbolo": "GBTC",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Bitcoin",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "GLD",
-            "Cantidad": "14% del Portafolio",
-            "Nombre": "Oro",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "IAU",
-            "Cantidad": "14% del Portafolio",
-            "Nombre": "Oro",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "QQQ",
-            "Cantidad": "14% del Portafolio",
-            "Nombre": "Nasdaq 100",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": "EQAC"
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "VUG",
-            "Cantidad": "14% del Portafolio",
-            "Nombre": "Acciones de Crecimiento",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "EEM",
-            "Cantidad": "14% del Portafolio",
-            "Nombre": "Mercados Emergentes",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": "EIMI "
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "DBB",
-            "Cantidad": "14% del Portafolio",
-            "Nombre": "Metales Básicos",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": "IDTP"
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "VWO",
-            "Cantidad": "14% del Portafolio",
-            "Nombre": "Mercados Emergentes",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
-        }
-    ],
+    "Ordenes": [],
     "Portafolio": [
         {
             "Simbolo": "DBB",
             "Nombre": "Metales Básicos",
             "Peso": "14%",
-            "Estado": "AUMENTAR",
+            "Estado": "MANTENER",
             "MGC": "IDTP"
         },
         {
             "Simbolo": "EEM",
             "Nombre": "Mercados Emergentes",
             "Peso": "14%",
-            "Estado": "AUMENTAR",
+            "Estado": "MANTENER",
             "MGC": "EIMI "
         },
         {
             "Simbolo": "GLD",
             "Nombre": "Oro",
             "Peso": "14%",
-            "Estado": "AUMENTAR",
+            "Estado": "MANTENER",
             "MGC": NaN
         },
         {
             "Simbolo": "IAU",
             "Nombre": "Oro",
             "Peso": "14%",
-            "Estado": "AUMENTAR",
+            "Estado": "MANTENER",
             "MGC": NaN
         },
         {
-            "Simbolo": "QQQ",
-            "Nombre": "Nasdaq 100",
+            "Simbolo": "VEA",
+            "Nombre": "Mercados Desarrollados",
             "Peso": "14%",
-            "Estado": "AUMENTAR",
-            "MGC": "EQAC"
-        },
-        {
-            "Simbolo": "VUG",
-            "Nombre": "Acciones de Crecimiento",
-            "Peso": "14%",
-            "Estado": "AUMENTAR",
+            "Estado": "MANTENER",
             "MGC": NaN
         },
         {
-            "Simbolo": "VWO",
-            "Nombre": "Mercados Emergentes",
+            "Simbolo": "XLE",
+            "Nombre": "Energía",
             "Peso": "14%",
-            "Estado": "NUEVA COMPRA",
+            "Estado": "MANTENER",
             "MGC": NaN
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "143.42%",
-            "Strategy": "545.26%",
+            "Benchmark": "157.25%",
+            "Strategy": "610.89%",
             "MaxDD_Bench": "-23.82%",
             "MaxDD_Strat": "-18.85%"
         },
@@ -267,8 +147,13 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "19.7%",
+                "Retorno": "21.7%",
                 "MaxPerdida": "-13.7%"
+            },
+            {
+                "Año": 2026,
+                "Retorno": "7.0%",
+                "MaxPerdida": "-9.5%"
             }
         ]
     }
