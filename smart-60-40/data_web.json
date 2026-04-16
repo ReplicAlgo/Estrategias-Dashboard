@@ -52,112 +52,11 @@
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "236.67%",
-            "Strategy": "561.04%",
-            "MaxDD_Bench": "-31.90%",
-            "MaxDD_Strat": "-36.91%"
+            "Benchmark": "N/A",
+            "Strategy": "N/A",
+            "MaxDD_Bench": "N/A",
+            "MaxDD_Strat": "N/A"
         },
-        "tabla_anual": [
-            {
-                "Año": 2026,
-                "Retorno": "0.7%",
-                "MaxPerdida": "-7.5%"
-            },
-            {
-                "Año": 2025,
-                "Retorno": "22.4%",
-                "MaxPerdida": "-13.3%"
-            },
-            {
-                "Año": 2024,
-                "Retorno": "20.1%",
-                "MaxPerdida": "-7.5%"
-            },
-            {
-                "Año": 2023,
-                "Retorno": "24.3%",
-                "MaxPerdida": "-5.9%"
-            },
-            {
-                "Año": 2022,
-                "Retorno": "-23.5%",
-                "MaxPerdida": "-27.6%"
-            },
-            {
-                "Año": 2021,
-                "Retorno": "17.3%",
-                "MaxPerdida": "-9.4%"
-            },
-            {
-                "Año": 2020,
-                "Retorno": "34.5%",
-                "MaxPerdida": "-20.4%"
-            },
-            {
-                "Año": 2019,
-                "Retorno": "23.5%",
-                "MaxPerdida": "-7.1%"
-            },
-            {
-                "Año": 2018,
-                "Retorno": "1.3%",
-                "MaxPerdida": "-15.0%"
-            },
-            {
-                "Año": 2017,
-                "Retorno": "18.7%",
-                "MaxPerdida": "-3.4%"
-            },
-            {
-                "Año": 2016,
-                "Retorno": "9.2%",
-                "MaxPerdida": "-5.9%"
-            },
-            {
-                "Año": 2015,
-                "Retorno": "1.5%",
-                "MaxPerdida": "-9.8%"
-            },
-            {
-                "Año": 2014,
-                "Retorno": "14.8%",
-                "MaxPerdida": "-4.8%"
-            },
-            {
-                "Año": 2013,
-                "Retorno": "17.2%",
-                "MaxPerdida": "-6.9%"
-            },
-            {
-                "Año": 2012,
-                "Retorno": "11.3%",
-                "MaxPerdida": "-7.1%"
-            },
-            {
-                "Año": 2011,
-                "Retorno": "2.0%",
-                "MaxPerdida": "-6.8%"
-            },
-            {
-                "Año": 2010,
-                "Retorno": "12.9%",
-                "MaxPerdida": "-9.5%"
-            },
-            {
-                "Año": 2009,
-                "Retorno": "32.0%",
-                "MaxPerdida": "-11.7%"
-            },
-            {
-                "Año": 2008,
-                "Retorno": "-23.3%",
-                "MaxPerdida": "-36.9%"
-            },
-            {
-                "Año": 2007,
-                "Retorno": "19.1%",
-                "MaxPerdida": "-10.0%"
-            }
-        ]
+        "tabla_anual": []
     }
 }
