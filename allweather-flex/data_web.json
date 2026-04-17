@@ -1,29 +1,13 @@
 {
     "StrategyName": "AllWeather FLEX",
-    "MesActual": "Abril 2025",
-    "Fecha": "4/1/25",
+    "MesActual": "Abril 2026",
+    "Fecha": "4/1/26",
     "Ordenes": [
         {
             "Accion": "VENDER",
-            "Simbolo": "VUG",
+            "Simbolo": "VEA",
             "Cantidad": "100% de la Posición",
-            "Nombre": "Acciones de Crecimiento",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "VENDER",
-            "Simbolo": "SPY",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "S&P 500",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": "CSPX / VOO / SPXS"
-        },
-        {
-            "Accion": "VENDER",
-            "Simbolo": "IVV",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "S&P 500",
+            "Nombre": "Mercados Desarrollados",
             "Instruccion": "Vender al mercado en la apertura",
             "MGC": NaN
         },
@@ -34,31 +18,22 @@
             "Nombre": "Energía",
             "Instruccion": "Comprar al mercado en la apertura",
             "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "EFA",
-            "Cantidad": "20% del Portafolio",
-            "Nombre": "Mercados Desarrollados",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": "IDSE / ISAC //CEUU"
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "TIP",
-            "Cantidad": "20% del Portafolio",
-            "Nombre": "Bonos Protegidos contra Inflación",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
         }
     ],
     "Portafolio": [
         {
-            "Simbolo": "GBTC",
-            "Nombre": "Bitcoin",
-            "Peso": "5%",
+            "Simbolo": "DBB",
+            "Nombre": "Metales Básicos",
+            "Peso": "20%",
             "Estado": "MANTENER",
-            "MGC": NaN
+            "MGC": "IDTP"
+        },
+        {
+            "Simbolo": "EEM",
+            "Nombre": "Mercados Emergentes",
+            "Peso": "20%",
+            "Estado": "MANTENER",
+            "MGC": "EIMI "
         },
         {
             "Simbolo": "GLD",
@@ -73,26 +48,12 @@
             "Peso": "20%",
             "Estado": "NUEVA COMPRA",
             "MGC": NaN
-        },
-        {
-            "Simbolo": "EFA",
-            "Nombre": "Mercados Desarrollados",
-            "Peso": "20%",
-            "Estado": "NUEVA COMPRA",
-            "MGC": "IDSE / ISAC //CEUU"
-        },
-        {
-            "Simbolo": "TIP",
-            "Nombre": "Bonos Protegidos contra Inflación",
-            "Peso": "20%",
-            "Estado": "NUEVA COMPRA",
-            "MGC": NaN
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "105.61%",
-            "Strategy": "355.49%",
+            "Benchmark": "147.70%",
+            "Strategy": "485.27%",
             "MaxDD_Bench": "-23.82%",
             "MaxDD_Strat": "-19.89%"
         },
@@ -189,8 +150,13 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "-1.4%",
-                "MaxPerdida": "-8.3%"
+                "Retorno": "18.1%",
+                "MaxPerdida": "-13.7%"
+            },
+            {
+                "Año": 2026,
+                "Retorno": "3.0%",
+                "MaxPerdida": "-10.6%"
             }
         ]
     }

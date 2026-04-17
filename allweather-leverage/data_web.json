@@ -1,30 +1,14 @@
 {
     "StrategyName": "AllWeather Leverage",
-    "MesActual": "Abril 2025",
-    "Fecha": "4/1/25",
+    "MesActual": "Abril 2026",
+    "Fecha": "4/1/26",
     "Ordenes": [
         {
             "Accion": "VENDER",
-            "Simbolo": "SSO",
+            "Simbolo": "EFO",
             "Cantidad": "100% de la Posición",
-            "Nombre": "S&P 500 Apalancado",
+            "Nombre": "Mercados Desarrollados Apalancados",
             "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "VENDER",
-            "Simbolo": "EUO",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Dólar  Apalancado",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "XLU",
-            "Cantidad": "20% del Portafolio",
-            "Nombre": "Servicios Públicos",
-            "Instruccion": "Comprar al mercado en la apertura",
             "MGC": NaN
         },
         {
@@ -38,9 +22,9 @@
     ],
     "Portafolio": [
         {
-            "Simbolo": "GBTC",
-            "Nombre": "Bitcoin",
-            "Peso": "5%",
+            "Simbolo": "EET",
+            "Nombre": "Mercados Emergentes Apalancados",
+            "Peso": "20%",
             "Estado": "MANTENER",
             "MGC": NaN
         },
@@ -59,13 +43,6 @@
             "MGC": NaN
         },
         {
-            "Simbolo": "XLU",
-            "Nombre": "Servicios Públicos",
-            "Peso": "20%",
-            "Estado": "NUEVA COMPRA",
-            "MGC": NaN
-        },
-        {
             "Simbolo": "XLE",
             "Nombre": "Energía",
             "Peso": "20%",
@@ -75,8 +52,8 @@
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "205.99%",
-            "Strategy": "852.22%",
+            "Benchmark": "247.99%",
+            "Strategy": "1,316.86%",
             "MaxDD_Bench": "-31.00%",
             "MaxDD_Strat": "-24.50%"
         },
@@ -173,8 +150,13 @@
             },
             {
                 "Año": 2025,
-                "Retorno": "6.7%",
+                "Retorno": "47.2%",
                 "MaxPerdida": "-9.9%"
+            },
+            {
+                "Año": 2026,
+                "Retorno": "4.5%",
+                "MaxPerdida": "-19.9%"
             }
         ]
     }
