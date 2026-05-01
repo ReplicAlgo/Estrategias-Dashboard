@@ -1,23 +1,23 @@
 {
     "StrategyName": "Smart DCA Defensivo",
-    "MesActual": "Abril 2026",
-    "Fecha": "4/1/26",
+    "MesActual": "Mayo 2026",
+    "Fecha": "5/1/26",
     "Ordenes": [
         {
             "Accion": "VENDER",
-            "Simbolo": "TLT",
+            "Simbolo": "UUP",
             "Cantidad": "100% de la Posición",
-            "Nombre": "Bonos del Tesoro Largo Plazo",
+            "Nombre": "Dólar Estadounidense",
             "Instruccion": "Vender al mercado en la apertura",
-            "MGC": "SGLD"
+            "MGC": "CBU0"
         },
         {
             "Accion": "COMPRAR",
-            "Simbolo": "UUP",
+            "Simbolo": "JNK",
             "Cantidad": "50% del Portafolio",
-            "Nombre": "Dólar Estadounidense",
+            "Nombre": "Bonos Alto Riesgo",
             "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": "CBU0"
+            "MGC": NaN
         }
     ],
     "Portafolio": [
@@ -29,17 +29,17 @@
             "MGC": "IHYA"
         },
         {
-            "Simbolo": "UUP",
-            "Nombre": "Dólar Estadounidense",
+            "Simbolo": "JNK",
+            "Nombre": "Bonos Alto Riesgo",
             "Peso": "50%",
             "Estado": "NUEVA COMPRA",
-            "MGC": "CBU0"
+            "MGC": NaN
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "76.04%",
-            "Strategy": "139.16%",
+            "Benchmark": "74.43%",
+            "Strategy": "138.21%",
             "MaxDD_Bench": "-14.43%",
             "MaxDD_Strat": "-19.20%"
         },
@@ -141,7 +141,7 @@
             },
             {
                 "Año": 2026,
-                "Retorno": "8.8%",
+                "Retorno": "8.5%",
                 "MaxPerdida": "-7.7%"
             }
         ]

@@ -1,39 +1,31 @@
 {
     "StrategyName": "Satellite Synergy",
-    "MesActual": "Abril 2026",
-    "Fecha": "4/1/26",
+    "MesActual": "Mayo 2026",
+    "Fecha": "5/1/26",
     "Ordenes": [
         {
             "Accion": "VENDER",
-            "Simbolo": "IEF",
+            "Simbolo": "FLOT",
             "Cantidad": "100% de la Posición",
-            "Nombre": "Bonos del Tesoro Mediano Plazo",
+            "Nombre": "Bonos Tasa Flotante",
             "Instruccion": "Vender al mercado en la apertura",
             "MGC": NaN
         },
         {
             "Accion": "COMPRAR",
-            "Simbolo": "FLOT",
+            "Simbolo": "SHYG",
             "Cantidad": "25% del Portafolio",
-            "Nombre": "Bonos Tasa Flotante",
+            "Nombre": "Bonos Corporativos Alto Riesgo Corto Plazo",
             "Instruccion": "Comprar al mercado en la apertura",
             "MGC": NaN
         },
         {
-            "Accion": "VENDER",
+            "Accion": "COMPRAR",
             "Simbolo": "SPY",
-            "Cantidad": "100% de la Posición",
+            "Cantidad": "25% del Portafolio",
             "Nombre": "S&P 500",
-            "Instruccion": "Vender al mercado en la apertura",
+            "Instruccion": "Comprar al mercado en la apertura",
             "MGC": "CSPX / VOO / SPXS"
-        },
-        {
-            "Accion": "VENDER",
-            "Simbolo": "TLH",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Bonos del Tesoro Largo Plazo",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
         }
     ],
     "Portafolio": [
@@ -66,17 +58,24 @@
             "MGC": NaN
         },
         {
-            "Simbolo": "FLOT",
-            "Nombre": "Bonos Tasa Flotante",
+            "Simbolo": "SHYG",
+            "Nombre": "Bonos Corporativos Alto Riesgo Corto Plazo",
             "Peso": "25%",
             "Estado": "NUEVA COMPRA",
             "MGC": NaN
+        },
+        {
+            "Simbolo": "SPY",
+            "Nombre": "S&P 500",
+            "Peso": "25%",
+            "Estado": "NUEVA COMPRA",
+            "MGC": "CSPX / VOO / SPXS"
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "247.99%",
-            "Strategy": "267.93%",
+            "Benchmark": "274.63%",
+            "Strategy": "274.88%",
             "MaxDD_Bench": "-31.00%",
             "MaxDD_Strat": "-10.90%"
         },
@@ -178,7 +177,7 @@
             },
             {
                 "Año": 2026,
-                "Retorno": "0.3%",
+                "Retorno": "1.8%",
                 "MaxPerdida": "-6.8%"
             }
         ]

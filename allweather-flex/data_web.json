@@ -1,23 +1,23 @@
 {
     "StrategyName": "AllWeather FLEX",
-    "MesActual": "Abril 2026",
-    "Fecha": "4/1/26",
+    "MesActual": "Mayo 2026",
+    "Fecha": "5/1/26",
     "Ordenes": [
         {
             "Accion": "VENDER",
-            "Simbolo": "VEA",
+            "Simbolo": "GLD",
             "Cantidad": "100% de la Posición",
-            "Nombre": "Mercados Desarrollados",
+            "Nombre": "Oro",
             "Instruccion": "Vender al mercado en la apertura",
             "MGC": NaN
         },
         {
             "Accion": "COMPRAR",
-            "Simbolo": "XLE",
+            "Simbolo": "DBC",
             "Cantidad": "20% del Portafolio",
-            "Nombre": "Energía",
+            "Nombre": "Materias Primas",
             "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
+            "MGC": "IB01*"
         }
     ],
     "Portafolio": [
@@ -36,24 +36,24 @@
             "MGC": "EIMI "
         },
         {
-            "Simbolo": "GLD",
-            "Nombre": "Oro",
+            "Simbolo": "XLE",
+            "Nombre": "Energía",
             "Peso": "20%",
             "Estado": "MANTENER",
             "MGC": NaN
         },
         {
-            "Simbolo": "XLE",
-            "Nombre": "Energía",
+            "Simbolo": "DBC",
+            "Nombre": "Materias Primas",
             "Peso": "20%",
             "Estado": "NUEVA COMPRA",
-            "MGC": NaN
+            "MGC": "IB01*"
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "147.70%",
-            "Strategy": "485.27%",
+            "Benchmark": "158.99%",
+            "Strategy": "509.17%",
             "MaxDD_Bench": "-23.82%",
             "MaxDD_Strat": "-19.89%"
         },
@@ -155,7 +155,7 @@
             },
             {
                 "Año": 2026,
-                "Retorno": "3.0%",
+                "Retorno": "6.6%",
                 "MaxPerdida": "-10.6%"
             }
         ]
