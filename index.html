@@ -354,7 +354,9 @@
                     
                     if (riskEl && row['Perfil Riesgo']) {
                         const riskValue = row['Perfil Riesgo'].trim();
-                        riskEl.innerText = riskValue;
+                        
+                        // Aquí incluimos el texto literal "Perfil Riesgo:" antes de la clasificación
+                        riskEl.innerText = `Perfil Riesgo: ${riskValue}`;
                         
                         // Diseño ultra limpio e integrado para los badges de riesgo al lado del badge temporal
                         if (riskValue.toLowerCase() === 'arriesgado') {
