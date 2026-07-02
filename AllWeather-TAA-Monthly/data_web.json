@@ -1,7 +1,7 @@
 {
     "StrategyName": "AllWeather TAA",
     "MesActual": "Julio 2026",
-    "Fecha": "7/2/26",
+    "Fecha": "7/3/26",
     "Ordenes": [],
     "Portafolio": [
         {
@@ -138,8 +138,8 @@
             },
             {
                 "Año": 2026,
-                "Retorno": "2.6%",
-                "MaxPerdida": "-11.3%"
+                "Retorno": "2.5%",
+                "MaxPerdida": "-11.4%"
             }
         ]
     }

@@ -1,7 +1,7 @@
 {
     "StrategyName": "NDX Core 9",
     "MesActual": "Julio 2026",
-    "Fecha": "7/2/26",
+    "Fecha": "7/3/26",
     "Ordenes": [],
     "Portafolio": [
         {
@@ -166,8 +166,8 @@
             },
             {
                 "Año": 2026,
-                "Retorno": "41.3%",
-                "MaxPerdida": "-9.9%"
+                "Retorno": "37.8%",
+                "MaxPerdida": "-7.1%"
             }
         ]
     }
