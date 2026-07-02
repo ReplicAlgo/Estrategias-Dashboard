@@ -1,26 +1,49 @@
 {
     "StrategyName": "AllWeather Leverage",
-    "MesActual": "Mayo 2026",
-    "Fecha": "5/1/26",
+    "MesActual": "Junio 2026",
+    "Fecha": "6/1/26",
     "Ordenes": [
         {
             "Accion": "VENDER",
-            "Simbolo": "GLD",
+            "Simbolo": "UGL",
             "Cantidad": "100% de la Posición",
-            "Nombre": "Oro",
+            "Nombre": "Oro Apalancado",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "VENDER",
+            "Simbolo": "XLE",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Energía",
             "Instruccion": "Vender al mercado en la apertura",
             "MGC": NaN
         },
         {
             "Accion": "COMPRAR",
-            "Simbolo": "DBC",
+            "Simbolo": "QLD",
             "Cantidad": "20% del Portafolio",
-            "Nombre": "Materias Primas",
+            "Nombre": "Nasdaq 100 Apalancado",
             "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": "IB01*"
+            "MGC": NaN
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "SSO",
+            "Cantidad": "20% del Portafolio",
+            "Nombre": "S&P 500 Apalancado",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": NaN
         }
     ],
     "Portafolio": [
+        {
+            "Simbolo": "DBC",
+            "Nombre": "Materias Primas",
+            "Peso": "20%",
+            "Estado": "MANTENER",
+            "MGC": "IB01*"
+        },
         {
             "Simbolo": "EET",
             "Nombre": "Mercados Emergentes Apalancados",
@@ -29,33 +52,40 @@
             "MGC": NaN
         },
         {
-            "Simbolo": "UGL",
-            "Nombre": "Oro Apalancado",
-            "Peso": "20%",
+            "Simbolo": "SPY",
+            "Nombre": "S&P 500",
+            "Peso": "60%",
             "Estado": "MANTENER",
-            "MGC": NaN
+            "MGC": "CSPX / VOO / SPXS"
         },
         {
-            "Simbolo": "XLE",
-            "Nombre": "Energía",
-            "Peso": "20%",
+            "Simbolo": "TLT",
+            "Nombre": "Bonos del Tesoro Largo Plazo",
+            "Peso": "40%",
             "Estado": "MANTENER",
-            "MGC": NaN
+            "MGC": "SGLD"
         },
         {
-            "Simbolo": "DBC",
-            "Nombre": "Materias Primas",
+            "Simbolo": "QLD",
+            "Nombre": "Nasdaq 100 Apalancado",
             "Peso": "20%",
             "Estado": "NUEVA COMPRA",
-            "MGC": "IB01*"
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "SSO",
+            "Nombre": "S&P 500 Apalancado",
+            "Peso": "20%",
+            "Estado": "NUEVA COMPRA",
+            "MGC": NaN
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "274.63%",
-            "Strategy": "1,377.60%",
-            "MaxDD_Bench": "-31.00%",
-            "MaxDD_Strat": "-24.50%"
+            "Benchmark": "N/A",
+            "Strategy": "N/A",
+            "MaxDD_Bench": "N/A",
+            "MaxDD_Strat": "N/A"
         },
         "tabla_anual": [
             {
@@ -155,7 +185,7 @@
             },
             {
                 "Año": 2026,
-                "Retorno": "8.7%",
+                "Retorno": "8.9%",
                 "MaxPerdida": "-19.9%"
             }
         ]

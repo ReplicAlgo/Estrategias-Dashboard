@@ -1,0 +1,146 @@
+{
+    "StrategyName": "Fuerza 6",
+    "MesActual": "Junio 2026",
+    "Fecha": "6/1/26",
+    "Ordenes": [],
+    "Portafolio": [
+        {
+            "Simbolo": "DBC",
+            "Nombre": "Materias Primas",
+            "Peso": "58%",
+            "Estado": "MANTENER",
+            "MGC": "IB01*"
+        },
+        {
+            "Simbolo": "GLD",
+            "Nombre": "Oro",
+            "Peso": "25%",
+            "Estado": "MANTENER",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "VTI",
+            "Nombre": "Acciones USA",
+            "Peso": "58%",
+            "Estado": "MANTENER",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "VXUS",
+            "Nombre": "Acciones Internacionales",
+            "Peso": "58%",
+            "Estado": "MANTENER",
+            "MGC": NaN
+        }
+    ],
+    "Historico": {
+        "resumen": {
+            "Benchmark": "N/A",
+            "Strategy": "N/A",
+            "MaxDD_Bench": "N/A",
+            "MaxDD_Strat": "N/A"
+        },
+        "tabla_anual": [
+            {
+                "Año": 2007,
+                "Retorno": "22.3%",
+                "MaxPerdida": "-5.7%"
+            },
+            {
+                "Año": 2008,
+                "Retorno": "2.0%",
+                "MaxPerdida": "-10.2%"
+            },
+            {
+                "Año": 2009,
+                "Retorno": "31.3%",
+                "MaxPerdida": "-12.8%"
+            },
+            {
+                "Año": 2010,
+                "Retorno": "14.4%",
+                "MaxPerdida": "-16.2%"
+            },
+            {
+                "Año": 2011,
+                "Retorno": "20.3%",
+                "MaxPerdida": "-17.1%"
+            },
+            {
+                "Año": 2012,
+                "Retorno": "15.9%",
+                "MaxPerdida": "-9.7%"
+            },
+            {
+                "Año": 2013,
+                "Retorno": "31.6%",
+                "MaxPerdida": "-5.4%"
+            },
+            {
+                "Año": 2014,
+                "Retorno": "11.8%",
+                "MaxPerdida": "-7.1%"
+            },
+            {
+                "Año": 2015,
+                "Retorno": "-8.7%",
+                "MaxPerdida": "-13.6%"
+            },
+            {
+                "Año": 2016,
+                "Retorno": "1.7%",
+                "MaxPerdida": "-15.4%"
+            },
+            {
+                "Año": 2017,
+                "Retorno": "16.3%",
+                "MaxPerdida": "-2.7%"
+            },
+            {
+                "Año": 2018,
+                "Retorno": "-5.6%",
+                "MaxPerdida": "-13.2%"
+            },
+            {
+                "Año": 2019,
+                "Retorno": "12.4%",
+                "MaxPerdida": "-3.6%"
+            },
+            {
+                "Año": 2020,
+                "Retorno": "18.4%",
+                "MaxPerdida": "-8.3%"
+            },
+            {
+                "Año": 2021,
+                "Retorno": "19.4%",
+                "MaxPerdida": "-5.8%"
+            },
+            {
+                "Año": 2022,
+                "Retorno": "-5.0%",
+                "MaxPerdida": "-9.9%"
+            },
+            {
+                "Año": 2023,
+                "Retorno": "0.9%",
+                "MaxPerdida": "-10.8%"
+            },
+            {
+                "Año": 2024,
+                "Retorno": "22.0%",
+                "MaxPerdida": "-4.6%"
+            },
+            {
+                "Año": 2025,
+                "Retorno": "35.3%",
+                "MaxPerdida": "-6.6%"
+            },
+            {
+                "Año": 2026,
+                "Retorno": "21.1%",
+                "MaxPerdida": "-9.4%"
+            }
+        ]
+    }
+}

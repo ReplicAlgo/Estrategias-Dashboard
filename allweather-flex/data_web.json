@@ -1,25 +1,8 @@
 {
     "StrategyName": "AllWeather FLEX",
-    "MesActual": "Mayo 2026",
-    "Fecha": "5/1/26",
-    "Ordenes": [
-        {
-            "Accion": "VENDER",
-            "Simbolo": "GLD",
-            "Cantidad": "100% de la Posición",
-            "Nombre": "Oro",
-            "Instruccion": "Vender al mercado en la apertura",
-            "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "DBC",
-            "Cantidad": "20% del Portafolio",
-            "Nombre": "Materias Primas",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": "IB01*"
-        }
-    ],
+    "MesActual": "Junio 2026",
+    "Fecha": "6/1/26",
+    "Ordenes": [],
     "Portafolio": [
         {
             "Simbolo": "DBB",
@@ -29,6 +12,13 @@
             "MGC": "IDTP"
         },
         {
+            "Simbolo": "DBC",
+            "Nombre": "Materias Primas",
+            "Peso": "27%",
+            "Estado": "MANTENER",
+            "MGC": "IB01*"
+        },
+        {
             "Simbolo": "EEM",
             "Nombre": "Mercados Emergentes",
             "Peso": "20%",
@@ -36,26 +26,47 @@
             "MGC": "EIMI "
         },
         {
+            "Simbolo": "GLD",
+            "Nombre": "Oro",
+            "Peso": "7%",
+            "Estado": "MANTENER",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "IEF",
+            "Nombre": "Bonos del Tesoro Mediano Plazo",
+            "Peso": "15%",
+            "Estado": "MANTENER",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "SPY",
+            "Nombre": "S&P 500",
+            "Peso": "30%",
+            "Estado": "MANTENER",
+            "MGC": "CSPX / VOO / SPXS"
+        },
+        {
+            "Simbolo": "TLT",
+            "Nombre": "Bonos del Tesoro Largo Plazo",
+            "Peso": "40%",
+            "Estado": "MANTENER",
+            "MGC": "SGLD"
+        },
+        {
             "Simbolo": "XLE",
             "Nombre": "Energía",
             "Peso": "20%",
             "Estado": "MANTENER",
             "MGC": NaN
-        },
-        {
-            "Simbolo": "DBC",
-            "Nombre": "Materias Primas",
-            "Peso": "20%",
-            "Estado": "NUEVA COMPRA",
-            "MGC": "IB01*"
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "158.99%",
-            "Strategy": "509.17%",
-            "MaxDD_Bench": "-23.82%",
-            "MaxDD_Strat": "-19.89%"
+            "Benchmark": "N/A",
+            "Strategy": "N/A",
+            "MaxDD_Bench": "N/A",
+            "MaxDD_Strat": "N/A"
         },
         "tabla_anual": [
             {
@@ -155,7 +166,7 @@
             },
             {
                 "Año": 2026,
-                "Retorno": "6.6%",
+                "Retorno": "6.9%",
                 "MaxPerdida": "-10.6%"
             }
         ]
