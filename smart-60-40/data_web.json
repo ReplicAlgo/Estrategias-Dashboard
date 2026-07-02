@@ -66,10 +66,10 @@
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "778.42%",
-            "Strategy": "379.04%",
-            "MaxDD_Bench": "-36.91%",
-            "MaxDD_Strat": "-31.90%"
+            "Benchmark": "379.04%",
+            "Strategy": "778.42%",
+            "MaxDD_Bench": "-31.90%",
+            "MaxDD_Strat": "-36.91%"
         },
         "tabla_anual": [
             {
