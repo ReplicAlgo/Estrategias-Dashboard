@@ -66,6 +66,11 @@
         .card-amber:hover { box-shadow: 0 20px 40px -15px rgba(245, 158, 11, 0.3); }
         .card-sky:hover { box-shadow: 0 20px 40px -15px rgba(14, 165, 233, 0.3); }
         .card-red:hover { box-shadow: 0 20px 40px -15px rgba(239, 68, 68, 0.3); }
+        .card-indigo:hover { box-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.3); }
+        .card-violet:hover { box-shadow: 0 20px 40px -15px rgba(139, 92, 246, 0.3); }
+        .card-orange:hover { box-shadow: 0 20px 40px -15px rgba(249, 115, 22, 0.3); }
+        .card-fuchsia:hover { box-shadow: 0 20px 40px -15px rgba(217, 70, 239, 0.3); }
+        .card-rose:hover { box-shadow: 0 20px 40px -15px rgba(244, 63, 94, 0.3); }
 
         .glow-text {
             text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
@@ -137,6 +142,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-32">
 
+            <!-- 1. SMART DCA ACCIONES -->
             <a href="smart-dca-stock/" class="glass-card card-blue gradient-border p-8 rounded-3xl group flex flex-col justify-between">
                 <div>
                     <div class="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-blue-600/5 rounded-2xl flex items-center justify-center mb-6 border border-blue-500/20 group-hover:border-blue-500/40 transition-all">
@@ -165,6 +171,7 @@
                 </div>
             </a>
 
+            <!-- 2. SMART DCA DEFENSIVO -->
             <a href="smart-dca-defensive/" class="glass-card card-emerald gradient-border p-8 rounded-3xl group flex flex-col justify-between">
                 <div>
                     <div class="w-14 h-14 bg-gradient-to-br from-emerald-500/20 to-emerald-600/5 rounded-2xl flex items-center justify-center mb-6 border border-emerald-500/20 group-hover:border-emerald-500/40 transition-all">
@@ -193,6 +200,7 @@
                 </div>
             </a>
 
+            <!-- 3. SMART GLOBAL 60/40 -->
             <a href="smart-60-40/" class="glass-card card-purple gradient-border p-8 rounded-3xl group flex flex-col justify-between">
                 <div>
                     <div class="w-14 h-14 bg-gradient-to-br from-purple-500/20 to-purple-600/5 rounded-2xl flex items-center justify-center mb-6 border border-purple-500/20 group-hover:border-purple-500/40 transition-all">
@@ -221,34 +229,36 @@
                 </div>
             </a>
 
-            <a href="satellite-synergy/" class="glass-card card-amber gradient-border p-8 rounded-3xl group flex flex-col justify-between">
+            <!-- 4. NUEVO: ALLWEATHER TAA (Ubicado antes de AllWeather Flex) -->
+            <a href="AllWeather-TAA-Monthly/" class="glass-card card-indigo gradient-border p-8 rounded-3xl group flex flex-col justify-between">
                 <div>
-                    <div class="w-14 h-14 bg-gradient-to-br from-amber-500/20 to-amber-600/5 rounded-2xl flex items-center justify-center mb-6 border border-amber-500/20 group-hover:border-amber-500/40 transition-all">
-                        <i class="fas fa-satellite text-amber-400 text-2xl"></i>
+                    <div class="w-14 h-14 bg-gradient-to-br from-indigo-500/20 to-indigo-600/5 rounded-2xl flex items-center justify-center mb-6 border border-indigo-500/20 group-hover:border-indigo-500/40 transition-all">
+                        <i class="fas fa-sliders text-indigo-400 text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors">Satellite Synergy</h3>
-                    <p class="text-slate-400 mb-6 leading-relaxed">Modelo dinámico compuesto por 5 sistemas de rotación táctica. Eficiencia pura sin sacrificar retornos de largo plazo.</p>
+                    <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">AllWeather TAA</h3>
+                    <p class="text-slate-400 mb-6 leading-relaxed">Inspirado en Ray Dalio. Adaptado usando rotación táctica de los activos para mejorar retorno y riesgo. Baja rotación y no incluye Bitcoin.</p>
                     
                     <div class="grid grid-cols-2 gap-3 pt-4 border-t border-slate-800/60 mb-6">
                         <div class="bg-slate-900/40 border border-slate-800/80 rounded-xl p-3 text-center">
                             <span class="block text-slate-500 text-[10px] uppercase tracking-wider mb-1">Retorno Compuesto</span>
-                            <span class="text-white font-bold text-base"><span id="cagr-Satellite_Synergy">--</span> <span class="text-xs text-slate-400 font-normal">CAGR</span></span>
+                            <span class="text-white font-bold text-base"><span id="cagr-AllWeather_TAA">--</span> <span class="text-xs text-slate-400 font-normal">CAGR</span></span>
                         </div>
                         <div class="bg-slate-900/40 border border-slate-800/80 rounded-xl p-3 text-center">
                             <span class="block text-slate-500 text-[10px] uppercase tracking-wider mb-1">Volatilidad</span>
-                            <span class="text-white font-bold text-base" id="vol-Satellite_Synergy">--</span>
+                            <span class="text-white font-bold text-base" id="vol-AllWeather_TAA">--</span>
                         </div>
                     </div>
                 </div>
                 <div class="flex items-center justify-between mt-auto pt-2">
                     <div class="flex flex-wrap gap-2 items-center">
-                        <span class="text-[10px] font-bold uppercase tracking-[0.15em] text-amber-500/90 bg-amber-500/10 px-2.5 py-1 rounded-md border border-amber-500/10">Mensual • ETFs</span>
-                        <span id="risk-Satellite_Synergy" class="text-[10px] font-bold uppercase tracking-[0.15em] px-2.5 py-1 rounded-md transition-all duration-300">Cargando...</span>
+                        <span class="text-[10px] font-bold uppercase tracking-[0.15em] text-indigo-500/90 bg-indigo-500/10 px-2.5 py-1 rounded-md border border-indigo-500/10">Mensual • ETFs</span>
+                        <span id="risk-AllWeather_TAA" class="text-[10px] font-bold uppercase tracking-[0.15em] px-2.5 py-1 rounded-md transition-all duration-300">Cargando...</span>
                     </div>
-                    <i class="fas fa-chevron-right text-slate-600 group-hover:translate-x-1 group-hover:text-amber-400 transition-all ml-2"></i>
+                    <i class="fas fa-chevron-right text-slate-600 group-hover:translate-x-1 group-hover:text-indigo-400 transition-all ml-2"></i>
                 </div>
             </a>
 
+            <!-- 5. ALLWEATHER FLEX -->
             <a href="allweather-flex/" class="glass-card card-sky gradient-border p-8 rounded-3xl group flex flex-col justify-between">
                 <div>
                     <div class="w-14 h-14 bg-gradient-to-br from-sky-500/20 to-sky-600/5 rounded-2xl flex items-center justify-center mb-6 border border-sky-500/20 group-hover:border-sky-500/40 transition-all">
@@ -277,6 +287,7 @@
                 </div>
             </a>
 
+            <!-- 6. ALLWEATHER LEVERAGE -->
             <a href="allweather-leverage/" class="glass-card card-red gradient-border p-8 rounded-3xl group border-red-500/20 flex flex-col justify-between">
                 <div>
                     <div class="w-14 h-14 bg-gradient-to-br from-red-500/20 to-red-600/5 rounded-2xl flex items-center justify-center mb-6 border border-red-500/20 group-hover:border-red-500/40 transition-all">
@@ -302,6 +313,151 @@
                         <span id="risk-AllWeather_Leverage" class="text-[10px] font-bold uppercase tracking-[0.15em] px-2.5 py-1 rounded-md transition-all duration-300">Cargando...</span>
                     </div>
                     <i class="fas fa-chevron-right text-slate-600 group-hover:translate-x-1 group-hover:text-red-400 transition-all ml-2"></i>
+                </div>
+            </a>
+
+            <!-- 7. SATELLITE SYNERGY (Reposicionado después de AllWeather Leverage) -->
+            <a href="satellite-synergy/" class="glass-card card-amber gradient-border p-8 rounded-3xl group flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-gradient-to-br from-amber-500/20 to-amber-600/5 rounded-2xl flex items-center justify-center mb-6 border border-amber-500/20 group-hover:border-amber-500/40 transition-all">
+                        <i class="fas fa-satellite text-amber-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors">Satellite Synergy</h3>
+                    <p class="text-slate-400 mb-6 leading-relaxed">Modelo dinámico compuesto por 5 sistemas de rotación táctica. Eficiencia pura sin sacrificar retornos de largo plazo.</p>
+                    
+                    <div class="grid grid-cols-2 gap-3 pt-4 border-t border-slate-800/60 mb-6">
+                        <div class="bg-slate-900/40 border border-slate-800/80 rounded-xl p-3 text-center">
+                            <span class="block text-slate-500 text-[10px] uppercase tracking-wider mb-1">Retorno Compuesto</span>
+                            <span class="text-white font-bold text-base"><span id="cagr-Satellite_Synergy">--</span> <span class="text-xs text-slate-400 font-normal">CAGR</span></span>
+                        </div>
+                        <div class="bg-slate-900/40 border border-slate-800/80 rounded-xl p-3 text-center">
+                            <span class="block text-slate-500 text-[10px] uppercase tracking-wider mb-1">Volatilidad</span>
+                            <span class="text-white font-bold text-base" id="vol-Satellite_Synergy">--</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-2">
+                    <div class="flex flex-wrap gap-2 items-center">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.15em] text-amber-500/90 bg-amber-500/10 px-2.5 py-1 rounded-md border border-amber-500/10">Mensual • ETFs</span>
+                        <span id="risk-Satellite_Synergy" class="text-[10px] font-bold uppercase tracking-[0.15em] px-2.5 py-1 rounded-md transition-all duration-300">Cargando...</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-slate-600 group-hover:translate-x-1 group-hover:text-amber-400 transition-all ml-2"></i>
+                </div>
+            </a>
+
+            <!-- 8. NUEVO: OSO PEREZOSO (Ubicado después de Satellite Synergy) -->
+            <a href="OsoPerezoso-Mes/" class="glass-card card-violet gradient-border p-8 rounded-3xl group flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-gradient-to-br from-violet-500/20 to-violet-600/5 rounded-2xl flex items-center justify-center mb-6 border border-violet-500/20 group-hover:border-violet-500/40 transition-all">
+                        <i class="fas fa-bed text-violet-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-violet-400 transition-colors">Oso Perezoso</h3>
+                    <p class="text-slate-400 mb-6 leading-relaxed">Variación de DCA que nos protege en las caídas y elimina el sesgo de que índice de acciones escoger. Retornos similares a DCA pero menos riesgo. Diseñado para dormir mas tranquilos.</p>
+                    
+                    <div class="grid grid-cols-2 gap-3 pt-4 border-t border-slate-800/60 mb-6">
+                        <div class="bg-slate-900/40 border border-slate-800/80 rounded-xl p-3 text-center">
+                            <span class="block text-slate-500 text-[10px] uppercase tracking-wider mb-1">Retorno Compuesto</span>
+                            <span class="text-white font-bold text-base"><span id="cagr-OsoPerezoso">--</span> <span class="text-xs text-slate-400 font-normal">CAGR</span></span>
+                        </div>
+                        <div class="bg-slate-900/40 border border-slate-800/80 rounded-xl p-3 text-center">
+                            <span class="block text-slate-500 text-[10px] uppercase tracking-wider mb-1">Volatilidad</span>
+                            <span class="text-white font-bold text-base" id="vol-OsoPerezoso">--</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-2">
+                    <div class="flex flex-wrap gap-2 items-center">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.15em] text-violet-500/90 bg-violet-500/10 px-2.5 py-1 rounded-md border border-violet-500/10">Mensual • ETFs</span>
+                        <span id="risk-OsoPerezoso" class="text-[10px] font-bold uppercase tracking-[0.15em] px-2.5 py-1 rounded-md transition-all duration-300">Cargando...</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-slate-600 group-hover:translate-x-1 group-hover:text-violet-400 transition-all ml-2"></i>
+                </div>
+            </a>
+
+            <!-- 9. NUEVO: FUERZA 6 (Ubicado después de Oso Perezoso) -->
+            <a href="Fuerza6-monthly/" class="glass-card card-orange gradient-border p-8 rounded-3xl group flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-gradient-to-br from-orange-500/20 to-orange-600/5 rounded-2xl flex items-center justify-center mb-6 border border-orange-500/20 group-hover:border-orange-500/40 transition-all">
+                        <i class="fas fa-arrow-up-9-1 text-orange-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">Fuerza 6</h3>
+                    <p class="text-slate-400 mb-6 leading-relaxed">Basado en estudios de Meb Faber, pero adaptado para cortar perdidas rápido y dejar correr ganancias. Adaptabilidad Macro automática, enfocándonos en ETFs de índices, Oro y Materias Primas.</p>
+                    
+                    <div class="grid grid-cols-2 gap-3 pt-4 border-t border-slate-800/60 mb-6">
+                        <div class="bg-slate-900/40 border border-slate-800/80 rounded-xl p-3 text-center">
+                            <span class="block text-slate-500 text-[10px] uppercase tracking-wider mb-1">Retorno Compuesto</span>
+                            <span class="text-white font-bold text-base"><span id="cagr-Fuerza_SEIS_F6">--</span> <span class="text-xs text-slate-400 font-normal">CAGR</span></span>
+                        </div>
+                        <div class="bg-slate-900/40 border border-slate-800/80 rounded-xl p-3 text-center">
+                            <span class="block text-slate-500 text-[10px] uppercase tracking-wider mb-1">Volatilidad</span>
+                            <span class="text-white font-bold text-base" id="vol-Fuerza_SEIS_F6">--</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-2">
+                    <div class="flex flex-wrap gap-2 items-center">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.15em] text-orange-500/90 bg-orange-500/10 px-2.5 py-1 rounded-md border border-orange-500/10">Mensual • ETFs</span>
+                        <span id="risk-Fuerza_SEIS_F6" class="text-[10px] font-bold uppercase tracking-[0.15em] px-2.5 py-1 rounded-md transition-all duration-300">Cargando...</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-slate-600 group-hover:translate-x-1 group-hover:text-orange-400 transition-all ml-2"></i>
+                </div>
+            </a>
+
+            <!-- 10. NUEVO: NDX CORE 9 (Ubicado después de Fuerza 6) -->
+            <a href="NDX-Core9/" class="glass-card card-fuchsia gradient-border p-8 rounded-3xl group flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-gradient-to-br from-fuchsia-500/20 to-fuchsia-600/5 rounded-2xl flex items-center justify-center mb-6 border border-fuchsia-500/20 group-hover:border-fuchsia-500/40 transition-all">
+                        <i class="fas fa-gem text-fuchsia-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-fuchsia-400 transition-colors">NDX Core 9</h3>
+                    <p class="text-slate-400 mb-6 leading-relaxed">Estrategia enfocada en buscar los ganadores entre las acciones del Nasdaq. El algoritmo rota de manera automática fuera de sectores débiles o empresas en declive, canalizando el capital únicamente hacia el flujo institucional.</p>
+                    
+                    <div class="grid grid-cols-2 gap-3 pt-4 border-t border-slate-800/60 mb-6">
+                        <div class="bg-slate-900/40 border border-slate-800/80 rounded-xl p-3 text-center">
+                            <span class="block text-slate-500 text-[10px] uppercase tracking-wider mb-1">Retorno Compuesto</span>
+                            <span class="text-white font-bold text-base"><span id="cagr-NDX_Core9">--</span> <span class="text-xs text-slate-400 font-normal">CAGR</span></span>
+                        </div>
+                        <div class="bg-slate-900/40 border border-slate-800/80 rounded-xl p-3 text-center">
+                            <span class="block text-slate-500 text-[10px] uppercase tracking-wider mb-1">Volatilidad</span>
+                            <span class="text-white font-bold text-base" id="vol-NDX_Core9">--</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-2">
+                    <div class="flex flex-wrap gap-2 items-center">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.15em] text-fuchsia-500/90 bg-fuchsia-500/10 px-2.5 py-1 rounded-md border border-fuchsia-500/10">Mensual • Acciones Nasdaq</span>
+                        <span id="risk-NDX_Core9" class="text-[10px] font-bold uppercase tracking-[0.15em] px-2.5 py-1 rounded-md transition-all duration-300">Cargando...</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-slate-600 group-hover:translate-x-1 group-hover:text-fuchsia-400 transition-all ml-2"></i>
+                </div>
+            </a>
+
+            <!-- 11. NUEVO: ROTACION DEFENSIVA D4 (Ubicado después de NDX Core 9) -->
+            <a href="RotacionDefensiva-D4/" class="glass-card card-rose gradient-border p-8 rounded-3xl group flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-gradient-to-br from-rose-500/20 to-rose-600/5 rounded-2xl flex items-center justify-center mb-6 border border-rose-500/20 group-hover:border-rose-500/40 transition-all">
+                        <i class="fas fa-shield text-rose-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-rose-400 transition-colors">Rotacion Defensiva D4</h3>
+                    <p class="text-slate-400 mb-6 leading-relaxed">Estrategia para mercados débiles. Busca activos diferentes a acciones, ganando cuando el S&P 500 se debilita. Estrategia de Rotación táctica (TAA).</p>
+                    
+                    <div class="grid grid-cols-2 gap-3 pt-4 border-t border-slate-800/60 mb-6">
+                        <div class="bg-slate-900/40 border border-slate-800/80 rounded-xl p-3 text-center">
+                            <span class="block text-slate-500 text-[10px] uppercase tracking-wider mb-1">Retorno Compuesto</span>
+                            <span class="text-white font-bold text-base"><span id="cagr-RotacionDefensiva-D4">--</span> <span class="text-xs text-slate-400 font-normal">CAGR</span></span>
+                        </div>
+                        <div class="bg-slate-900/40 border border-slate-800/80 rounded-xl p-3 text-center">
+                            <span class="block text-slate-500 text-[10px] uppercase tracking-wider mb-1">Volatilidad</span>
+                            <span class="text-white font-bold text-base" id="vol-RotacionDefensiva-D4">--</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-2">
+                    <div class="flex flex-wrap gap-2 items-center">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.15em] text-rose-500/90 bg-rose-500/10 px-2.5 py-1 rounded-md border border-rose-500/10">Semanal • ETFs</span>
+                        <span id="risk-RotacionDefensiva-D4" class="text-[10px] font-bold uppercase tracking-[0.15em] px-2.5 py-1 rounded-md transition-all duration-300">Cargando...</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-slate-600 group-hover:translate-x-1 group-hover:text-rose-400 transition-all ml-2"></i>
                 </div>
             </a>
 
