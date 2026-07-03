@@ -10,9 +10,42 @@
             "Nombre": "Bonos Corporativos Alto Riesgo Corto Plazo",
             "Instruccion": "Vender al mercado en la apertura",
             "MGC": NaN
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "FLOT",
+            "Cantidad": "25% del Portafolio",
+            "Nombre": "Bonos Tasa Flotante",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": NaN
         }
     ],
-    "Stops": [],
+    "Stops": [
+        {
+            "Accion": "VENDER",
+            "Simbolo": "9",
+            "Nombre": "9",
+            "PrecioStop": "$158.8",
+            "Instruccion": "Vender Stop si toca $158.8",
+            "MGC": "-"
+        },
+        {
+            "Accion": "VENDER",
+            "Simbolo": "4",
+            "Nombre": "4",
+            "PrecioStop": "$18.8",
+            "Instruccion": "Vender Stop si toca $18.8",
+            "MGC": "-"
+        },
+        {
+            "Accion": "VENDER",
+            "Simbolo": "9",
+            "Nombre": "9",
+            "PrecioStop": "$47.2",
+            "Instruccion": "Vender Stop si toca $47.2",
+            "MGC": "-"
+        }
+    ],
     "Portafolio": [
         {
             "Simbolo": "AOR",
@@ -48,6 +81,13 @@
             "Peso": "25%",
             "Estado": "MANTENER",
             "MGC": "CSPX / VOO / SPXS"
+        },
+        {
+            "Simbolo": "FLOT",
+            "Nombre": "Bonos Tasa Flotante",
+            "Peso": "25%",
+            "Estado": "NUEVA COMPRA",
+            "MGC": NaN
         }
     ],
     "Historico": {
