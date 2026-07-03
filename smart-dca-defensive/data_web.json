@@ -10,14 +10,6 @@
             "Nombre": "Bonos Alto Riesgo",
             "Instruccion": "Vender al mercado en la apertura",
             "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "GLD",
-            "Cantidad": "50% del Portafolio",
-            "Nombre": "Oro",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": NaN
         }
     ],
     "Stops": [],
@@ -28,13 +20,6 @@
             "Peso": "50%",
             "Estado": "MANTENER",
             "MGC": "IHYA"
-        },
-        {
-            "Simbolo": "GLD",
-            "Nombre": "Oro",
-            "Peso": "50%",
-            "Estado": "NUEVA COMPRA",
-            "MGC": NaN
         }
     ],
     "Historico": {
