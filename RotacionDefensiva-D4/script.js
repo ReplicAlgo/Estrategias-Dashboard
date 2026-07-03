@@ -1,7 +1,7 @@
 /**
  * Script para el Dashboard de Estrategias Individuales
  * Maneja la carga de datos con limpieza de errores 'NaN' e inyecta el contenido original.
- * Versión final sin referencias internas.
+ * Versión final con soporte dinámico para Órdenes Stop.
  */
 document.addEventListener('DOMContentLoaded', () => {
     const timestamp = new Date().getTime();
@@ -30,6 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const mesActual = data.MesActual || "";
             if (document.getElementById('mes-ordenes')) document.getElementById('mes-ordenes').textContent = mesActual;
             if (document.getElementById('mes-portafolio')) document.getElementById('mes-portafolio').textContent = mesActual;
+            
+            // Actualizar etiquetas del mes para la nueva tabla de Stops
+            const idMesActualEls = document.querySelectorAll('.id-mes-actual');
+            idMesActualEls.forEach(el => el.textContent = mesActual);
 
             // 4. Órdenes del Mes (Diseño Original con Check Mark)
             const ordenesBody = document.getElementById('tabla-ordenes');
@@ -52,6 +56,34 @@ document.addEventListener('DOMContentLoaded', () => {
                                     <i class="fa-solid fa-circle-check mr-2"></i>
                                     <span class="text-sm font-medium uppercase tracking-wider">No se requieren cambios para este periodo</span>
                                 </div>
+                            </td>
+                        </tr>
+                    `;
+                }
+            }
+
+            // ==========================================
+            // NUEVA SECCIÓN: Renderizado de Órdenes Stop
+            // ==========================================
+            const stopOrdersBody = document.getElementById('stop-orders-table-body');
+            if (stopOrdersBody) {
+                if (data.Stops && data.Stops.length > 0) {
+                    stopOrdersBody.innerHTML = data.Stops.map(stop => `
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="py-4 px-6 font-bold text-amber-500 tracking-wide">${stop.Accion || 'STOP'}</td>
+                            <td class="py-4 px-6 font-bold mono text-blue-400">${stop.Simbolo}</td>
+                            <td class="py-4 px-6 text-slate-300 font-medium">${stop.Nombre}</td>
+                            <td class="py-4 px-6 text-slate-200 font-semibold">$${stop.PrecioStop || stop.NivelStop}</td>
+                            <td class="py-4 px-6 text-slate-400 text-xs italic">${stop.Instruccion}</td>
+                            <td class="py-4 px-6 text-right font-bold text-white pr-6">${stop.Cantidad || '100% de la Posición'}</td>
+                        </tr>
+                    `).join('');
+                } else {
+                    // Mantener o reinyectar la fila fija "No Aplica" si no hay alertas de stop
+                    stopOrdersBody.innerHTML = `
+                        <tr id="stop-empty-row">
+                            <td colspan="6" class="py-8 text-center text-slate-500 italic font-medium tracking-wide">
+                                No Aplica
                             </td>
                         </tr>
                     `;
