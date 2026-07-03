@@ -20,6 +20,32 @@
             "MGC": NaN
         }
     ],
+    "Stops": [
+        {
+            "Accion": "VENDER",
+            "Simbolo": "9",
+            "Nombre": "9",
+            "PrecioStop": "$158.8",
+            "Instruccion": "Vender Stop si toca $158.8",
+            "MGC": "-"
+        },
+        {
+            "Accion": "VENDER",
+            "Simbolo": "4",
+            "Nombre": "4",
+            "PrecioStop": "$18.8",
+            "Instruccion": "Vender Stop si toca $18.8",
+            "MGC": "-"
+        },
+        {
+            "Accion": "VENDER",
+            "Simbolo": "9",
+            "Nombre": "9",
+            "PrecioStop": "$47.2",
+            "Instruccion": "Vender Stop si toca $47.2",
+            "MGC": "-"
+        }
+    ],
     "Portafolio": [
         {
             "Simbolo": "AOR",
