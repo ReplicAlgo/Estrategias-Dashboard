@@ -3,15 +3,7 @@
     "MesActual": "Junio 2026",
     "Fecha": "6/1/26",
     "Ordenes": [],
-    "Portafolio": [
-        {
-            "Simbolo": "TLT",
-            "Nombre": "Bonos del Tesoro Largo Plazo",
-            "Peso": "100%",
-            "Estado": "MANTENER",
-            "MGC": "SGLD"
-        }
-    ],
+    "Portafolio": [],
     "Historico": {
         "resumen": {
             "Benchmark": "75.76%",

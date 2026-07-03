@@ -14,7 +14,7 @@
         {
             "Simbolo": "DBC",
             "Nombre": "Materias Primas",
-            "Peso": "27%",
+            "Peso": "20%",
             "Estado": "MANTENER",
             "MGC": "IB01*"
         },
@@ -24,34 +24,6 @@
             "Peso": "20%",
             "Estado": "MANTENER",
             "MGC": "EIMI "
-        },
-        {
-            "Simbolo": "GLD",
-            "Nombre": "Oro",
-            "Peso": "7%",
-            "Estado": "MANTENER",
-            "MGC": NaN
-        },
-        {
-            "Simbolo": "IEF",
-            "Nombre": "Bonos del Tesoro Mediano Plazo",
-            "Peso": "15%",
-            "Estado": "MANTENER",
-            "MGC": NaN
-        },
-        {
-            "Simbolo": "SPY",
-            "Nombre": "S&P 500",
-            "Peso": "30%",
-            "Estado": "MANTENER",
-            "MGC": "CSPX / VOO / SPXS"
-        },
-        {
-            "Simbolo": "TLT",
-            "Nombre": "Bonos del Tesoro Largo Plazo",
-            "Peso": "40%",
-            "Estado": "MANTENER",
-            "MGC": "SGLD"
         },
         {
             "Simbolo": "XLE",

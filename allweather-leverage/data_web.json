@@ -52,20 +52,6 @@
             "MGC": NaN
         },
         {
-            "Simbolo": "SPY",
-            "Nombre": "S&P 500",
-            "Peso": "60%",
-            "Estado": "MANTENER",
-            "MGC": "CSPX / VOO / SPXS"
-        },
-        {
-            "Simbolo": "TLT",
-            "Nombre": "Bonos del Tesoro Largo Plazo",
-            "Peso": "40%",
-            "Estado": "MANTENER",
-            "MGC": "SGLD"
-        },
-        {
             "Simbolo": "QLD",
             "Nombre": "Nasdaq 100 Apalancado",
             "Peso": "20%",

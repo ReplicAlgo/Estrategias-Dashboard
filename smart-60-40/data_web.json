@@ -29,25 +29,11 @@
             "MGC": "EIMI "
         },
         {
-            "Simbolo": "IEF",
-            "Nombre": "Bonos del Tesoro Mediano Plazo",
-            "Peso": "40%",
-            "Estado": "MANTENER",
-            "MGC": NaN
-        },
-        {
             "Simbolo": "QQQ",
             "Nombre": "Nasdaq 100",
             "Peso": "30%",
             "Estado": "MANTENER",
             "MGC": "EQAC"
-        },
-        {
-            "Simbolo": "SPY",
-            "Nombre": "S&P 500",
-            "Peso": "60%",
-            "Estado": "MANTENER",
-            "MGC": "CSPX / VOO / SPXS"
         },
         {
             "Simbolo": "VTIP",

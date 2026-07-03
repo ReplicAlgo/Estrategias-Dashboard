@@ -1,42 +1,35 @@
 {
     "StrategyName": "OsoPerezoso",
-    "MesActual": "Julio 2026",
-    "Fecha": "7/1/26",
+    "MesActual": "Junio 2026",
+    "Fecha": "6/1/26",
     "Ordenes": [],
     "Portafolio": [
         {
             "Simbolo": "EEM",
             "Nombre": "Mercados Emergentes",
-            "Peso": "50%",
+            "Peso": "25%",
             "Estado": "MANTENER",
             "MGC": "EIMI "
         },
         {
-            "Simbolo": "EFA",
-            "Nombre": "Mercados Desarrollados",
-            "Peso": "25%",
-            "Estado": "MANTENER",
-            "MGC": "IDSE / ISAC //CEUU"
-        },
-        {
             "Simbolo": "QQQ",
             "Nombre": "Nasdaq 100",
-            "Peso": "50%",
+            "Peso": "25%",
             "Estado": "MANTENER",
             "MGC": "EQAC"
         },
         {
             "Simbolo": "SPY",
             "Nombre": "S&P 500",
-            "Peso": "50%",
+            "Peso": "25%",
             "Estado": "MANTENER",
             "MGC": "CSPX / VOO / SPXS"
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "489.88%",
-            "Strategy": "373.85%",
+            "Benchmark": "493.8%",
+            "Strategy": "376.19%",
             "MaxDD_Bench": "-53.92%",
             "MaxDD_Strat": "-19.19%"
         },
@@ -138,7 +131,7 @@
             },
             {
                 "Año": 2026,
-                "Retorno": "16.3%",
+                "Retorno": "16.8%",
                 "MaxPerdida": "-5.6%"
             }
         ]

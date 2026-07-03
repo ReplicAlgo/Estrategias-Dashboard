@@ -7,21 +7,14 @@
         {
             "Simbolo": "EEM",
             "Nombre": "Mercados Emergentes",
-            "Peso": "75%",
+            "Peso": "50%",
             "Estado": "MANTENER",
             "MGC": "EIMI "
         },
         {
-            "Simbolo": "EFA",
-            "Nombre": "Mercados Desarrollados",
-            "Peso": "25%",
-            "Estado": "MANTENER",
-            "MGC": "IDSE / ISAC //CEUU"
-        },
-        {
             "Simbolo": "QQQ",
             "Nombre": "Nasdaq 100",
-            "Peso": "75%",
+            "Peso": "50%",
             "Estado": "MANTENER",
             "MGC": "EQAC"
         }

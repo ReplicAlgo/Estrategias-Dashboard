@@ -52,16 +52,9 @@
         {
             "Simbolo": "SPY",
             "Nombre": "S&P 500",
-            "Peso": "85%",
+            "Peso": "25%",
             "Estado": "MANTENER",
             "MGC": "CSPX / VOO / SPXS"
-        },
-        {
-            "Simbolo": "TLT",
-            "Nombre": "Bonos del Tesoro Largo Plazo",
-            "Peso": "40%",
-            "Estado": "MANTENER",
-            "MGC": "SGLD"
         },
         {
             "Simbolo": "FLOT",

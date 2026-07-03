@@ -1,7 +1,7 @@
 {
     "StrategyName": "NDX Core 9",
-    "MesActual": "Julio 2026",
-    "Fecha": "7/3/26",
+    "MesActual": "Junio 2026",
+    "Fecha": "6/1/26",
     "Ordenes": [],
     "Portafolio": [
         {
@@ -52,19 +52,12 @@
             "Peso": "11%",
             "Estado": "MANTENER",
             "MGC": NaN
-        },
-        {
-            "Simbolo": "QQQ",
-            "Nombre": "Nasdaq 100",
-            "Peso": "100%",
-            "Estado": "MANTENER",
-            "MGC": "EQAC"
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "1,815.75%",
-            "Strategy": "2,320.94%",
+            "Benchmark": "1,882.6%",
+            "Strategy": "2,150.38%",
             "MaxDD_Bench": "-53.40%",
             "MaxDD_Strat": "-40.12%"
         },
@@ -166,8 +159,8 @@
             },
             {
                 "Año": 2026,
-                "Retorno": "37.8%",
-                "MaxPerdida": "-7.1%"
+                "Retorno": "28.1%",
+                "MaxPerdida": "-9.9%"
             }
         ]
     }

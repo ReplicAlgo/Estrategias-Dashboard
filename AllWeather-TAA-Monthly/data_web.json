@@ -1,42 +1,45 @@
 {
     "StrategyName": "AllWeather TAA",
-    "MesActual": "Julio 2026",
-    "Fecha": "7/3/26",
-    "Ordenes": [],
-    "Portafolio": [
+    "MesActual": "Junio 2026",
+    "Fecha": "6/1/26",
+    "Ordenes": [
         {
+            "Accion": "VENDER",
+            "Simbolo": "GLD",
+            "Cantidad": "100% de la Posición",
+            "Nombre": "Oro",
+            "Instruccion": "Vender al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "COMPRAR",
             "Simbolo": "EEM",
+            "Cantidad": "33% del Portafolio",
             "Nombre": "Mercados Emergentes",
-            "Peso": "33%",
-            "Estado": "MANTENER",
+            "Instruccion": "Comprar al mercado en la apertura",
             "MGC": "EIMI "
-        },
-        {
-            "Simbolo": "SPY",
-            "Nombre": "S&P 500",
-            "Peso": "60%",
-            "Estado": "MANTENER",
-            "MGC": "CSPX / VOO / SPXS"
-        },
-        {
-            "Simbolo": "TLT",
-            "Nombre": "Bonos del Tesoro Largo Plazo",
-            "Peso": "40%",
-            "Estado": "MANTENER",
-            "MGC": "SGLD"
-        },
+        }
+    ],
+    "Portafolio": [
         {
             "Simbolo": "XLE",
             "Nombre": "Energía",
             "Peso": "33%",
             "Estado": "MANTENER",
             "MGC": NaN
+        },
+        {
+            "Simbolo": "EEM",
+            "Nombre": "Mercados Emergentes",
+            "Peso": "33%",
+            "Estado": "NUEVA COMPRA",
+            "MGC": "EIMI "
         }
     ],
     "Historico": {
         "resumen": {
-            "Benchmark": "388.13%",
-            "Strategy": "579.93%",
+            "Benchmark": "391.21%",
+            "Strategy": "609.74%",
             "MaxDD_Bench": "-31.00%",
             "MaxDD_Strat": "-14.04%"
         },
@@ -138,8 +141,8 @@
             },
             {
                 "Año": 2026,
-                "Retorno": "2.5%",
-                "MaxPerdida": "-11.4%"
+                "Retorno": "7.0%",
+                "MaxPerdida": "-7.9%"
             }
         ]
     }

@@ -6,7 +6,7 @@
         {
             "Accion": "VENDER",
             "Simbolo": "JNK",
-            "Cantidad": "75% de la Posición",
+            "Cantidad": "100% de la Posición",
             "Nombre": "Bonos Alto Riesgo",
             "Instruccion": "Vender al mercado en la apertura",
             "MGC": NaN
@@ -22,32 +22,18 @@
     ],
     "Portafolio": [
         {
-            "Simbolo": "GLD",
-            "Nombre": "Oro",
-            "Peso": "20%",
-            "Estado": "AUMENTAR",
-            "MGC": NaN
-        },
-        {
-            "Simbolo": "JNK",
-            "Nombre": "Bonos Alto Riesgo",
-            "Peso": "70%",
-            "Estado": "REDUCIR",
-            "MGC": NaN
-        },
-        {
-            "Simbolo": "TLT",
-            "Nombre": "Bonos del Tesoro Largo Plazo",
-            "Peso": "20%",
-            "Estado": "MANTENER",
-            "MGC": "SGLD"
-        },
-        {
             "Simbolo": "VTIP",
             "Nombre": "Bonos ST Protegidos Inflación",
             "Peso": "50%",
             "Estado": "MANTENER",
             "MGC": "IHYA"
+        },
+        {
+            "Simbolo": "GLD",
+            "Nombre": "Oro",
+            "Peso": "50%",
+            "Estado": "NUEVA COMPRA",
+            "MGC": NaN
         }
     ],
     "Historico": {

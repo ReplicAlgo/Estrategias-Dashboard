@@ -7,28 +7,21 @@
         {
             "Simbolo": "DBC",
             "Nombre": "Materias Primas",
-            "Peso": "58%",
+            "Peso": "33%",
             "Estado": "MANTENER",
             "MGC": "IB01*"
         },
         {
-            "Simbolo": "GLD",
-            "Nombre": "Oro",
-            "Peso": "25%",
-            "Estado": "MANTENER",
-            "MGC": NaN
-        },
-        {
             "Simbolo": "VTI",
             "Nombre": "Acciones USA",
-            "Peso": "58%",
+            "Peso": "33%",
             "Estado": "MANTENER",
             "MGC": NaN
         },
         {
             "Simbolo": "VXUS",
             "Nombre": "Acciones Internacionales",
-            "Peso": "58%",
+            "Peso": "33%",
             "Estado": "MANTENER",
             "MGC": NaN
         }
