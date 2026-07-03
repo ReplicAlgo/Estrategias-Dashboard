@@ -6,27 +6,27 @@
     "Stops": [
         {
             "Accion": "STOP",
-            "Simbolo": "540.25",
-            "Nombre": "540.25",
+            "Simbolo": "SPY",
+            "Nombre": "S&P 500",
             "PrecioStop": "good",
             "Instruccion": "Vender Stop si toca $good",
-            "MGC": "-"
+            "MGC": "CSPX / VOO / SPXS"
         },
         {
             "Accion": "STOP",
-            "Simbolo": "485.74",
-            "Nombre": "485.74",
+            "Simbolo": "QQQ",
+            "Nombre": "Nasdaq 100",
             "PrecioStop": "good",
             "Instruccion": "Vender Stop si toca $good",
-            "MGC": "-"
+            "MGC": "EQAC"
         },
         {
             "Accion": "STOP",
-            "Simbolo": "44.36",
-            "Nombre": "44.36",
+            "Simbolo": "EEM",
+            "Nombre": "Mercados Emergentes",
             "PrecioStop": "good",
             "Instruccion": "Vender Stop si toca $good",
-            "MGC": "-"
+            "MGC": "EIMI "
         }
     ],
     "Portafolio": [
