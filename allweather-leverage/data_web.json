@@ -18,6 +18,22 @@
             "Nombre": "Energía",
             "Instruccion": "Vender al mercado en la apertura",
             "MGC": NaN
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "QLD",
+            "Cantidad": "N/A% del Portafolio",
+            "Nombre": "Nasdaq 100 Apalancado",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": NaN
+        },
+        {
+            "Accion": "COMPRAR",
+            "Simbolo": "SSO",
+            "Cantidad": "N/A% del Portafolio",
+            "Nombre": "S&P 500 Apalancado",
+            "Instruccion": "Comprar al mercado en la apertura",
+            "MGC": NaN
         }
     ],
     "Stops": [],
@@ -34,6 +50,20 @@
             "Nombre": "Mercados Emergentes Apalancados",
             "Peso": "20%",
             "Estado": "MANTENER",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "QLD",
+            "Nombre": "Nasdaq 100 Apalancado",
+            "Peso": "0%",
+            "Estado": "NUEVA COMPRA",
+            "MGC": NaN
+        },
+        {
+            "Simbolo": "SSO",
+            "Nombre": "S&P 500 Apalancado",
+            "Peso": "0%",
+            "Estado": "NUEVA COMPRA",
             "MGC": NaN
         }
     ],

@@ -3,7 +3,32 @@
     "MesActual": "Junio 2026",
     "Fecha": "6/1/26",
     "Ordenes": [],
-    "Stops": [],
+    "Stops": [
+        {
+            "Accion": "STOP",
+            "Simbolo": "540.25",
+            "Nombre": "540.25",
+            "PrecioStop": "$N/A",
+            "Instruccion": "Vender Stop si toca $N/A",
+            "MGC": "-"
+        },
+        {
+            "Accion": "STOP",
+            "Simbolo": "485.74",
+            "Nombre": "485.74",
+            "PrecioStop": "$N/A",
+            "Instruccion": "Vender Stop si toca $N/A",
+            "MGC": "-"
+        },
+        {
+            "Accion": "STOP",
+            "Simbolo": "44.36",
+            "Nombre": "44.36",
+            "PrecioStop": "$N/A",
+            "Instruccion": "Vender Stop si toca $N/A",
+            "MGC": "-"
+        }
+    ],
     "Portafolio": [
         {
             "Simbolo": "EEM",
