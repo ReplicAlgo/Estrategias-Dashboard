@@ -8,24 +8,24 @@
             "Accion": "STOP",
             "Simbolo": "SPY",
             "Nombre": "S&P 500",
-            "PrecioStop": "good",
-            "Instruccion": "Vender Stop si toca $good",
+            "PrecioStop": "540.25",
+            "Instruccion": "Vender Stop si toca $540.25",
             "MGC": "CSPX / VOO / SPXS"
         },
         {
             "Accion": "STOP",
             "Simbolo": "QQQ",
             "Nombre": "Nasdaq 100",
-            "PrecioStop": "good",
-            "Instruccion": "Vender Stop si toca $good",
+            "PrecioStop": "485.74",
+            "Instruccion": "Vender Stop si toca $485.74",
             "MGC": "EQAC"
         },
         {
             "Accion": "STOP",
             "Simbolo": "EEM",
             "Nombre": "Mercados Emergentes",
-            "PrecioStop": "good",
-            "Instruccion": "Vender Stop si toca $good",
+            "PrecioStop": "44.36",
+            "Instruccion": "Vender Stop si toca $44.36",
             "MGC": "EIMI "
         }
     ],

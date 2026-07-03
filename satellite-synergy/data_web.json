@@ -20,7 +20,32 @@
             "MGC": NaN
         }
     ],
-    "Stops": [],
+    "Stops": [
+        {
+            "Accion": "STOP",
+            "Simbolo": "GLD",
+            "Nombre": "Oro",
+            "PrecioStop": "158.89",
+            "Instruccion": "Vender Stop si toca $158.89",
+            "MGC": NaN
+        },
+        {
+            "Accion": "STOP",
+            "Simbolo": "DBA",
+            "Nombre": "Agricultura",
+            "PrecioStop": "18.84",
+            "Instruccion": "Vender Stop si toca $18.84",
+            "MGC": NaN
+        },
+        {
+            "Accion": "STOP",
+            "Simbolo": "IGF",
+            "Nombre": "Infraestructura Global",
+            "PrecioStop": "47.29",
+            "Instruccion": "Vender Stop si toca $47.29",
+            "MGC": NaN
+        }
+    ],
     "Portafolio": [
         {
             "Simbolo": "AOR",
