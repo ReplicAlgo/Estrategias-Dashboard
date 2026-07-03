@@ -10,14 +10,6 @@
             "Nombre": "Oro",
             "Instruccion": "Vender al mercado en la apertura",
             "MGC": NaN
-        },
-        {
-            "Accion": "COMPRAR",
-            "Simbolo": "EEM",
-            "Cantidad": "33% del Portafolio",
-            "Nombre": "Mercados Emergentes",
-            "Instruccion": "Comprar al mercado en la apertura",
-            "MGC": "EIMI "
         }
     ],
     "Stops": [],
@@ -28,13 +20,6 @@
             "Peso": "33%",
             "Estado": "MANTENER",
             "MGC": NaN
-        },
-        {
-            "Simbolo": "EEM",
-            "Nombre": "Mercados Emergentes",
-            "Peso": "33%",
-            "Estado": "NUEVA COMPRA",
-            "MGC": "EIMI "
         }
     ],
     "Historico": {
