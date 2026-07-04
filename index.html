@@ -122,6 +122,23 @@
 
     <div class="bg-mesh"></div>
 
+    <!-- NEW CONTENT: Sticky Global Navigation Bar -->
+    <nav class="sticky top-0 z-50 w-full border-b border-white/5 bg-slate-950/60 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="text-white font-bold tracking-wider text-lg uppercase">ReplicAlgo</span>
+            </div>
+            <div>
+                <a href="https://estrategias-core-portfolio-simulator.streamlit.app/"
+                   target="_blank" 
+                   class="flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-purple-400 transition-colors bg-purple-500/10 border border-purple-500/20 px-4 py-2 rounded-xl">
+                    <i class="fa-solid fa-sliders text-purple-400"></i>
+                    <span>Simulador de Portafolio</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
     <main class="max-w-7xl mx-auto px-6 py-24 relative">
         
         <header class="text-center mb-16">
@@ -140,7 +157,7 @@
             </p>
         </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-32">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
 
             <!-- 1. SMART DCA ACCIONES -->
             <a href="smart-dca-stock/" class="glass-card card-blue gradient-border p-8 rounded-3xl group flex flex-col justify-between">
@@ -229,7 +246,7 @@
                 </div>
             </a>
 
-            <!-- 4. NUEVO: ALLWEATHER TAA (Ubicado antes de AllWeather Flex) -->
+            <!-- 4. NUEVO: ALLWEATHER TAA -->
             <a href="AllWeather-TAA-Monthly/" class="glass-card card-indigo gradient-border p-8 rounded-3xl group flex flex-col justify-between">
                 <div>
                     <div class="w-14 h-14 bg-gradient-to-br from-indigo-500/20 to-indigo-600/5 rounded-2xl flex items-center justify-center mb-6 border border-indigo-500/20 group-hover:border-indigo-500/40 transition-all">
@@ -316,7 +333,7 @@
                 </div>
             </a>
 
-            <!-- 7. SATELLITE SYNERGY (Reposicionado después de AllWeather Leverage) -->
+            <!-- 7. SATELLITE SYNERGY -->
             <a href="satellite-synergy/" class="glass-card card-amber gradient-border p-8 rounded-3xl group flex flex-col justify-between">
                 <div>
                     <div class="w-14 h-14 bg-gradient-to-br from-amber-500/20 to-amber-600/5 rounded-2xl flex items-center justify-center mb-6 border border-amber-500/20 group-hover:border-amber-500/40 transition-all">
@@ -345,7 +362,7 @@
                 </div>
             </a>
 
-            <!-- 8. NUEVO: OSO PEREZOSO (Ubicado después de Satellite Synergy) -->
+            <!-- 8. NUEVO: OSO PEREZOSO -->
             <a href="OsoPerezoso-Mes/" class="glass-card card-violet gradient-border p-8 rounded-3xl group flex flex-col justify-between">
                 <div>
                     <div class="w-14 h-14 bg-gradient-to-br from-violet-500/20 to-violet-600/5 rounded-2xl flex items-center justify-center mb-6 border border-violet-500/20 group-hover:border-violet-500/40 transition-all">
@@ -374,7 +391,7 @@
                 </div>
             </a>
 
-            <!-- 9. NUEVO: FUERZA 6 (Ubicado después de Oso Perezoso) -->
+            <!-- 9. NUEVO: FUERZA 6 -->
             <a href="Fuerza6-monthly/" class="glass-card card-orange gradient-border p-8 rounded-3xl group flex flex-col justify-between">
                 <div>
                     <div class="w-14 h-14 bg-gradient-to-br from-orange-500/20 to-orange-600/5 rounded-2xl flex items-center justify-center mb-6 border border-orange-500/20 group-hover:border-orange-500/40 transition-all">
@@ -403,7 +420,7 @@
                 </div>
             </a>
 
-            <!-- 10. NUEVO: NDX CORE 9 (Ubicado después de Fuerza 6) -->
+            <!-- 10. NUEVO: NDX CORE 9 -->
             <a href="NDX-Core9/" class="glass-card card-fuchsia gradient-border p-8 rounded-3xl group flex flex-col justify-between">
                 <div>
                     <div class="w-14 h-14 bg-gradient-to-br from-fuchsia-500/20 to-fuchsia-600/5 rounded-2xl flex items-center justify-center mb-6 border border-fuchsia-500/20 group-hover:border-fuchsia-500/40 transition-all">
@@ -432,7 +449,7 @@
                 </div>
             </a>
 
-            <!-- 11. NUEVO: ROTACION DEFENSIVA D4 (Ubicado después de NDX Core 9) -->
+            <!-- 11. NUEVO: ROTACION DEFENSIVA D4 -->
             <a href="RotacionDefensiva-D4/" class="glass-card card-rose gradient-border p-8 rounded-3xl group flex flex-col justify-between">
                 <div>
                     <div class="w-14 h-14 bg-gradient-to-br from-rose-500/20 to-rose-600/5 rounded-2xl flex items-center justify-center mb-6 border border-rose-500/20 group-hover:border-rose-500/40 transition-all">
@@ -461,6 +478,25 @@
                 </div>
             </a>
 
+        </div>
+
+        <!-- NEW CONTENT: High Exposure CTA Card Integration -->
+        <div class="glass-card p-8 bg-gradient-to-br from-purple-600/10 via-transparent to-blue-500/5 border border-purple-500/20 mb-32 rounded-[2rem]">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="space-y-2">
+                    <span class="text-xs font-bold text-purple-400 uppercase tracking-[0.2em]">Herramienta Avanzada</span>
+                    <h3 class="text-2xl font-bold text-white tracking-tight">Optimiza tu Asignación de Activos</h3>
+                    <p class="text-sm text-slate-400 max-w-2xl">
+                        Combina nuestras estrategias cuantitativas independientes (*Fuerza 6, NDX Core 9, Satélites...*) para construir tu propio **Strategic Core**. Encuentra la combinación perfecta de baja correlación para maximizar tus retornos y mitigar drawdowns de forma simultánea.
+                    </p>
+                </div>
+                <a href="https://estrategias-core-portfolio-simulator.streamlit.app/" 
+                   target="_blank" 
+                   class="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/20 hover:opacity-90 transition-all flex items-center gap-3 group whitespace-nowrap">
+                    <span>Probar Backtester</span>
+                    <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
         </div>
 
         <footer class="max-w-4xl mx-auto">
