@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satellite Synergy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #020617; color: #f1f5f9; }
+        
+        .slide { 
+            min-height: 100vh;
+            padding: 80px; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            max-width: 1000px;
+            margin: auto;
+            page-break-after: always;
+        }
+
+        .glass-card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .gradient-title {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @media print {
+            body { background: white; color: black; }
+            .slide { background: white; border: none; page-break-after: always; padding: 40px; }
+            .glass-card { background: #f8fafc; border: 1px solid #e2e8f0; color: black; box-shadow: none; }
+            .gradient-title { color: #b45309; -webkit-text-fill-color: #b45309; }
+            .text-slate-400 { color: #64748b; }
+            .text-emerald-400 { color: #059669; }
+            .text-rose-400 { color: #e11d48; }
+            .bg-slate-800 { background-color: #e2e8f0; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Slide 1: Portada -->
+    <section class="slide items-center text-center">
+        <div class="mb-6 px-4 py-1 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-500 text-xs font-semibold uppercase tracking-widest">Protocolo Profesional</div>
+        <h1 class="text-6xl font-bold mb-4 gradient-title">Satellite Synergy</h1>
+        <p class="text-xl text-slate-400">Explicación de la Estrategia y Guía de uso</p>
+    </section>
+
+    <!-- Slide 2: ¿Qué es Satellite Synergy? -->
+    <section class="slide">
+        <h2 class="text-4xl font-bold mb-8 text-white">¿Qué es Satellite Synergy?</h2>
+        <div class="glass-card p-10">
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
+                    <h3 class="text-amber-500 font-bold mb-2">La Estrategia</h3>
+                    <p class="text-sm text-slate-300">Modelo dinámico compuesto por 5 sistemas de rotación táctica. Son sistemas que no aparecen de forma independiente dentro de las otras estrategias. Diseñados para dar un perfil Moderado de riesgo con el objetivo común de rotar entre activos ofensivos y defensivos.</p>
+                </div>
+                <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
+                    <h3 class="text-amber-500 font-bold mb-2">Selección Mensual</h3>
+                    <p class="text-sm text-slate-300">Mantenemos únicamente los activos con mayor fuerza. Usamos ETFs de Acciones, Renta Fija, Materias Prima y Monedas.</p>
+                </div>
+                <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
+                    <h3 class="text-amber-500 font-bold mb-2">Nivel de Rotación</h3>
+                    <p class="text-sm text-slate-300">Rotación Media. 321 transacciones desde 2007. Estrategia no rebalancea. Solo nos mueve del débil al fuerte cuando es necesario.</p>
+                </div>
+                <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
+                    <h3 class="text-amber-500 font-bold mb-2">Siempre Invertidos?</h3>
+                    <p class="text-sm text-slate-300">No. La rotacion nos lleva al mas fuerte o a efectivo si no hay condiciones apropiadas de mercado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 3: Resultados -->
+    <section class="slide">
+        <h2 class="text-4xl font-bold mb-8 text-white">Resultados</h2>
+        <div class="glass-card p-10 space-y-6">
+            <div class="grid grid-cols-2 gap-8 text-center">
+                <div class="p-6 bg-slate-900 rounded-xl border border-emerald-500/30">
+                    <h3 class="text-emerald-400 font-bold mb-2">Satellite Synergy</h3>
+                    <p class="text-3xl font-bold">382%</p>
+                    <p class="text-sm text-slate-400">Retorno Acumulado</p>
+                    <p class="text-2xl font-bold mt-4">8.46%</p>
+                    <p class="text-sm text-slate-400">ROR</p>
+                    <p class="text-xl font-bold mt-4 text-rose-400">-11%</p>
+                    <p class="text-sm text-slate-400">Max Drawdown</p>
+                </div>
+                <div class="p-6 bg-slate-900 rounded-xl border border-slate-700">
+                    <h3 class="text-slate-400 font-bold mb-2">Buy & Hold (Benchmark)</h3>
+                    <p class="text-3xl font-bold">391%</p>
+                    <p class="text-sm text-slate-400">Retorno Acumulado</p>
+                    <p class="text-2xl font-bold mt-4">8.5%</p>
+                    <p class="text-sm text-slate-400">ROR</p>
+                    <p class="text-xl font-bold mt-4 text-rose-400">-31%</p>
+                    <p class="text-sm text-slate-400">Max Draw Down</p>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-slate-700 text-slate-300 text-sm leading-relaxed italic">
+                Estrategia da retornos muy parecidos en el largo plazo a comprar y mantener pero lo hace con 60% menos riesgo. Estrategia con retorno y Perfil de riesgo atractivo.
+            </div>
+        </div>
+        <p class="text-sm text-slate-500 mt-4">*Resultados desde 2007.</p>
+    </section>
+
+    <!-- Slide 4: Expectativas y Variabilidad (Análisis de Monte Carlo) -->
+    <section class="slide">
+        <h2 class="text-4xl font-bold mb-8 text-white">Expectativas y Variabilidad (Análisis de Monte Carlo)</h2>
+        <div class="glass-card p-10 space-y-8">
+            <div>
+                <div class="flex justify-between text-sm text-slate-400 mb-2"><span>6% (Min)</span><span class="font-bold text-white">Retorno Anual Esperado</span><span>24% (Max)</span></div>
+                <div class="w-full h-4 bg-slate-800 rounded-full relative">
+                    <div class="absolute top-[-4px] w-6 h-6 bg-emerald-400 rounded-full shadow-lg border-2 border-white" style="left: 13.3%"></div>
+                    <div class="absolute top-8 left-[13.3%] text-emerald-400 font-bold text-sm -translate-x-1/2">8.4%</div>
+                </div>
+            </div>
+            <div>
+                <div class="flex justify-between text-sm text-slate-400 mb-2"><span>-22% (Min)</span><span class="font-bold text-white">Máxima Caída Esperada</span><span>-6% (Max)</span></div>
+                <div class="w-full h-4 bg-slate-800 rounded-full relative">
+                    <div class="absolute top-[-4px] w-6 h-6 bg-rose-400 rounded-full shadow-lg border-2 border-white" style="left: 68.8%"></div>
+                    <div class="absolute top-8 left-[68.8%] text-rose-400 font-bold text-sm -translate-x-1/2">-11%</div>
+                </div>
+            </div>
+            <div>
+                <div class="flex justify-between text-sm text-slate-400 mb-2"><span>20 (Min)</span><span class="font-bold text-white">Duración de Caídas Acumuladas (Días)</span><span>570 (Max)</span></div>
+                <div class="w-full h-4 bg-slate-800 rounded-full relative">
+                    <div class="absolute top-[-4px] w-6 h-6 bg-blue-400 rounded-full shadow-lg border-2 border-white" style="left: 29.1%"></div>
+                    <div class="absolute top-8 left-[29.1%] text-blue-400 font-bold text-sm -translate-x-1/2">180</div>
+                </div>
+            </div>
+            <div>
+                <div class="flex justify-between text-sm text-slate-400 mb-2"><span>0.1% (Min)</span><span class="font-bold text-white">Ganador Promedio</span><span>122% (Max)</span></div>
+                <div class="w-full h-4 bg-slate-800 rounded-full relative">
+                    <div class="absolute top-[-4px] w-6 h-6 bg-emerald-500 rounded-full shadow-lg border-2 border-white" style="left: 5.7%"></div>
+                    <div class="absolute top-8 left-[5.7%] text-emerald-500 font-bold text-sm -translate-x-1/2">7%</div>
+                </div>
+            </div>
+            <div>
+                <div class="flex justify-between text-sm text-slate-400 mb-2"><span>-15% (Min)</span><span class="font-bold text-white">Perdedor Promedio</span><span>-0.1% (Max)</span></div>
+                <div class="w-full h-4 bg-slate-800 rounded-full relative">
+                    <div class="absolute top-[-4px] w-6 h-6 bg-rose-500 rounded-full shadow-lg border-2 border-white" style="left: 80.5%"></div>
+                    <div class="absolute top-8 left-[80.5%] text-rose-500 font-bold text-sm -translate-x-1/2">-3%</div>
+                </div>
+            </div>
+            <div>
+                <div class="flex justify-between text-sm text-slate-400 mb-2"><span>20 (Min)</span><span class="font-bold text-white">Duración Ganador (Días)</span><span>1270 (Max)</span></div>
+                <div class="w-full h-4 bg-slate-800 rounded-full relative">
+                    <div class="absolute top-[-4px] w-6 h-6 bg-blue-400 rounded-full shadow-lg border-2 border-white" style="left: 5.0%"></div>
+                    <div class="absolute top-8 left-[5.0%] text-blue-400 font-bold text-sm -translate-x-1/2">82</div>
+                </div>
+            </div>
+            <div>
+                <div class="flex justify-between text-sm text-slate-400 mb-2"><span>20 (Min)</span><span class="font-bold text-white">Duración Perdedor (Días)</span><span>271 (Max)</span></div>
+                <div class="w-full h-4 bg-slate-800 rounded-full relative">
+                    <div class="absolute top-[-4px] w-6 h-6 bg-rose-400 rounded-full shadow-lg border-2 border-white" style="left: 5.6%"></div>
+                    <div class="absolute top-8 left-[5.6%] text-rose-400 font-bold text-sm -translate-x-1/2">34</div>
+                </div>
+            </div>
+            <div class="pt-4 mt-6 border-t border-slate-700 text-sm text-slate-400">
+                <p>Esta sección define las expectativas que debe tener el inversionista. Cualquier número dentro de los rangos mínimos y máximos es “normal” y la estrategia sigue funcionando dentro de los parámetros esperados. Puntos de colores representan los resultados promedio para cada métrica.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 5: Entendiendo el Riesgo -->
+    <section class="slide">
+        <div class="flex items-center mb-8">
+            <div class="w-1.5 h-10 bg-amber-500 mr-4"></div>
+            <h2 class="text-4xl font-bold text-white">Entendiendo el Riesgo</h2>
+        </div>
+        <div class="grid grid-cols-2 gap-6">
+            <div class="glass-card p-6 border-l-4 border-rose-500">
+                <h3 class="text-xl font-bold text-white mb-2">Volatilidad <span class="text-amber-500">7.5%</span></h3>
+                <p class="text-slate-400">Nivel de volatilidad Moderada/Baja.</p>
+            </div>
+            <div class="glass-card p-6 border-l-4 border-rose-500">
+                <h3 class="text-xl font-bold text-white mb-2">Max Drawdown <span class="text-amber-500">-11%</span></h3>
+                <p class="text-slate-400">Nivel de caída Moderada y mucho menor a comprar y mantener.</p>
+            </div>
+            <div class="glass-card p-6 border-l-4 border-rose-500">
+                <h3 class="text-xl font-bold text-white mb-2">Período de Recuperación <span class="text-amber-500">570 días</span></h3>
+                <p class="text-slate-400">Estrategia tiene periodos de recuperación largos pero menores que comprar y mantener (570 vs 720).</p>
+            </div>
+            <div class="glass-card p-6 border-l-4 border-rose-500">
+                <h3 class="text-xl font-bold text-white mb-2">Utilización de Stop <span class="text-amber-500">NO</span></h3>
+                <p class="text-slate-400">Esta estrategia no utiliza stop.  Rotamos a más fuertes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 6: ¿Cómo utilizar la herramienta? -->
+    <section class="slide">
+        <h2 class="text-4xl font-bold mb-8 text-white">¿Cómo utilizar la herramienta?</h2>
+        <div class="space-y-10">
+            <div class="flex gap-4">
+               <div class="bg-blue-600 text-white font-bold w-12 h-12 rounded-full flex items-center justify-center shrink-0 text-xl">1</div>
+               <div class="glass-card p-6 w-full">
+                    <h3 class="font-bold text-lg mb-2 text-white">Frecuencia de Revisión: Mensual</h3>
+                    <p class="text-slate-400 text-sm">Este sistema es mensual así que NO requiere monitoreo diario o semanal. Solo tienes que ingresar el primer día hábil de cada mes.</p>
+                </div>
+           </div>
+            <div class="flex gap-4">
+               <div class="bg-blue-600 text-white font-bold w-12 h-12 rounded-full flex items-center justify-center shrink-0 text-xl">2</div>
+               <div class="glass-card p-6 w-full space-y-4">
+                   <h3 class="font-bold text-lg text-white">Órdenes del Mes Junio 2026</h3>
+                    <p class="text-slate-400 text-sm">Revisa si hay cambios. Si no hay cambios, mantén tu posición.</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs text-slate-300 border border-slate-700 rounded-lg">
+                             <thead class="uppercase bg-slate-800 text-slate-500">
+                                 <tr><th class="p-3">Acción</th><th class="p-3">Símbolo</th><th class="p-3">Nombre del Activo</th><th class="p-3">Instrucción</th><th class="p-3">Cantidad</th></tr>
+                             </thead>
+                             <tbody><tr><td colspan="5" class="p-4 text-center text-emerald-400 font-bold">✔ NO SE REQUIEREN CAMBIOS PARA ESTE PERIODO</td></tr></tbody>
+                        </table>
+                    </div>
+                    <p class="text-slate-400 text-sm mt-4">Si hay señales, ejecuta las compras/ventas correspondientes.</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs text-slate-300 border border-slate-700 rounded-lg">
+                             <thead class="uppercase bg-slate-800 text-slate-500">
+                                 <tr><th class="p-3">Acción</th><th class="p-3">Símbolo</th><th class="p-3">Nombre del Activo</th><th class="p-3">Instrucción</th><th class="p-3">Cantidad</th></tr>
+                             </thead>
+                             <tbody class="divide-y divide-slate-700">
+                                 <tr><td class="p-3 text-rose-500 font-bold">VENDER</td><td class="p-3 text-blue-400 font-bold">JNK</td><td class="p-3">Bonos Alto Riesgo</td><td class="p-3 italic">Vender al mercado en la apertura</td><td class="p-3 font-bold">100% de la Posición</td></tr>
+                                 <tr><td class="p-3 text-emerald-500 font-bold">COMPRAR</td><td class="p-3 text-blue-400 font-bold">GLD</td><td class="p-3">Oro</td><td class="p-3 italic">Comprar al mercado en la apertura</td><td class="p-3 font-bold">50% del Portafolio</td></tr>
+                             </tbody>
+                        </table>
+                    </div>
+                    <p class="text-xs text-amber-500 mt-2 italic">*Acción Vender: la última columna indica el % de posición a vender.<br>*Acción Comprar: la última columna indica el % del portafolio a invertir.</p>
+                </div>
+           </div>
+            <div class="flex gap-4">
+               <div class="bg-blue-600 text-white font-bold w-12 h-12 rounded-full flex items-center justify-center shrink-0 text-xl">3</div>
+               <div class="glass-card p-6 w-full space-y-4">
+                    <h3 class="font-bold text-lg text-white">Sección de protección: Órdenes Stop Junio 2026</h3>
+                    <p class="text-slate-400 text-sm">Si la estrategia no utiliza stop aparecerá "No Aplica".</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs text-slate-300 border border-slate-700 rounded-lg">
+                             <thead class="uppercase bg-slate-800 text-slate-500">
+                                 <tr><th class="p-3">Acción</th><th class="p-3">Símbolo</th><th class="p-3">Nombre del Activo</th><th class="p-3">Nivel Stop</th><th class="p-3">Instrucción</th><th class="p-3">Cantidad</th></tr>
+                             </thead>
+                             <tbody><tr><td colspan="6" class="p-4 text-center text-slate-500 italic">No Aplica</td></tr></tbody>
+                        </table>
+                    </div>
+                    <p class="text-slate-400 text-sm">Si la estrategia utiliza stop aparecerá el nivel al que se debe poner la orden de stop por cada instrumento.</p>
+                    <div class="overflow-x-auto mt-4">
+                        <table class="w-full text-left text-xs text-slate-300 border border-slate-700 rounded-lg">
+                             <thead class="uppercase bg-slate-800 text-slate-500">
+                                 <tr><th class="p-3">Acción</th><th class="p-3">Símbolo</th><th class="p-3">Nombre del Activo</th><th class="p-3">Nivel Stop</th><th class="p-3">Instrucción</th><th class="p-3">Cantidad</th></tr>
+                             </thead>
+                             <tbody class="divide-y divide-slate-700">
+                                 <tr><td class="p-3 text-amber-500 font-bold">STOP</td><td class="p-3 text-blue-400 font-bold">GLD</td><td class="p-3">Oro</td><td class="p-3 font-bold">$158.89</td><td class="p-3 italic">Vender Stop si toca $158.89</td><td class="p-3 font-bold">100% de la Posición</td></tr>
+                                 <tr><td class="p-3 text-amber-500 font-bold">STOP</td><td class="p-3 text-blue-400 font-bold">DBA</td><td class="p-3">Agricultura</td><td class="p-3 font-bold">$18.84</td><td class="p-3 italic">Vender Stop si toca $18.84</td><td class="p-3 font-bold">100% de la Posición</td></tr>
+                                 <tr><td class="p-3 text-amber-500 font-bold">STOP</td><td class="p-3 text-blue-400 font-bold">IGF</td><td class="p-3">Infraestructura Global</td><td class="p-3 font-bold">$47.29</td><td class="p-3 italic">Vender Stop si toca $47.29</td><td class="p-3 font-bold">100% de la Posición</td></tr>
+                             </tbody>
+                        </table>
+                    </div>
+                    <p class="text-slate-400 text-sm">Asegurarse de poner el stop GTC (Good Till Cancelled) para que dure mas de 1 día en el bróker. De lo contrario tendrán que poner el stop todos los días nuevamente.</p>
+                </div>
+           </div>
+            <div class="flex gap-4">
+               <div class="bg-blue-600 text-white font-bold w-12 h-12 rounded-full flex items-center justify-center shrink-0 text-xl">4</div>
+               <div class="glass-card p-6 w-full space-y-4">
+                    <h3 class="font-bold text-lg text-white">Composición Portafolio Actual Junio 2026</h3>
+                    <p class="text-slate-400 text-sm">Esta sección refleja como debe quedar nuestro portafolio después de hacer los cambios de compra y venta del sistema.</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs text-slate-300 border border-slate-700 rounded-lg">
+                             <thead class="uppercase bg-slate-800 text-slate-500">
+                                 <tr><th class="p-3">Ticker</th><th class="p-3">Activo</th><th class="p-3">Peso Actual</th><th class="p-3">Estado</th></tr>
+                             </thead>
+                             <tbody class="divide-y divide-slate-700">
+                                 <tr><td class="p-3 text-blue-400 font-bold">EEM</td><td class="p-3">Mercados Emergentes</td><td class="p-3 font-bold">50%</td><td class="p-3"><span class="bg-slate-700 px-2 py-1 rounded text-white text-xs">MANTENER</span></td></tr>
+                                 <tr><td class="p-3 text-blue-400 font-bold">QQQ</td><td class="p-3">Nasdaq 100</td><td class="p-3 font-bold">50%</td><td class="p-3"><span class="bg-slate-700 px-2 py-1 rounded text-white text-xs">MANTENER</span></td></tr>
+                             </tbody>
+                        </table>
+                    </div>
+               </div>
+           </div>
+        </div>
+    </section>
+
+    <!-- Slide 7: Preguntas Frecuentes -->
+    <section class="slide">
+        <h2 class="text-4xl font-bold mb-8 text-white">Preguntas Frecuentes</h2>
+        <div class="glass-card p-10 space-y-6">
+            <div>
+                <h3 class="text-amber-500 font-bold mb-2">1. ¿Qué pasa si no hago los cambios a tiempo?</h3>
+                <p class="text-sm text-slate-300">Los cambios deben hacerse idealmente en la fecha indicada (en sistemas mensuales, el primer día del mes). Si te pasas, puedes ajustarlos lo antes posible. Hacerlos tarde puede generar diferencias frente al modelo por precios distintos, aunque en sistemas mensuales esas variaciones suelen ser pequeñas.</p>
+            </div>
+            <div>
+                <h3 class="text-amber-500 font-bold mb-2">2. ¿Qué hago si es mi primera vez en la estrategia?</h3>
+                <p class="text-sm text-slate-300">En sistemas mensuales, puedes esperar al primer día del mes y comprar todo para igualar el Portafolio Actual. A corto plazo tus retornos pueden diferir, pero a largo plazo el desempeño converge y será muy similar sin importar cuándo empezaste.</p>
+            </div>
+            <div>
+                <h3 class="text-amber-500 font-bold mb-2">3. ¿Si empiezo en cualquier momento puedo perder más de lo estimado?</h3>
+                <p class="text-sm text-slate-300">La caída máxima se calcula desde un pico histórico. Si empiezas en un momento desfavorable, la caída esperada es la misma que muestra el modelo. Según la sección de Expectativas y Variabilidad, en el 90% de los casos las pérdidas estarán dentro de los rangos previstos, sin importar cuándo inicies.</p>
+            </div>
+            <div>
+                <h3 class="text-amber-500 font-bold mb-2">4. ¿Debo invertir solo en los símbolos exactos?</h3>
+                <p class="text-sm text-slate-300">Puedes usar cualquier símbolo, fondo o ETF que replique el mismo índice o activo del modelo. Los modelos usan los más líquidos, pero existen alternativas equivalentes. Para acciones individuales, sí debes usar las específicas del modelo.</p>
+            </div>
+            <div>
+                <h3 class="text-amber-500 font-bold mb-2">5. ¿Qué hago si el valor del ETF es muy grande para mi cuenta?</h3>
+                <p class="text-sm text-slate-300">Puedes buscar ETFs que sigan el mismo índice pero con menor precio por unidad. También puedes comprar fracciones del ETF, opción disponible en muchos brókers para ETFs y acciones.</p>
+            </div>
+            <div>
+                <h3 class="text-amber-500 font-bold mb-2">6. ¿Cuántas estrategias debo escoger?</h3>
+                <p class="text-sm text-slate-300">Depende de tu objetivo, pero normalmente conviene usar varias para diversificar y reducir dependencia en un solo modelo. La app de portafolio te permite evaluar riesgo y curvas de capital al combinar estrategias. Siempre considera tus objetivos, perfil de riesgo y situación tributaria. Consulta asesores si lo necesitas.</p>
+            </div>
+            <div>
+                <h3 class="text-amber-500 font-bold mb-2">7. Uso de CFDs — ¿Puedo usar CFDs para invertir en estos modelos?</h3>
+                <p class="text-sm text-slate-300">No lo recomendamos para estrategias de largo plazo. Los costos de financiamiento y spreads de los CFDs suelen ser mucho más altos que los de ETFs o acciones, lo que reduce significativamente el rendimiento real. Además, los CFDs están diseñados para operaciones de corto plazo y pueden introducir riesgos adicionales que el modelo no contempla.</p>
+            </div>
+            <div>
+                <h3 class="text-amber-500 font-bold mb-2">8. Costos y comisiones</h3>
+                <p class="text-sm text-slate-300">Los resultados del modelo ya consideran spreads y comisiones típicas de brókers como Interactive Brokers (2026). Si tu bróker cobra más, tus rendimientos reales serán menores. Entre menor sea tu capital, mayor será el impacto proporcional de las comisiones en el desempeño. Esto incluye: comisiones por operación, spreads, costos de financiamiento (si usas margen) y tarifas internas de los ETFs.</p>
+            </div>
+            <div>
+                <h3 class="text-amber-500 font-bold mb-2">9. Tamaño mínimo de cuenta</h3>
+                <p class="text-sm text-slate-300">El tamaño mínimo depende del modelo y de los ETFs utilizados. En general, necesitas suficiente capital para comprar al menos una unidad de cada ETF o usar fracciones si tu bróker las permite. Si tu cuenta es muy pequeña, las comisiones y los rebalanceos pueden afectar más el rendimiento y generar mayor desviación frente al modelo. Para este sistema el minimo es USD 6,000. Con ETFs de menor valor de unidad se puede invertir con c. USD 2,500.</p>
+            </div>
+            <div>
+                <h3 class="text-amber-500 font-bold mb-2">10. Frecuencia de revisión — ¿Debo revisar mi portafolio entre rebalanceos?</h3>
+                <p class="text-sm text-slate-300">No. Solo debes revisar tu portafolio en las fechas indicadas:<br>
+                · Sistemas mensuales: primer día del mes<br>
+                · Sistemas semanales: lunes<br>
+                · Sistemas diarios: día del trade<br>
+                Revisar o intervenir fuera de esas fechas no aporta valor y puede generar errores o sobre‑operación.</p>
+            </div>
+            <div>
+                <h3 class="text-amber-500 font-bold mb-2">11. Impuestos — ¿Cómo afectan los impuestos?</h3>
+                <p class="text-sm text-slate-300">Cada modelo tiene un nivel distinto de rotación.<br>
+                · Rotación baja: menos eventos tributarios.<br>
+                · Rotación alta: más ventas y potenciales impuestos. Tu tasa impositiva y la frecuencia de rebalanceo afectarán el rendimiento neto.<br>
+                · Busca asesoría fiscal si necesitas evaluar tu caso específico.</p>
+            </div>
+            <div>
+                <h3 class="text-amber-500 font-bold mb-2">12. Uso de apalancamiento — ¿Puedo usar margen o apalancamiento?</h3>
+                <p class="text-sm text-slate-300">El modelo no usa apalancamiento . Si aplicas apalancamiento, podrías amplificar esa caída hasta niveles que incluyan la pérdida total del capital. Revisa tu perfil de riesgo antes de decidir usar apalancamiento en esta estrategia.</p>
+            </div>
+            <div>
+                <h3 class="text-amber-500 font-bold mb-2">13. Errores de ejecución — ¿Qué hago si me equivoco al comprar o vender?</h3>
+                <p class="text-sm text-slate-300">Corrige el error lo antes posible. Si compraste o vendiste el símbolo incorrecto, revierte la operación y ajusta tu portafolio para que coincida nuevamente con la asignación del modelo. Mientras más rápido lo corrijas, menor será la desviación frente al desempeño esperado.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
