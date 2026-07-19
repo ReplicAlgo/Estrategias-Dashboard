@@ -132,5 +132,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // ==========================================
+    // NUEVA SECCIÓN: Manual de la Estrategia (iframe con verificación previa)
+    // ==========================================
+    async function loadManual() {
+        const manualWrapper = document.getElementById('manual-wrapper');
+        const manualIframe = document.getElementById('manual-iframe');
+        if (!manualWrapper || !manualIframe) return;
+
+        const manualUrl = `manual.html?t=${timestamp}`;
+        try {
+            const resp = await fetch(manualUrl, { method: 'GET', cache: 'no-store' });
+            if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+            manualIframe.src = manualUrl;
+        } catch (err) {
+            console.warn("⚠️ Manual no disponible:", err);
+            manualWrapper.innerHTML = `
+                <div class="w-full h-full flex items-center justify-center">
+                    <p class="text-slate-500 text-sm italic px-8 text-center">
+                        <i class="fa-solid fa-file-circle-exclamation mr-2"></i>
+                        Manual no disponible por el momento.
+                    </p>
+                </div>
+            `;
+        }
+    }
+
+    loadManual();
     loadAndFixData();
 });
+ 
