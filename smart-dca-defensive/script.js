@@ -133,32 +133,50 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // NUEVA SECCIÓN: Manual de la Estrategia (iframe con verificación previa)
+    // Manual de la Estrategia: modal a pantalla completa
     // ==========================================
-    async function loadManual() {
-        const manualWrapper = document.getElementById('manual-wrapper');
-        const manualIframe = document.getElementById('manual-iframe');
-        if (!manualWrapper || !manualIframe) return;
+    async function initManual() {
+        const openBtn = document.getElementById('manual-open-btn');
+        const closeBtn = document.getElementById('manual-close-btn');
+        const modal = document.getElementById('manual-modal');
+        const iframe = document.getElementById('manual-iframe');
+        if (!openBtn || !closeBtn || !modal || !iframe) return;
 
         const manualUrl = `manual.html?t=${timestamp}`;
+        let manualAvailable = false;
+
         try {
             const resp = await fetch(manualUrl, { method: 'GET', cache: 'no-store' });
-            if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-            manualIframe.src = manualUrl;
+            manualAvailable = resp.ok;
         } catch (err) {
-            console.warn("⚠️ Manual no disponible:", err);
-            manualWrapper.innerHTML = `
-                <div class="w-full h-full flex items-center justify-center">
-                    <p class="text-slate-500 text-sm italic px-8 text-center">
-                        <i class="fa-solid fa-file-circle-exclamation mr-2"></i>
-                        Manual no disponible por el momento.
-                    </p>
-                </div>
-            `;
+            manualAvailable = false;
         }
+
+        if (!manualAvailable) {
+            openBtn.disabled = true;
+            openBtn.classList.add('opacity-40', 'cursor-not-allowed');
+            openBtn.innerHTML = 'No disponible';
+            return;
+        }
+
+        function openModal() {
+            iframe.src = manualUrl; // carga perezosa: solo al abrir
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        openBtn.addEventListener('click', openModal);
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
     }
 
-    loadManual();
+    initManual();
     loadAndFixData();
 });
- 

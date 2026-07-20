@@ -257,13 +257,37 @@
                 <div class="mt-8">
                     <h2 class="text-sm font-bold text-amber-500 uppercase tracking-[0.2em] mb-2">Documentación</h2>
                     <h3 class="text-2xl font-bold text-white tracking-tight mb-4">Manual de la Estrategia</h3>
-                    <div class="glass-panel p-3">
-                        <div id="manual-wrapper" class="relative rounded-2xl overflow-hidden bg-slate-900/30" style="height: 600px;">
-                            <iframe id="manual-iframe" title="Manual de la Estrategia" class="w-full h-full" style="border: none;" loading="lazy"></iframe>
+                    <div id="manual-preview" class="glass-panel p-8 flex items-center gap-6 bg-gradient-to-br from-amber-500/5 to-transparent border-amber-500/10">
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-book-open text-amber-500 text-xl"></i>
                         </div>
+                        <div class="flex-1">
+                            <p class="text-white font-bold mb-1">Guía completa de la estrategia</p>
+                            <p class="text-slate-400 text-xs">Explicación del sistema, resultados históricos y preguntas frecuentes.</p>
+                        </div>
+                        <button id="manual-open-btn" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm px-5 py-3 rounded-xl transition-colors whitespace-nowrap flex-shrink-0">
+                            Ver Manual <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i>
+                        </button>
                     </div>
                 </div>
             </section>
+        </div>
+
+        <!-- MODAL: Manual de la Estrategia (pantalla completa) -->
+        <div id="manual-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 md:p-8" style="background: rgba(2, 6, 23, 0.85); backdrop-filter: blur(6px);">
+            <div class="glass-panel w-full h-full max-w-6xl overflow-hidden flex flex-col" style="max-height: 92vh;">
+                <div class="flex items-center justify-between p-4 border-b border-white/5 flex-shrink-0">
+                    <h4 class="text-white font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-book-open text-amber-500"></i> Manual de la Estrategia
+                    </h4>
+                    <button id="manual-close-btn" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center transition-colors">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="flex-1 overflow-hidden">
+                    <iframe id="manual-iframe" title="Manual de la Estrategia" class="w-full h-full" style="border: none;"></iframe>
+                </div>
+            </div>
         </div>
 
         <footer class="pt-12 border-t border-white/5">
